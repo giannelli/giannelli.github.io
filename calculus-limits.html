@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T19:25:16Z    *-->
+<!--*    on 2016-12-28T22:59:32Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -137,7 +137,13 @@ MathJax.Hub.Config({
 <div class="sagecell-sage" id="sage-27"><script type="text/x-sage">f2 = (x-1)/(x^2-1)
 show(f2)
 f2.limit(x=1)
-</script></div></section></div></main>
+</script></div>
+<p id="p-65">Plotting this function will give us a better picture of what is happening:</p>
+<div class="sagecell-sage" id="sage-28"><script type="text/x-sage">pt = point((1, 1/2), rgbcolor='white', pointsize=30, faceted=True)
+p=plot(f2, -2,2, ymin=-5,ymax=5, exclude=[-1])
+p+pt
+</script></div>
+<figure class="figure-like" id="figure-5"><img width="100%" src="images/limits_ex2.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">3.1.1</span>Example 2, page 26</figcaption></figure></section></div></main>
 </div>
 </body>
 </html>
