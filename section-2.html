@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-12-28T19:15:21Z    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG Running From Source</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="section-3.html">Next</a><a class="up-button button toolbar-item" href="sets.html">Up</a><a class="previous-button toolbar-item button" href="sage-online.html">Prev</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sage-online.html">Prev</a><a class="up-button button toolbar-item" href="sets.html">Up</a><a class="next-button button toolbar-item" href="section-3.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html">About John A Giannelli</a></li>
+<li><a href="dedication-1.html">Dedication</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+</ul>
+<h2 class="link active"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html">SageMath Online</a></li>
+<li><a href="section-2.html" class="active">Running From Source</a></li>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
+</ul>
+<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-4.html">How to define functions</a></li>
+<li><a href="section-5.html">Symbolic Manipulation</a></li>
+<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+</ul>
+<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="calculus-integration.html">Integration</a></li>
+<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
+<li><a href="references-1.html">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html">Systems Of Equations</a></li>
+<li><a href="exercises-de.html">Exercises</a></li>
+<li><a href="references-2.html">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-2"><header title="Section 1.2 Running From Source"><h1 class="heading hide-type" alt="Section 1.2 Running From Source">
+<span class="type">Section</span><span class="codenumber">1.2</span><span class="title">Running From Source</span>
+</h1></header><p id="p-24">The SageMath source is hosted here <a class="external-url" href="https://git.sagemath.org/sage.git/" target="_blank">SageMath GitHub</a>.
+            To download and build the source you will need the appropriate development environment set up. This is not detailed here
+            and assumes some familiarity with git and make. Full details can be found <a class="external-url" href="http://doc.sagemath.org/html/en/installation/source.html" target="_blank">here</a>.
+            At a minimum you will need a POSIX compliant shell with GCC, make, perl, and python.
+        </p>
+<section class="subsection" id="subsection-1"><header title="Subsection 1.2.1 Building SageMath"><h1 class="heading hide-type" alt="Subsection 1.2.1 Building SageMath">
+<span class="type">Subsection</span><span class="codenumber">1.2.1</span><span class="title">Building SageMath</span>
+</h1></header><p id="p-25">Once you have a build environment setup then grab the source from the git repository. This may take a few minutes depending on your network speed.</p>
+<pre class="console"><span class="prompt unselectable">--- ~/dev »</span><b>git clone git://github.com/sagemath/sage.git
+</b>Cloning into 'sage'...
+remote: Counting objects: 448266, done.
+remote: Compressing objects: 100% (268/268), done.
+remote: Total 448266 (delta 157), reused 0 (delta 0), pack-reused 447997
+Receiving objects: 100% (448266/448266), 152.82 MiB | 11.21 MiB/s, done.
+Resolving deltas: 100% (341065/341065), done.
+<span class="prompt unselectable">--- ~/dev »</span><b>cd sage
+</b><span class="prompt unselectable">--- dev/sage ‹master› »</span><b>git checkout develop
+</b>Branch develop set up to track remote branch develop from origin.
+Switched to a new branch 'develop'
+<span class="prompt unselectable">--- dev/sage ‹develop› »</span><b>make
+</b>make build/make/Makefile
+make[1]: Entering directory `/home/dev/sage'
+make[1]: `build/make/Makefile' is up to date.
+make[1]: Leaving directory `/home/dev/sage'
+build/bin/sage-logger \
+"cd build/make &amp;&amp; ./install 'all'" logs/install.log
+*** ALL ENVIRONMENT VARIABLES BEFORE BUILD: ***
+...
+&lt;and so on, and so forth, for quite some time ...&gt;
+...
+Testing that Sage starts...
+[2016-12-01 14:31:59] SageMath version 7.5.beta4, Release Date: 2016-11-24
+Forcing Sage-location, probably because a new package was installed.
+Updating various hardcoded paths...
+(Please wait at most a few minutes.)
+DO NOT INTERRUPT THIS.
+Done updating paths.
+Yes, Sage starts.
+make[2]: Leaving directory `/home/dev/sage/build/make'
+make[1]: Leaving directory `/home/dev/sage/build/make'
+
+real 29m58.528s
+user 32m33.566s
+sys 7m0.240s
+Sage build/upgrade complete!
+
+To install small scripts to directly run Sage's versions of GAP,
+the PARI/GP interpreter, Maxima, or Singular etc. (by typing e.g.
+just 'gap' or 'gp') into a standard 'bin' directory, start Sage
+by typing 'sage' (or './sage') and enter something like
+
+install_scripts('/usr/local/bin')
+
+at the Sage command prompt ('sage:').
+</pre>
+<p id="p-26"></p></section><section class="subsection" id="subsection-2"><header title="Subsection 1.2.2 Running SageMath Notebook from the command line"><h1 class="heading hide-type" alt="Subsection 1.2.2 Running SageMath Notebook from the command line">
+<span class="type">Subsection</span><span class="codenumber">1.2.2</span><span class="title">Running SageMath Notebook from the command line</span>
+</h1></header><pre class="console"><span class="prompt unselectable">--- ~/dev »</span><b>./sage --notebook
+</b></pre>
+<figure class="figure-like" id="figure-2"><img width="100%" src="images/sageNotebookStart.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.1</span>Starting Sage notebook from the command line.</figcaption></figure><figure class="figure-like" id="figure-3"><img width="100%" src="images/sageNotebookSession.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.2</span>The Notebook session at localhost:8080.</figcaption></figure><p id="p-27">
+                You can now start using this local session equivalently to SageMathCloud sessions with the
+                benefit of gaining the full resources of your local machine and being able to work offline.
+            </p></section><section class="subsection" id="subsection-3"><header title="Subsection 1.2.3 Running SageMath From the command line"><h1 class="heading hide-type" alt="Subsection 1.2.3 Running SageMath From the command line">
+<span class="type">Subsection</span><span class="codenumber">1.2.3</span><span class="title">Running SageMath From the command line</span>
+</h1></header><p id="p-28">You can also run SageMath directly from the command line.  You may want to do this for quick tests or as part of your development cycle.</p>
+<figure class="figure-like" id="figure-4"><img width="100%" src="images/sageCommandLineSession.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.3</span>A sample Sage command line session.</figcaption></figure></section></section></div></main>
+</div>
+</body>
+</html>

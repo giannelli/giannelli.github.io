@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG Declaring Variables and Plotting</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate Sage Code'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="integers.html">Next</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="previous-button toolbar-item button" href="section-5.html">Prev</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-5.html">Prev</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="integers.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html">About John A Giannelli</a></li>
+<li><a href="dedication-1.html">Dedication</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html">SageMath Online</a></li>
+<li><a href="section-2.html">Running From Source</a></li>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
+</ul>
+<h2 class="link active"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-4.html">How to define functions</a></li>
+<li><a href="section-5.html">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" class="active">Declaring Variables and Plotting</a></li>
+</ul>
+<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="calculus-integration.html">Integration</a></li>
+<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
+<li><a href="references-1.html">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html">Systems Of Equations</a></li>
+<li><a href="exercises-de.html">Exercises</a></li>
+<li><a href="references-2.html">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-6"><header title="Section 2.3 Declaring Variables and Plotting"><h1 class="heading hide-type" alt="Section 2.3 Declaring Variables and Plotting">
+<span class="type">Section</span><span class="codenumber">2.3</span><span class="title">Declaring Variables and Plotting</span>
+</h1></header><p id="p-50">Sage allows us to solve equations not only numerically but symbolically.
+            To make this possible we have to be able to define variables that are used in the symbolic manipulation.</p>
+<p id="p-51">We will demonstrate this using a complete differential equation example. Taking this approach has the additional
+        advantage of introducing some other Sage methods.</p>
+<section class="subsection" id="subsection-5"><header title="Subsection 2.3.1 Use SageMath to solve differential equations"><h1 class="heading hide-type" alt="Subsection 2.3.1 Use SageMath to solve differential equations">
+<span class="type">Subsection</span><span class="codenumber">2.3.1</span><span class="title">Use SageMath to solve differential equations</span>
+</h1></header><p id="p-52">First we have to know how to describe a differential equation (DE) with Sage.
+                The syntax may not be obvious but the are ample examples in the documentation.</p>
+<p id="p-53">Sage can solve a large class of first-order and second-order Ordinary Differential Equations (ODEs) as
+                well as Initial Value Problems (IVPs). The chapter on differential equations <a href="differential.html" alt="Chapter 4 Differential Equations" title="Chapter 4 Differential Equations">Chapter 4</a> will
+                go into more details.  This particular example just uses DE to illustrate how variables are declared and used.
+            </p>
+<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">var('a b c x y z')
+</script></div>
+<p id="p-54">For this first example, I'll express the differential equation using common mathematical notation, then
+                enter it into Sage using Sage's notation. Here's the mathematical notation for our example:
+            </p>\begin{equation}y(t) + rcy'(t) = 0\label{men-1}\tag{2.3.1}\end{equation}\begin{equation}y(0) = 1\label{men-2}\tag{2.3.2}\end{equation}<p id="p-55">This expression says that the unknown function (the function to be found) produces the sum of y(t) and r
+                c y'(t) for any time t, and that the initial value of the function at time zero is 1. (The meaning of r
+                and c will become clear after a bit.) This is an example of a differential equation that specifies an
+                initial value, as many do. In this case I intend to scale the result after acquiring the result, and
+                this initial value makes that easy. Here is how I submit this differential equation to Sage:
+            </p></section><p id="p-56">(From
+            <a class="external-url" href="http://arachnoid.com/sage/differential1.html#Second_Example" target="_blank">P Lutus - Applying Sage to physics</a>)
+        </p>
+<div class="sagecell-sage" id="sage-23"><script type="text/x-sage">var('r c t')
+y = function('y')(t)
+de = y + r*c*diff(y,t) == 0
+des = desolve(de,[y,t],[0,1]);des
+</script></div>
+<p id="p-57">Or in the prettier format:</p>
+<div class="sagecell-sage" id="sage-24"><script type="text/x-sage">show(des)
+</script></div>
+<p id="p-58">Let us break this entry down:
+
+            </p>
+<ul style="list-style-type: disc;">
+<li id="li-7">
+                    var('r c t') tells Sage to pre-declare the variables that will be used.
+                </li>
+<li id="li-8">
+                    \(y = function('y')(t)\)
+                    tells Sage that \(y\) is a function of \(t\), e.g. as though every time we type \(y\) we mean \(
+                    y(t)\).
+                    This is a way to identify \(y\) as a function, not just a variable, and associate it with \(t\).
+                </li>
+<li id="li-9">
+                    \(de = y + r*c*diff(y,t) == 0\)
+                    creates a variable \(de\) that contains one of the statements of the DE.
+                </li>
+<li id="li-10">
+                    \(des = desolve(de,[y,t],[0,1])\)
+                    invokes the Sage DE solver using our definition \(de\) as an argument, and:
+                </li>
+<li id="li-11">
+                    \([y,t]\)
+                    identifies \(y\) as the function of interest and \(t\) as the dependent variable
+                </li>
+<li id="li-12">
+                    \([0,1]\)
+                    sets the initial conditions: at \(t = 0, y = 1\), or as we expressed it above, "\(y(0) =1\)".
+                </li>
+</ul>
+<p>
+
+            <p id="p-59">Now let us plot this</p>
+            <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">f(t,r,c) = des
+plot(f(t,1,1),(t,0,5),figsize=(4,3))
+</script></div>
+
+            <p id="p-60">Let us now take a more general solution.</p>
+            <div class="sagecell-sage" id="sage-26"><script type="text/x-sage">f(t,a,b,r,c) = (a-b) * des + b
+show(f)
+lbl = text("$RC \, Circuit, \, r = 10000\Omega, \, c = 100\mu f $",(3,3),fontsize=12,rgbcolor='#006000')
+p = plot(f(t,0,10,10000,100e-6),(t,0,5), figsize=(4,3),axes_labels=['time','v'])
+show(p+lbl)
+</script></div>
+        </p></section></div></main>
+</div>
+</body>
+</html>

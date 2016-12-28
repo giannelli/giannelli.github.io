@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG Hints and Solutions to Selected Exercises</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="appendix-gfdl.html">Next</a><a class="up-button button toolbar-item" href="backmatter.html">Up</a><a class="previous-button toolbar-item button" href="appendix-1.html">Prev</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="appendix-1.html">Prev</a><a class="up-button button toolbar-item" href="backmatter.html">Up</a><a class="next-button button toolbar-item" href="appendix-gfdl.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html">About John A Giannelli</a></li>
+<li><a href="dedication-1.html">Dedication</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html">SageMath Online</a></li>
+<li><a href="section-2.html">Running From Source</a></li>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
+</ul>
+<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-4.html">How to define functions</a></li>
+<li><a href="section-5.html">Symbolic Manipulation</a></li>
+<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+</ul>
+<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="calculus-integration.html">Integration</a></li>
+<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
+<li><a href="references-1.html">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html">Systems Of Equations</a></li>
+<li><a href="exercises-de.html">Exercises</a></li>
+<li><a href="references-2.html">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link active"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html" class="active">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="appendix-2"><header title="Appendix B Hints and Solutions to Selected Exercises"><h1 class="heading hide-type" alt="Appendix B Hints and Solutions to Selected Exercises">
+<span class="type">Appendix</span><span class="codenumber">B</span><span class="title">Hints and Solutions to Selected Exercises</span>
+</h1></header><section class="exercises"><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">4.4</span><span class="title">Exercises</span>
+</h1>
+<article class="exercise-like" id="exercise-2"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">1</span>
+</h5>
+<p id="p-127">Response to Exponential Input</p>
+<p id="p-128">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + e^{st}\label{men-23}\tag{4.4.5}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-24}\tag{4.4.6}\end{equation}<p id="p-129">This is the standard growth equation  with an exponential forcing term \(e^{st}\).</p>
+<p id="p-130">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = Ye^{st}\end{equation*}<p id="p-131">where \(Y\) is a constant.</p>
+<p id="p-132">Substituting we get:</p>\begin{equation*}Ys e^{st} = aY e^{st} + e^{st}\end{equation*}<p id="p-133">Rearranging gives:</p>\begin{equation*}Y=\frac{1}{s-a}\end{equation*}<p id="p-134">Full solution is the <!--Style me with CSS--><em>particular</em> solution plus <!--Style me with CSS--><em>null</em> (or <!--Style me with CSS--><em>homogeneous</em>) solution:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + C e^{st}\end{equation*}<p id="p-135">From the initial conditions we get:</p>\begin{equation*}y(0) = \frac{1}{s-a} + C\end{equation*}<p id="p-136">Substituting in \(y(t)\) gives:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}\end{equation*}<p id="p-137">Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>\begin{equation*}y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\end{equation*}<p id="p-138">In Strang's terminology:</p>\begin{equation}y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\label{men-25}\tag{4.4.7}\end{equation}<p id="p-139">That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor.
+                Notice that this extra term has a singularity (division by zero) at \(s=a\). This is <!--Style me with CSS--><em>Resonance</em>.</p>
+<p id="p-140">This singularity can be handled using  <!--Style me with CSS--><em>L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a></p>
+<figure class="figure-like" id="figure-6"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p id="p-141">The full solution, using L'Hopital, should match the final solution in
+                <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>\begin{equation}y(t)=y_{0} e^{a t} + t e^{s t}\label{men-26}\tag{4.4.8}\end{equation}<p id="p-142">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-143">Remind yourself how to obtain the homogeneous (null) solution:</p>
+<pre class="code-block tex2jax_ignore">t,a = var('t,a')
+y = function('y')(t)
+de1 = diff(y,t) == a*y
+sol1 = desolve(de1,y, ivar=t)
+show(sol1)
+</pre>
+<p id="p-144">\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\).</p>
+<p id="p-145">Also have a look at the screenshot above!</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">Sage Commands:</p>
+<pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
+y = function('y')(t)
+de = diff(y,t) == a*y + e^(s*t)
+sol=desolve(de,y, ivar=t, ics=[0,y0])
+show(sol)
+</pre>
+<p id="p-147">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-148">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
+<p id="p-149">
+                As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
+                We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
+            </p>
+<p id="p-150">Sage Commands:</p>
+<pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
+numerator.diff(s)
+denominator= s - a
+denominator.diff(s)
+</pre>
+<p id="p-151">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
+<p id="p-152">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span></span></span></article><article class="exercise-like" id="exercise-3"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">2</span>
+</h5>
+<p id="p-153">Response to Oscillating Input</p>
+<p id="p-154">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\label{men-27}\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-28}\tag{4.4.10}\end{equation}<p id="p-155">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
+<p id="p-156">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-157">where \(M\) and \(N\) are constants.</p>
+<p id="p-158">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-159">Sage Commands:</p>
+<pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
+y = function('y')(t)
+de = diff(y,t) == a*y + cos(omega*t)
+sol=desolve(de,y, ivar=t, ics=[0,y0])
+show(sol)
+</pre>
+<p id="p-160">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span></span></article></section></section></div></main>
+</div>
+</body>
+</html>
