@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T22:59:32Z    *-->
+<!--*    on 2016-12-31T19:54:05Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -44,7 +44,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -67,13 +67,13 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="backmatter.html">Next</a><a class="up-button button toolbar-item" href="differential.html">Up</a><a class="previous-button toolbar-item button" href="system-of-de.html">Prev</a>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="system-of-de.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="differential.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="system-of-de.html">Prev</a><a class="up-button button toolbar-item" href="differential.html">Up</a><a class="next-button button toolbar-item" href="backmatter.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="system-of-de.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="differential.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 <h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
 <li><a href="calculus-limits.html">Calculating Limits</a></li>
-<li><a href="calculus-integration.html">Integration</a></li>
+<li><a href="calculus-integration.html">Derivatives</a></li>
 <li><a href="integers-sage.html">Sage</a></li>
 <li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
 <li><a href="references-1.html">References</a></li>
@@ -123,54 +123,54 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-de"><header title="Exercises 4.4 Exercises"><h1 class="heading hide-type" alt="Exercises 4.4 Exercises">
 <span class="type">Section</span><span class="codenumber">4.4</span><span class="title">Exercises</span><a href="exercises-de.html" class="permalink">¶ permalink</a>
 </h1></header><article class="exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-128">Response to Exponential Input</p>
-<p id="p-129">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + e^{st}\label{men-23}\tag{4.4.5}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-24}\tag{4.4.6}\end{equation}<p id="p-130">This is the standard growth equation  with an exponential forcing term \(e^{st}\).</p>
-<p id="p-131">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = Ye^{st}\end{equation*}<p id="p-132">where \(Y\) is a constant.</p>
-<p id="p-133">Substituting we get:</p>\begin{equation*}Ys e^{st} = aY e^{st} + e^{st}\end{equation*}<p id="p-134">Rearranging gives:</p>\begin{equation*}Y=\frac{1}{s-a}\end{equation*}<p id="p-135">Full solution is the <!--Style me with CSS--><em>particular</em> solution plus <!--Style me with CSS--><em>null</em> (or <!--Style me with CSS--><em>homogeneous</em>) solution:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + C e^{st}\end{equation*}<p id="p-136">From the initial conditions we get:</p>\begin{equation*}y(0) = \frac{1}{s-a} + C\end{equation*}<p id="p-137">Substituting in \(y(t)\) gives:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}\end{equation*}<p id="p-138">Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>\begin{equation*}y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\end{equation*}<p id="p-139">In Strang's terminology:</p>\begin{equation}y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\label{men-25}\tag{4.4.7}\end{equation}<p id="p-140">That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor.
+<p id="p-137">Response to Exponential Input</p>
+<p id="p-138">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + e^{st}\label{men-23}\tag{4.4.5}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-24}\tag{4.4.6}\end{equation}<p id="p-139">This is the standard growth equation  with an exponential forcing term \(e^{st}\).</p>
+<p id="p-140">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = Ye^{st}\end{equation*}<p id="p-141">where \(Y\) is a constant.</p>
+<p id="p-142">Substituting we get:</p>\begin{equation*}Ys e^{st} = aY e^{st} + e^{st}\end{equation*}<p id="p-143">Rearranging gives:</p>\begin{equation*}Y=\frac{1}{s-a}\end{equation*}<p id="p-144">Full solution is the <!--Style me with CSS--><em>particular</em> solution plus <!--Style me with CSS--><em>null</em> (or <!--Style me with CSS--><em>homogeneous</em>) solution:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + C e^{st}\end{equation*}<p id="p-145">From the initial conditions we get:</p>\begin{equation*}y(0) = \frac{1}{s-a} + C\end{equation*}<p id="p-146">Substituting in \(y(t)\) gives:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}\end{equation*}<p id="p-147">Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>\begin{equation*}y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\end{equation*}<p id="p-148">In Strang's terminology:</p>\begin{equation}y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\label{men-25}\tag{4.4.7}\end{equation}<p id="p-149">That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor.
                 Notice that this extra term has a singularity (division by zero) at \(s=a\). This is <!--Style me with CSS--><em>Resonance</em>.</p>
-<p id="p-141">This singularity can be handled using  <!--Style me with CSS--><em>L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a></p>
-<figure class="figure-like" id="figure-7"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p id="p-142">The full solution, using L'Hopital, should match the final solution in
-                <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>\begin{equation}y(t)=y_{0} e^{a t} + t e^{s t}\label{men-26}\tag{4.4.8}\end{equation}<p id="p-143">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-144">Remind yourself how to obtain the homogeneous (null) solution:</p>
+<p id="p-150">This singularity can be handled using  <!--Style me with CSS--><em>L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a></p>
+<figure class="figure-like" id="figure-7"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p id="p-151">The full solution, using L'Hopital, should match the final solution in
+                <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>\begin{equation}y(t)=y_{0} e^{a t} + t e^{s t}\label{men-26}\tag{4.4.8}\end{equation}<p id="p-152">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-153">Remind yourself how to obtain the homogeneous (null) solution:</p>
 <pre class="code-block tex2jax_ignore">t,a = var('t,a')
 y = function('y')(t)
 de1 = diff(y,t) == a*y
 sol1 = desolve(de1,y, ivar=t)
 show(sol1)
 </pre>
-<p id="p-145">\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\).</p>
-<p id="p-146">Also have a look at the screenshot above!</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-147">Sage Commands:</p>
+<p id="p-154">\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\).</p>
+<p id="p-155">Also have a look at the screenshot above!</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-156">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
 y = function('y')(t)
 de = diff(y,t) == a*y + e^(s*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<p id="p-148">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-149">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
-<p id="p-150">
+<p id="p-157">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-158">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
+<p id="p-159">
                 As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
                 We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
             </p>
-<p id="p-151">Sage Commands:</p>
+<p id="p-160">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
 numerator.diff(s)
 denominator= s - a
 denominator.diff(s)
 </pre>
-<p id="p-152">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
-<p id="p-153">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span></span> </article><article class="exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-154">Response to Oscillating Input</p>
-<p id="p-155">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\label{men-27}\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-28}\tag{4.4.10}\end{equation}<p id="p-156">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
-<p id="p-157">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-158">where \(M\) and \(N\) are constants.</p>
-<p id="p-159">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-160">Sage Commands:</p>
+<p id="p-161">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
+<p id="p-162">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span></span> </article><article class="exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-163">Response to Oscillating Input</p>
+<p id="p-164">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\label{men-27}\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-28}\tag{4.4.10}\end{equation}<p id="p-165">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
+<p id="p-166">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-167">where \(M\) and \(N\) are constants.</p>
+<p id="p-168">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-169">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
 y = function('y')(t)
 de = diff(y,t) == a*y + cos(omega*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<p id="p-161">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article></section></div></main>
+<p id="p-170">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article></section></div></main>
 </div>
 </body>
 </html>
