@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-31T19:54:04Z    *-->
+<!--*    on 2017-01-03T00:27:12Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG Derivatives</title>
+<title>JAG Integration</title>
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -37,7 +37,15 @@ MathJax.Hub.Config({
         scale: 88,
     },
 });
-    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate Sage Code'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
@@ -68,12 +76,12 @@ MathJax.Hub.Config({
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="calculus-limits.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers-sage.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="calculus-derivatives.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers-sage.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="calculus-limits.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers-sage.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="calculus-derivatives.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers-sage.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -99,7 +107,8 @@ MathJax.Hub.Config({
 <h2 class="link active"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
 <li><a href="calculus-limits.html">Calculating Limits</a></li>
-<li><a href="calculus-integration.html" class="active">Derivatives</a></li>
+<li><a href="calculus-derivatives.html">Derivatives</a></li>
+<li><a href="calculus-integration.html" class="active">Integration</a></li>
 <li><a href="integers-sage.html">Sage</a></li>
 <li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
 <li><a href="references-1.html">References</a></li>
@@ -120,13 +129,32 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="calculus-integration"><header title="Section 3.2 Derivatives"><h1 class="heading hide-type" alt="Section 3.2 Derivatives">
-<span class="type">Section</span><span class="codenumber">3.2</span><span class="title">Derivatives</span><a href="calculus-integration.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-72">Examples taken from <a knowl="./knowl/james_stewart.html" knowl-id="xref-james_stewart" alt="Bibliographic Entry 3.5.1 Essential Calculus: Early Transcendentals" title="Bibliographic Entry 3.5.1 Essential Calculus: Early Transcendentals">Essential Calculus - James Stewart, Chapter 2 [3.5.1]</a>.</p>
-<p id="p-73">The examples here have all been entered into this (public)
-            <a class="external-url" href="https://cloud.sagemath.com/projects/aab56d83-dc7e-435a-9c97-f420f3cfc10b/files/Calculus_Derivatives.sagews" target="_blank">
-                Cloud SageMath Worksheet</a>.</p>
-<p id="p-74">Some of the examples from that worksheet are recreated here.</p></section></div></main>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="calculus-integration"><header title="Section 3.3 Integration"><h1 class="heading hide-type" alt="Section 3.3 Integration">
+<span class="type">Section</span><span class="codenumber">3.3</span><span class="title">Integration</span><a href="calculus-integration.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-77">Here are some examples of indefinite integrals to demonstarte the power of SageMath:</p>
+<div class="sagecell-sage" id="sage-34"><script type="text/x-sage">f = x^3
+show("function:",f,", Indefinite Integral = ",f.integrate(x))
+f= e^x
+show("function:",f,", Indefinite Integral = ",integral(f,x))
+f=1/x
+show("function:",f,", Indefinite Integral = ",integral(f,x))
+f=sinh(x)
+show("function:",f,", Indefinite Integral = ",f.integral(x))
+f=1/sqrt(1+x^2)
+show("function:",f,", Indefinite Integral = ",integral(f,x))
+
+show("Integration by parts:")
+f=e^x*cos(x)
+show("function:",f,", Indefinite Integral = ",f.integral(x))
+
+f=sqrt(x^2-25)/x
+show("function:",f,", Indefinite Integral = ",f.integral(x))
+</script></div>
+<p id="p-78">Now for some Definite Integrals. For example:</p>\begin{equation*}\int_{-1}^{1} \frac{1}{x^{2} + 1} dx = \frac{1}{2} \, \pi\end{equation*}<p id="p-79">This can be confirmed in SageMath quite simply:</p>
+<div class="sagecell-sage" id="sage-35"><script type="text/x-sage">f(x)=1/(1+x^2)
+show(f)
+f.integral(x, -1, 1).show()
+</script></div></section></div></main>
 </div>
 </body>
 </html>
