@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-07T09:29:04Z    *-->
+<!--*    on 2017-01-07T21:20:44Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -424,9 +424,14 @@ pretty_print(html("$$D=%s$$"%H(0,0).det()))
 </script></div>
 <p id="p-96">
                 Now that we have familiarised our self with the shape of this equation lets now use sage to find the equation of the line at \((3,3)\).
-
-                Implicit differentiation is required here to compute \(\frac{dy}{dx}\). We then use <!--Style me with CSS--><em>solve()</em>
+                Implicit differentiation is required here to compute \(\frac{dy}{dx}\) so that we can find the gradient at this point.</p>
+<p id="p-97"> Next find the horizontal axis of the curve by using the <!--Style me with CSS--><em>solve()</em>
                 passing in our expression and the partial derivative (set equal to zero - although this is assumed if we do not explicitly say so).
+            </p>
+<p id="p-98">
+                The solutions are printed using a for loop (learn some Python!) and an <!--Style me with CSS--><em>if</em> statement that prints results
+                only if \(x\) and \(y\) are real - in the 'ring' <!--Style me with CSS--><em>RR</em>.  There are two solutions,
+                which we can see from the plot that this is correct.  Take some time to understand the code used to do the plotting.
             </p>
 <div class="sagecell-sage" id="sage-49"><script type="text/x-sage">x,y = var('x,y')
 expr = x^3+y^3==6*x*y
@@ -435,26 +440,70 @@ f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
 dydx(x,y) = f.implicit_derivative(y,x)
 show(dydx)
 
+xrange = (x,-2,5)
+yrange = (y,-2,5)
+
+def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
+    plt=point(pt,rgbcolor=color, pointsize=pointsize)
+    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
+    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
+    return plt
+
+
+pt=(3,3)
+m=dydx(x=pt[0],y=pt[1])
+#y=mx+c => c=y-mx (at point (3,3))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P=plot(Y,xrange,color='red',legend_label=tangent, ymin=yrange[1], ymax=yrange[2])
+P += point_with_coords(pt, xrange, yrange, color='red', pointsize=60)
+
+# Gradient is Horizontal
 pts=[]
 for solution in solve([expr, dydx==0],x,y,solution_dict=True):
     if solution[x] in RR and solution[y] in RR:
         print("x = {0}   y = {1}".format(solution[x], solution[y]))
         pts.append((solution[x],solution[y]))
 
-show(pts)
+
+def cross_hair(pt, xrange, yrange):
+    plt=point_with_coords(pt,xrange,yrange)
+    pt1=(xrange[1],pt[1])
+    pt2=(xrange[2],pt[1])
+    plt += line([pt1, pt2], linestyle='--')
+    pt1=(pt[0], yrange[1])
+    pt2=(pt[0],yrange[2])
+    plt += line([pt1, pt2], linestyle='--')
+    return plt
+
+P += implicit_plot(expr, xrange, yrange, axes="true" )
+for pt in pts:
+    P += cross_hair(pt, xrange, yrange)
+
+show(P)
 </script></div>
-<p id="p-97">
-                The solutions are printed using a for loop (learn some Python!) and an if statement that prints results
-                only if \(x\) and \(y\) are real - in the 'ring' <!--Style me with CSS--><em>RR</em>.  There are two solutions,
-                which we can see from the plot that this is what we want.  These are placed in the array that we have
-                initialised (square brackets - []) to be empty just before the for loop.  We can then use this list of
-                points to draw some horizontal tangents.
+<p id="p-99">Section 2.6, Exercise 3, Page 127</p>
+<div class="sagecell-sage" id="sage-50"><script type="text/x-sage">x,y = var('x,y')
+expr=x^3+y^3 == 1
+show(expr)
+f(x) = expr.lhs() - expr.rhs() # Notice the '1' has been moved to the same side.
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-100">Summary</p>
+<p id="p-101">
+                Differentiate the full equation with respect to \(x\).  Use the chain rule for \(y\) variable results in:
+                \begin{equation*}x \ {\mapsto}\ 3 \, x^{2} + 3 \, y^{2} \frac {dy}{dx} = 0\end{equation*}
+                Rearranging gives: \begin{equation*}\frac {dy}{dx} = - \frac {x^2}{y^2}\end{equation*}</p>
+<p id="p-102">
+                The remaining equations in this section will be solved without explanation.
             </p>
-<p id="p-98">The following examples make use of this predefined function.  It is not very robust
+<p id="p-103">The following examples make use of this predefined function.  It is not very robust
             and assumes that the \(expr\) argumnet is sage Expression type with variable \(x\) and \(y\).</p>
-<p id="p-99">Make sure you run this before running the other examples.  There will be no output but the function
+<p id="p-104">Make sure you run this before running the other examples.  There will be no output but the function
             will be stored in memory available for use in other cells.</p>
-<div class="sagecell-sage" id="sage-50"><script type="text/x-sage">def my_implicit_derivative(expr):
+<div class="sagecell-sage" id="sage-51"><script type="text/x-sage">def my_implicit_derivative(expr):
     show(expr)
     f(x,y) = expr.lhs() - expr.rhs()
     dydx = f.implicit_derivative(y,x)
@@ -462,8 +511,103 @@ show(pts)
     # show("Dy=",dydx) #Use this instead of the one above if you are using the online sage notebook.
     return dydx
 </script></div>
-<p id="p-100">Exercise 21 - Cardioid, Page 127</p>
-<div class="sagecell-sage" id="sage-51"><script type="text/x-sage">x,y,m= var('x,y,m')
+<p id="p-105">
+                Section 2.6, Exercise 4, Page 127
+            </p>
+<div class="sagecell-sage" id="sage-52"><script type="text/x-sage">x,y = var('x,y')
+expr = 2*x^3 + x^2*y - x*y^3 == 2
+show(expr)
+f(x) = expr.lhs() - expr.rhs() # Notice the '2' has been moved to the other side.
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-106">
+                Section 2.6, Exercise 5, Page 127
+            </p>
+<div class="sagecell-sage" id="sage-53"><script type="text/x-sage">x,y = var('x,y')
+expr = x^2 + x*y - y^2 == 4
+show(expr)
+f(x) = expr.lhs() - expr.rhs()
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-107">
+                Section 2.6, Exercise 6, Page 127
+            </p>
+<div class="sagecell-sage" id="sage-54"><script type="text/x-sage">x,y = var('x,y')
+expr = y^5 + x^2*y^3 == 1+x^4*y
+show(expr)
+f(x) = expr.lhs() - expr.rhs()
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-108">
+                Section 2.6, Exercise 7 - 16, Page 127
+            </p>
+<div class="sagecell-sage" id="sage-55"><script type="text/x-sage">x,y = var('x,y')
+my_implicit_derivative(y*cos(x) == x^2 + y^2).show()
+
+my_implicit_derivative(cos(x*y) == 1+sin(y)).show()
+
+my_implicit_derivative(4*cos(x)*sin(y) == 1).show()
+
+pretty_print(html('\nWhich is the same as $\\frac {dy}{dx} = tan(x)tan(y)$'))
+
+my_implicit_derivative(y*sin(x^2) == x*sin(y^2)).show()
+
+my_implicit_derivative(tan(x/y) == x+y).simplify_trig().show()
+
+my_implicit_derivative(sqrt(x+y) == 1+x^2*y^2).show()
+
+my_implicit_derivative(sqrt(x*y) == 1+x^2*y).simplify_full().show()
+
+my_implicit_derivative(x*sin(y) +y*sin(x) == 1).show()
+
+my_implicit_derivative(y*cos(x) == 1+sin(x*y)).show()
+
+my_implicit_derivative(tan(x-y) == y/(1+x^2)).show()
+pretty_print('Is this last one correct??!!')
+</script></div>
+<p id="p-109">
+                Section 2.6, Exercise 19, Page 127
+            </p>
+<div class="sagecell-sage" id="sage-56"><script type="text/x-sage">x,y,m= var('x,y,m')
+expr=x^2+x*y+y^2 == 3
+dydx = my_implicit_derivative(expr)
+dydx.show()
+pt=(1,1)
+
+m=dydx(x=1,y=1)
+#y=mx+c => c=y-mx (at point (1,1))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P1=point(pt,rgbcolor='black', pointsize=30)
+P2=implicit_plot(expr, (x,-2,2), (y,-2,2))
+P3=plot(Y,(x,-2,2),color='red',legend_label=tangent)
+P1+P2+P3
+</script></div>
+<p id="p-110">
+                Section 2.6, Exercise 20, Page 127
+            </p>
+<div class="sagecell-sage" id="sage-57"><script type="text/x-sage">x,y,m= var('x,y,m')
+expr=x^2+2*x*y-y^2+x == 2
+dydx = my_implicit_derivative(expr)
+dydx.show()
+pt=(1,2)
+
+m=dydx(x=pt[0],y=pt[1])
+#y=mx+c => c=y-mx (at point (1,1))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P1=point(pt,rgbcolor='black', pointsize=30)
+P2=implicit_plot(expr, (x,-10,10), (y,-10,10),axes="true")
+P3=plot(Y,(x,-5,5),color='red',legend_label=tangent,ymin=-5,ymax=5)
+P1+P2+P3
+</script></div>
+<p id="p-111">Section 2.6, Exercise 21 - Cardioid, Page 127</p>
+<div class="sagecell-sage" id="sage-58"><script type="text/x-sage">x,y,m= var('x,y,m')
 expr=x^2+y^2 == (2*x^2+2*y^2-x)^2
 dydx = my_implicit_derivative(expr)
 
@@ -479,8 +623,8 @@ P2=implicit_plot(expr, (x,-1,1), (y,-1,1),axes="true")
 P3=plot(Y,(x,-1,1),color='red',legend_label=tangent,ymin=-1,ymax=1)
 P1+P2+P3
 </script></div>
-<p id="p-101">Exercise 23 - Lemniscate, Page 127</p>
-<div class="sagecell-sage" id="sage-52"><script type="text/x-sage">x,y,m= var('x,y,m')
+<p id="p-112">Section 2.6, Exercise 23 - Lemniscate, Page 127</p>
+<div class="sagecell-sage" id="sage-59"><script type="text/x-sage">x,y,m= var('x,y,m')
 expr=2*(x^2+y^2)^2 == 25*(x^2-y^2)
 dydx = my_implicit_derivative(expr)
 pt=(3,1)
