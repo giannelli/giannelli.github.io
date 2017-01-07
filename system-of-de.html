@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-03T00:27:12Z    *-->
+<!--*    on 2017-01-07T09:07:33Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -131,12 +131,12 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="system-of-de"><header title="Section 4.3 Systems Of Equations"><h1 class="heading hide-type" alt="Section 4.3 Systems Of Equations">
 <span class="type">Section</span><span class="codenumber">4.3</span><span class="title">Systems Of Equations</span><a href="system-of-de.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-9"><header title="Subsection 4.3.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.3.1 First Example">
+</h1></header><section class="subsection" id="subsection-11"><header title="Subsection 4.3.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.3.1 First Example">
 <span class="type">Subsection</span><span class="codenumber">4.3.1</span><span class="title">First Example</span>
-</h1></header><p id="p-137">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-19}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-20}\tag{4.3.2}\end{equation}<p id="p-138">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-21}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-22}\tag{4.3.4}\end{equation}<p id="p-139">You should now be comfortable with defining the variables, the functions, and the initial conditions.
+</h1></header><p id="p-162">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-19}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-20}\tag{4.3.2}\end{equation}<p id="p-163">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-21}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-22}\tag{4.3.4}\end{equation}<p id="p-164">You should now be comfortable with defining the variables, the functions, and the initial conditions.
                 The only difference is the use of the desolve_system() method. So let us jump straight in:
             </p>
-<div class="sagecell-sage" id="sage-55"><script type="text/x-sage">t = var('t')
+<div class="sagecell-sage" id="sage-74"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
 de1 = diff(x,t) + y == 0
@@ -144,8 +144,8 @@ de2 = diff(y,t) - x == 0
 solution = desolve_system([de1,de2],[x,y],ics=[0,1,2])
 show(solution)
 </script></div>
-<p id="p-140">Try this for fun:</p>
-<div class="sagecell-sage" id="sage-56"><script type="text/x-sage">t = var('t')
+<p id="p-165">Try this for fun:</p>
+<div class="sagecell-sage" id="sage-75"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
 de1 = diff(x,t) + y == t*cos(3*t)
@@ -161,9 +161,9 @@ solnx;solny
 #plot([solnx,solny],(0,20*pi))
 parametric_plot((solnx,solny), (t,0, 50*pi))
 </script></div>
-<div class="sagecell-sage" id="sage-57"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
+<div class="sagecell-sage" id="sage-76"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
 </script></div>
-<p id="p-141">A controlled explosion!</p></section></section></div></main>
+<p id="p-166">A controlled explosion!</p></section></section></div></main>
 </div>
 </body>
 </html>

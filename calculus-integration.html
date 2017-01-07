@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-03T00:27:12Z    *-->
+<!--*    on 2017-01-07T09:07:33Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -131,8 +131,8 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="calculus-integration"><header title="Section 3.3 Integration"><h1 class="heading hide-type" alt="Section 3.3 Integration">
 <span class="type">Section</span><span class="codenumber">3.3</span><span class="title">Integration</span><a href="calculus-integration.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-77">Here are some examples of indefinite integrals to demonstarte the power of SageMath:</p>
-<div class="sagecell-sage" id="sage-34"><script type="text/x-sage">f = x^3
+</h1></header><p id="p-102">Here are some examples of indefinite integrals to demonstrate the power of SageMath:</p>
+<div class="sagecell-sage" id="sage-53"><script type="text/x-sage">f = x^3
 show("function:",f,", Indefinite Integral = ",f.integrate(x))
 f= e^x
 show("function:",f,", Indefinite Integral = ",integral(f,x))
@@ -150,8 +150,8 @@ show("function:",f,", Indefinite Integral = ",f.integral(x))
 f=sqrt(x^2-25)/x
 show("function:",f,", Indefinite Integral = ",f.integral(x))
 </script></div>
-<p id="p-78">Now for some Definite Integrals. For example:</p>\begin{equation*}\int_{-1}^{1} \frac{1}{x^{2} + 1} dx = \frac{1}{2} \, \pi\end{equation*}<p id="p-79">This can be confirmed in SageMath quite simply:</p>
-<div class="sagecell-sage" id="sage-35"><script type="text/x-sage">f(x)=1/(1+x^2)
+<p id="p-103">Now for some Definite Integrals. For example:</p>\begin{equation*}\int_{-1}^{1} \frac{1}{x^{2} + 1} dx = \frac{1}{2} \, \pi\end{equation*}<p id="p-104">This can be confirmed in SageMath quite simply:</p>
+<div class="sagecell-sage" id="sage-54"><script type="text/x-sage">f(x)=1/(1+x^2)
 show(f)
 f.integral(x, -1, 1).show()
 </script></div></section></div></main>
