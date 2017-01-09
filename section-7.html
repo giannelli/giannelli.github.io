@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG Declaring Variables and Plotting</title>
+<title>JAG Sage and Python</title>
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -76,12 +76,12 @@ MathJax.Hub.Config({
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="previous-button toolbar-item button" href="section-5.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-7.html">Next</a>
+<a class="previous-button toolbar-item button" href="section-6.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="integers.html">Next</a>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-5.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-7.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-6.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="integers.html">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -102,8 +102,8 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="section-4.html">How to define functions</a></li>
 <li><a href="section-5.html">Symbolic Manipulation</a></li>
-<li><a href="section-6.html" class="active">Declaring Variables and Plotting</a></li>
-<li><a href="section-7.html">Sage and Python</a></li>
+<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" class="active">Sage and Python</a></li>
 </ul>
 <h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
@@ -130,85 +130,115 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-6"><header title="Section 2.3 Declaring Variables and Plotting"><h1 class="heading hide-type" alt="Section 2.3 Declaring Variables and Plotting">
-<span class="type">Section</span><span class="codenumber">2.3</span><span class="title">Declaring Variables and Plotting</span>
-</h1></header><p id="p-50">Sage allows us to solve equations not only numerically but symbolically.
-            To make this possible we have to be able to define variables that are used in the symbolic manipulation.</p>
-<p id="p-51">We will demonstrate this using a complete differential equation example. Taking this approach has the additional
-        advantage of introducing some other Sage methods.</p>
-<section class="subsection" id="subsection-5"><header title="Subsection 2.3.1 Use SageMath to solve differential equations"><h1 class="heading hide-type" alt="Subsection 2.3.1 Use SageMath to solve differential equations">
-<span class="type">Subsection</span><span class="codenumber">2.3.1</span><span class="title">Use SageMath to solve differential equations</span>
-</h1></header><p id="p-52">First we have to know how to describe a differential equation (DE) with Sage.
-                The syntax may not be obvious but the are ample examples in the documentation.</p>
-<p id="p-53">Sage can solve a large class of first-order and second-order Ordinary Differential Equations (ODEs) as
-                well as Initial Value Problems (IVPs). The chapter on differential equations <a href="differential.html" alt="Chapter 4 Differential Equations" title="Chapter 4 Differential Equations">Chapter 4</a> will
-                go into more details.  This particular example just uses DE to illustrate how variables are declared and used.
-            </p>
-<div class="sagecell-sage"><script type="text/x-sage">var('a b c x y z')
-</script></div>
-<p id="p-54">For this first example, I'll express the differential equation using common mathematical notation, then
-                enter it into Sage using Sage's notation. Here's the mathematical notation for our example:
-            </p>\begin{equation}y(t) + rcy'(t) = 0\label{men-1}\tag{2.3.1}\end{equation}\begin{equation}y(0) = 1\label{men-2}\tag{2.3.2}\end{equation}<p id="p-55">This expression says that the unknown function (the function to be found) produces the sum of y(t) and r
-                c y'(t) for any time t, and that the initial value of the function at time zero is 1. (The meaning of r
-                and c will become clear after a bit.) This is an example of a differential equation that specifies an
-                initial value, as many do. In this case I intend to scale the result after acquiring the result, and
-                this initial value makes that easy. Here is how I submit this differential equation to Sage:
-            </p></section><p id="p-56">(From
-            <a class="external-url" href="http://arachnoid.com/sage/differential1.html#Second_Example" target="_blank">P Lutus - Applying Sage to physics</a>)
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-7"><header title="Section 2.4 Sage and Python"><h1 class="heading hide-type" alt="Section 2.4 Sage and Python">
+<span class="type">Section</span><span class="codenumber">2.4</span><span class="title">Sage and Python</span>
+</h1></header><p id="p-61">
+            Sage is built on top of <a class="external-url" href="https://www.python.org/" target="_blank">Python</a>. It will do no harm to find
+            out a little about this programming language and will aid your understanding of some of the
+            examples used in this manual.
         </p>
-<div class="sagecell-sage"><script type="text/x-sage">var('r c t')
-y = function('y')(t)
-de = y + r*c*diff(y,t) == 0
-des = desolve(de,[y,t],[0,1]);des
-</script></div>
-<p id="p-57">Or in the prettier format:</p>
-<div class="sagecell-sage"><script type="text/x-sage">show(des)
-</script></div>
-<p id="p-58">Let us break this entry down:
+<section class="subsection" id="subsection-6"><header title="Subsection 2.4.1 Lists, Tuples, and Dictionaries"><h1 class="heading hide-type" alt="Subsection 2.4.1 Lists, Tuples, and Dictionaries">
+<span class="type">Subsection</span><span class="codenumber">2.4.1</span><span class="title">Lists, Tuples, and Dictionaries</span>
+</h1></header><p id="p-62">Python has a number of built in data types. We will look at three that will come up again and again
+            in this manual.</p>
+<section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.4.1.1 Lists"><h1 class="heading hide-type" alt="Subsubsection 2.4.1.1 Lists">
+<span class="type">Subsubsection</span><span class="codenumber">2.4.1.1</span><span class="title">Lists</span>
+</h1></header><p id="p-63">Creating Lists</p>
+<ol style="list-style-type: decimal;">
+<li id="li-13">
+<p id="p-64">To create a list of items then use the <!--Style me with CSS--><em>[]</em> operator filled with the items:</p>
+<div class="sagecell-sage"><script type="text/x-sage"># Creating lists with Python
+listTransport = ['car', 'bus', 'train', 'plane', 'ship']
+print("A list of vehicles: " + str(listTransport))
 
-            </p>
-<ul style="list-style-type: disc;">
-<li id="li-7">
-                    var('r c t') tells Sage to pre-declare the variables that will be used.
-                </li>
-<li id="li-8">
-                    \(y = function('y')(t)\)
-                    tells Sage that \(y\) is a function of \(t\), e.g. as though every time we type \(y\) we mean \(
-                    y(t)\).
-                    This is a way to identify \(y\) as a function, not just a variable, and associate it with \(t\).
-                </li>
-<li id="li-9">
-                    \(de = y + r*c*diff(y,t) == 0\)
-                    creates a variable \(de\) that contains one of the statements of the DE.
-                </li>
-<li id="li-10">
-                    \(des = desolve(de,[y,t],[0,1])\)
-                    invokes the Sage DE solver using our definition \(de\) as an argument, and:
-                </li>
-<li id="li-11">
-                    \([y,t]\)
-                    identifies \(y\) as the function of interest and \(t\) as the dependent variable
-                </li>
-<li id="li-12">
-                    \([0,1]\)
-                    sets the initial conditions: at \(t = 0, y = 1\), or as we expressed it above, "\(y(0) =1\)".
-                </li>
-</ul>
-<p>
-
-            <p id="p-59">Now let us plot this</p>
-            <div class="sagecell-sage"><script type="text/x-sage">f(t,r,c) = des
-plot(f(t,1,1),(t,0,5),figsize=(4,3))
+listNumbers = [5, 7, 9, 11, 13]
+print("Some odd numbers: " + str(listNumbers))
 </script></div>
-
-            <p id="p-60">Let us now take a more general solution.</p>
-            <div class="sagecell-sage"><script type="text/x-sage">f(t,a,b,r,c) = (a-b) * des + b
-show(f)
-lbl = text("$RC \, Circuit, \, r = 10000\Omega, \, c = 100\mu f $",(3,3),fontsize=12,rgbcolor='#006000')
-p = plot(f(t,0,10,10000,100e-6),(t,0,5), figsize=(4,3),axes_labels=['time','v'])
-show(p+lbl)
+</li>
+<li id="li-14">
+<p id="p-65">Creating an empty list and then adding items.</p>
+<div class="sagecell-sage"><script type="text/x-sage">myList = []
+print("Empty list: " + str(myList))
+myList.append('Car')
+myList.append(100)
+print("After appending some items: " + str(myList))
 </script></div>
-        </p></section></div></main>
+<p id="p-66">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
+                            In this cas a <!--Style me with CSS--><em>sting</em> and a <!--Style me with CSS--><em>number</em>.</p>
+</li>
+<li id="li-15">
+<p id="p-67">Creating lists using python methods.</p>
+<div class="sagecell-sage"><script type="text/x-sage">myBigList = list()
+myBigList.extend(myList)
+print("List after extending: " + str(myBigList))
+myBigList.append(listTransport)
+print("List after appending another list:" + str(myBigList))
+
+listNumbers = range(1, 31, 5)
+print("A list of integers: " + str(listNumbers))
+</script></div>
+<p id="p-68">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
+                            range() and append().</p>
+</li>
+</ol>
+<p id="p-69">Accessing items in a list
+                    
+                </p>
+<p id="p-70"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
+                </p>
+<div class="sagecell-sage"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+print("A list of words: " + str(myList))
+
+print("\nIndices start at '0'")
+print("myList[0] = " + str(myList[0]))
+
+print("\nSecond item to the Fourth item (includes index 1 up to but not including 4")
+print("myList[1:4] = " + str(myList[1:4]))
+
+
+print("\nSecond to last items")
+print("myList[1:] = " + str(myList[1:]))
+
+print("\nAll items from the first to the fourth")
+print("myList[:4] = " + str(myList[:4]))
+
+print("\nThe last item")
+print("myList[-1] = " + str(myList[-1]))
+
+print("\nThe last three items")
+print("myList[-3:] = " + str(myList[-3:]))
+</script></div></section><section class="subsubsection" id="subsubsection-2"><header title="Subsubsection 2.4.1.2 Tuples
+                    
+                "><h1 class="heading hide-type" alt="Subsubsection 2.4.1.2 Tuples
+                    
+                ">
+<span class="type">Subsubsection</span><span class="codenumber">2.4.1.2</span><span class="title">Tuples
+                    
+                </span>
+</h1></header><p id="p-71">
+                   A tuple is an immutable list. A tuple can not be changed in once it is created.
+               </p>
+<p id="p-72">
+                    Tuples are defined exactly like lists except by using \(()\) brackets rather than \([]\) brackets.
+               </p>
+<div class="sagecell-sage"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
+print("A tuple: " + str(t))
+
+print("\nFirst item")
+print("t[0] " + str(t[0]))
+
+print("\nLast item")
+print("t[-1] = " + str(t[-1]))
+
+print("\nThird to last item")
+print("t[2:5] = " + str(t[2:5]))
+
+print("\nThird to last items (alternate)")
+print("t[2:] = " + str(t[2:]))
+</script></div>
+<p id="p-73">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
+                    in the examples and exercises in this manual.  For example, as co-ordinate ranges for plots.
+                    See for example <a knowl="./knowl/plot_tangentline.html" knowl-id="xref-plot_tangentline" alt="Figure 3.2.1 " title="Figure 3.2.1 ">the utility method plot_tangentline() 3.2.1</a>.</p></section></section></section></div></main>
 </div>
 </body>
 </html>
