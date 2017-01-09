@@ -1,11 +1,10 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-09T11:19:11Z    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
 <!--**************************************-->
-<figure class="figure-like"><div class="sagecell-sage"><script type="text/x-sage">def plot_tangentline(f, pt, xrange ):
+<article class="definition-like"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.1</span><span class="title">Utility method <tt class="code-inline tex2jax_ignore">plot_tangentline()</tt></span>
+</h5>
+<div class="sagecell-sage"><script type="text/x-sage">def plot_tangentline(f, pt, xrange ):
     (a,b) = pt
     dydx=f.diff(x)
     m=dydx(x=a)
@@ -17,5 +16,4 @@
         +plot(f,xrange,legend_label='f(x)',detect_poles='show') \
         +plot(dydx,xrange, color='green',legend_label='f\'(x)',linestyle='--',detect_poles='show') \
         +plot(y,xrange,color='red',legend_label=tangent)
-</script></div>
-<figcaption><span class="heading">Figure</span><span class="codenumber">3.2.1</span>Utility method plot_tangentline()</figcaption></figure><span class="incontext"><a href="calculus-derivatives.html#plot_tangentline">in-context</a></span>
+</script></div></article><span class="incontext"><a href="calculus-derivatives.html#plot_tangentline">in-context</a></span>

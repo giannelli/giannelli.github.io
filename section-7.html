@@ -128,21 +128,21 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-7"><header title="Section 2.5 Sage and Python"><h1 class="heading hide-type" alt="Section 2.5 Sage and Python">
 <span class="type">Section</span><span class="codenumber">2.5</span><span class="title">Sage and Python</span>
-</h1></header><p id="p-48">
+</h1></header><p id="p-49">
             Sage is built on top of <a class="external-url" href="https://www.python.org/" target="_blank">Python</a>. It will do no harm to find
             out a little about this programming language and will aid your understanding of some of the
             examples used in this manual.
         </p>
 <section class="subsection" id="subsection-5"><header title="Subsection 2.5.1 Lists, Tuples, and Dictionaries"><h1 class="heading hide-type" alt="Subsection 2.5.1 Lists, Tuples, and Dictionaries">
 <span class="type">Subsection</span><span class="codenumber">2.5.1</span><span class="title">Lists, Tuples, and Dictionaries</span>
-</h1></header><p id="p-49">Python has a number of built in data types. We will look at three that will come up again and again
+</h1></header><p id="p-50">Python has a number of built in data types. We will look at three that will come up again and again
             in this manual.</p>
 <section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.5.1.1 Lists"><h1 class="heading hide-type" alt="Subsubsection 2.5.1.1 Lists">
 <span class="type">Subsubsection</span><span class="codenumber">2.5.1.1</span><span class="title">Lists</span>
-</h1></header><p id="p-50">Creating Lists</p>
+</h1></header><p id="p-51">Creating Lists</p>
 <ol style="list-style-type: decimal;">
 <li id="li-13">
-<p id="p-51">To create a list of items then use the <!--Style me with CSS--><em>[]</em> operator filled with the items:</p>
+<p id="p-52">To create a list of items then use the <!--Style me with CSS--><em>[]</em> operator filled with the items:</p>
 <div class="sagecell-sage"><script type="text/x-sage"># Creating lists with Python
 listTransport = ['car', 'bus', 'train', 'plane', 'ship']
 print("A list of vehicles: " + str(listTransport))
@@ -152,18 +152,18 @@ print("Some odd numbers: " + str(listNumbers))
 </script></div>
 </li>
 <li id="li-14">
-<p id="p-52">Creating an empty list and then adding items.</p>
+<p id="p-53">Creating an empty list and then adding items.</p>
 <div class="sagecell-sage"><script type="text/x-sage">myList = []
 print("Empty list: " + str(myList))
 myList.append('Car')
 myList.append(100)
 print("After appending some items: " + str(myList))
 </script></div>
-<p id="p-53">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
+<p id="p-54">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
                             In this cas a <!--Style me with CSS--><em>sting</em> and a <!--Style me with CSS--><em>number</em>.</p>
 </li>
 <li id="li-15">
-<p id="p-54">Creating lists using python methods.</p>
+<p id="p-55">Creating lists using python methods.</p>
 <div class="sagecell-sage"><script type="text/x-sage">myBigList = list()
 myBigList.extend(myList)
 print("List after extending: " + str(myBigList))
@@ -173,14 +173,14 @@ print("List after appending another list:" + str(myBigList))
 listNumbers = range(1, 31, 5)
 print("A list of integers: " + str(listNumbers))
 </script></div>
-<p id="p-55">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
-                            range() and append().</p>
+<p id="p-56">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
+                            <tt class="code-inline tex2jax_ignore">range()</tt> and <tt class="code-inline tex2jax_ignore">append()</tt>.</p>
 </li>
 </ol>
-<p id="p-56">Accessing items in a list
+<p id="p-57">Accessing items in a list
                     
                 </p>
-<p id="p-57"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
+<p id="p-58"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
                 </p>
 <div class="sagecell-sage"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 print("A list of words: " + str(myList))
@@ -211,10 +211,10 @@ print("myList[-3:] = " + str(myList[-3:]))
 <span class="type">Subsubsection</span><span class="codenumber">2.5.1.2</span><span class="title">Tuples
                     
                 </span>
-</h1></header><p id="p-58">
+</h1></header><p id="p-59">
                    A tuple is an immutable list. A tuple can not be changed in once it is created.
                </p>
-<p id="p-59">
+<p id="p-60">
                     Tuples are defined exactly like lists except by using \(()\) brackets rather than \([]\) brackets.
                </p>
 <div class="sagecell-sage"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
@@ -232,7 +232,7 @@ print("t[2:5] = " + str(t[2:5]))
 print("\nThird to last items (alternate)")
 print("t[2:] = " + str(t[2:]))
 </script></div>
-<p id="p-60">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
+<p id="p-61">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
                     in the examples and exercises in this manual.  For example, as co-ordinate ranges for plots.
                     See for example <a knowl="./knowl/plot_tangentline.html" knowl-id="xref-plot_tangentline" alt="Definition 3.2.1 Utility method plot_tangentline()" title="Definition 3.2.1 Utility method plot_tangentline()">the utility method plot_tangentline() 3.2.1</a>.</p></section></section></section></div></main>
 </div>

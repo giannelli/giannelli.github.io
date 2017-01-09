@@ -128,28 +128,28 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-6"><header title="Section 2.4 Declaring Variables and Plotting"><h1 class="heading hide-type" alt="Section 2.4 Declaring Variables and Plotting">
 <span class="type">Section</span><span class="codenumber">2.4</span><span class="title">Declaring Variables and Plotting</span>
-</h1></header><p id="p-37">Sage allows us to solve equations not only numerically but symbolically.
+</h1></header><p id="p-38">Sage allows us to solve equations not only numerically but symbolically.
             To make this possible we have to be able to define variables that are used in the symbolic manipulation.</p>
-<p id="p-38">We will demonstrate this using a complete differential equation example. Taking this approach has the additional
+<p id="p-39">We will demonstrate this using a complete differential equation example. Taking this approach has the additional
         advantage of introducing some other Sage methods.</p>
 <section class="subsection" id="subsection-4"><header title="Subsection 2.4.1 Use SageMath to solve differential equations"><h1 class="heading hide-type" alt="Subsection 2.4.1 Use SageMath to solve differential equations">
 <span class="type">Subsection</span><span class="codenumber">2.4.1</span><span class="title">Use SageMath to solve differential equations</span>
-</h1></header><p id="p-39">First we have to know how to describe a differential equation (DE) with Sage.
+</h1></header><p id="p-40">First we have to know how to describe a differential equation (DE) with Sage.
                 The syntax may not be obvious but the are ample examples in the documentation.</p>
-<p id="p-40">Sage can solve a large class of first-order and second-order Ordinary Differential Equations (ODEs) as
+<p id="p-41">Sage can solve a large class of first-order and second-order Ordinary Differential Equations (ODEs) as
                 well as Initial Value Problems (IVPs). The chapter on differential equations <a href="differential.html" alt="Chapter 4 Differential Equations" title="Chapter 4 Differential Equations">Chapter 4</a> will
                 go into more details.  This particular example just uses DE to illustrate how variables are declared and used.
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">var('a b c x y z')
 </script></div>
-<p id="p-41">For this first example, I'll express the differential equation using common mathematical notation, then
+<p id="p-42">For this first example, I'll express the differential equation using common mathematical notation, then
                 enter it into Sage using Sage's notation. Here's the mathematical notation for our example:
-            </p>\begin{equation}y(t) + rcy'(t) = 0\label{men-1}\tag{2.4.1}\end{equation}\begin{equation}y(0) = 1\label{men-2}\tag{2.4.2}\end{equation}<p id="p-42">This expression says that the unknown function (the function to be found) produces the sum of y(t) and r
+            </p>\begin{equation}y(t) + rcy'(t) = 0\label{men-1}\tag{2.4.1}\end{equation}\begin{equation}y(0) = 1\label{men-2}\tag{2.4.2}\end{equation}<p id="p-43">This expression says that the unknown function (the function to be found) produces the sum of y(t) and r
                 c y'(t) for any time t, and that the initial value of the function at time zero is 1. (The meaning of r
                 and c will become clear after a bit.) This is an example of a differential equation that specifies an
                 initial value, as many do. In this case I intend to scale the result after acquiring the result, and
                 this initial value makes that easy. Here is how I submit this differential equation to Sage:
-            </p></section><p id="p-43">(From
+            </p></section><p id="p-44">(From
             <a class="external-url" href="http://arachnoid.com/sage/differential1.html#Second_Example" target="_blank">P Lutus - Applying Sage to physics</a>)
         </p>
 <div class="sagecell-sage"><script type="text/x-sage">var('r c t')
@@ -157,15 +157,15 @@ y = function('y')(t)
 de = y + r*c*diff(y,t) == 0
 des = desolve(de,[y,t],[0,1]);des
 </script></div>
-<p id="p-44">Or in the prettier format:</p>
+<p id="p-45">Or in the prettier format:</p>
 <div class="sagecell-sage"><script type="text/x-sage">show(des)
 </script></div>
-<p id="p-45">Let us break this entry down:
+<p id="p-46">Let us break this entry down:
 
             </p>
 <ul style="list-style-type: disc;">
 <li id="li-7">
-                    var('r c t') tells Sage to pre-declare the variables that will be used.
+                    <tt class="code-inline tex2jax_ignore">var('r c t')</tt> tells Sage to pre-declare the variables that will be used.
                 </li>
 <li id="li-8">
                     \(y = function('y')(t)\)
@@ -192,12 +192,12 @@ des = desolve(de,[y,t],[0,1]);des
 </ul>
 <p>
 
-            <p id="p-46">Now let us plot this</p>
+            <p id="p-47">Now let us plot this</p>
             <div class="sagecell-sage"><script type="text/x-sage">f(t,r,c) = des
 plot(f(t,1,1),(t,0,5),figsize=(4,3))
 </script></div>
 
-            <p id="p-47">Let us now take a more general solution.</p>
+            <p id="p-48">Let us now take a more general solution.</p>
             <div class="sagecell-sage"><script type="text/x-sage">f(t,a,b,r,c) = (a-b) * des + b
 show(f)
 lbl = text("$RC \, Circuit, \, r = 10000\Omega, \, c = 100\mu f $",(3,3),fontsize=12,rgbcolor='#006000')

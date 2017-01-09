@@ -1,0 +1,12 @@
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--**************************************-->
+<article class="definition-like"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.2</span><span class="title">Utility method <tt class="code-inline tex2jax_ignore">point_with_coords()</tt></span>
+</h5>
+<div class="sagecell-sage"><script type="text/x-sage">def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
+    plt=point(pt,rgbcolor=color, pointsize=pointsize)
+    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
+    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
+    return plt
+</script></div></article><span class="incontext"><a href="calculus-derivatives.html#point_with_coords">in-context</a></span>
