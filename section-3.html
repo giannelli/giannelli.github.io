@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
 <!--**************************************-->
 <html>
 <head>
@@ -68,7 +64,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
 </div>
@@ -76,12 +72,12 @@ MathJax.Hub.Config({
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="previous-button toolbar-item button" href="section-2.html">Previous</a><a class="up-button button toolbar-item" href="sets.html">Up</a><a class="next-button button toolbar-item" href="basics.html">Next</a>
+<a class="previous-button toolbar-item button" href="basics.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-4.html">Next</a>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-2.html">Previous</a><a class="up-button button toolbar-item" href="sets.html">Up</a><a class="next-button button toolbar-item" href="basics.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="basics.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-4.html">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -92,14 +88,14 @@ MathJax.Hub.Config({
 <li><a href="acknowledgement-1.html">Acknowledgements</a></li>
 <li><a href="preface-1.html">Preface</a></li>
 </ul>
-<h2 class="link active"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
 <ul>
 <li><a href="sage-online.html">SageMath Online</a></li>
 <li><a href="section-2.html">Running From Source</a></li>
-<li><a href="section-3.html" class="active">Executing Sage Commands</a></li>
 </ul>
-<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<h2 class="link active"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
 <ul>
+<li><a href="section-3.html" class="active">Executing Sage Commands</a></li>
 <li><a href="section-4.html">How to define functions</a></li>
 <li><a href="section-5.html">Symbolic Manipulation</a></li>
 <li><a href="section-6.html">Declaring Variables and Plotting</a></li>
@@ -130,72 +126,19 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-3"><header title="Section 1.3 Executing Sage Commands"><h1 class="heading hide-type" alt="Section 1.3 Executing Sage Commands">
-<span class="type">Section</span><span class="codenumber">1.3</span><span class="title">Executing Sage Commands</span>
-</h1></header><p id="p-29">Most of your interaction will be by typing commands into a <!--Style me with CSS--><em>sage cell</em>. Just below this paragraph is an empty cell.
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-3"><header title="Section 2.1 Executing Sage Commands"><h1 class="heading hide-type" alt="Section 2.1 Executing Sage Commands">
+<span class="type">Section</span><span class="codenumber">2.1</span><span class="title">Executing Sage Commands</span>
+</h1></header><p id="p-30">Most of your interaction will be by typing commands into a <!--Style me with CSS--><em>sage cell</em>. Just below this paragraph is an empty cell.
             Click once inside the compute cell and if you are in the Sage Notebook, you will get a more distinctive border around it,
             a blinking cursor inside, plus an “evaluate” link below.
         </p>
 <div class="sagecell-sage"><script type="text/x-sage"></script></div>
-<p id="p-30">At the cursor, type <tt class="code-inline tex2jax_ignore">2+2</tt> and then click on the evaluate link. Did a <tt class="code-inline tex2jax_ignore">4</tt> appear below the cell?
+<p id="p-31">At the cursor, type <tt class="code-inline tex2jax_ignore">2+2</tt> and then click on the evaluate link. Did a <tt class="code-inline tex2jax_ignore">4</tt> appear below the cell?
             If so, you have successfully sent a command off for Sage to evaluate and you have received back the (correct) answer.
         </p>
-<p id="p-31">Here is another compute cell. Try evaluating the command <tt class="code-inline tex2jax_ignore">factorial(300)</tt> here.
+<p id="p-32">Here is another compute cell. Try evaluating the command <tt class="code-inline tex2jax_ignore">factorial(300)</tt> here.
         </p>
-<div class="sagecell-sage"><script type="text/x-sage"></script></div>
-<p id="p-32">That is quite a big integer! </p>
-<p id="p-33">To make new compute cells in the Sage Notebook (only), hover your mouse just above another compute cell,
-            or just below some output from a compute cell. When you see a skinny blue bar across the width of your worksheet,
-            click and you will open up a new compute cell, ready for input. Note that your worksheet will remember any calculations you make,
-            in the order you make them, no matter where you put the cells, so it is best to stay organized and add new cells at the bottom.</p>
-<p id="p-34">Try placing your cursor just below the monstrous value of \(300!\) that you have.
-            Click on the blue bar and try another factorial computation in the new compute cell.
-        </p>
-<p id="p-35">Each compute cell will show output due to only the very last command in the cell. Try to predict the following output before evaluating the cell.</p>
-<div class="sagecell-sage"><script type="text/x-sage">a = 10
-b = 6
-b = b - 10
-a = a + 20
-a
-</script></div>
-<p id="p-36">The following compute cell will not print anything since the one command does not create output. But it will have an effect, as you can see when you execute the subsequent cell. Notice how this uses the value of <tt class="code-inline tex2jax_ignore">b</tt> from above. Execute this compute cell <!--Style me with CSS--><em>once</em>. Exactly once. Even if it <!--Style me with CSS--><em>appears</em> to do nothing. If you execute the cell twice, your credit card may be charged twice.
-        </p>
-<div class="sagecell-sage"><script type="text/x-sage">b = b + 50
-</script></div>
-<p id="p-37">Now execute this cell, which will produce some output.</p>
-<div class="sagecell-sage"><script type="text/x-sage">b + 20
-</script></div>
-<p id="p-38">So <tt class="code-inline tex2jax_ignore">b</tt> came into existence as <tt class="code-inline tex2jax_ignore">6</tt>. We subtracted \(10\) immediately afterward. Then a subsequent cell added <tt class="code-inline tex2jax_ignore">50</tt>. This assumes you executed this cell <!--Style me with CSS--><em>exactly</em> once! In the last cell we create <tt class="code-inline tex2jax_ignore">b+20</tt> (but do not save it) and it is this value (\(66\)) that is output, while <tt class="code-inline tex2jax_ignore">b</tt> is still \(46\).
-        </p>
-<p id="p-39">You can combine several commands on one line with a semi-colon. This is a great way to get multiple outputs from a compute cell. The syntax for building a matrix should be somewhat obvious when you see the output, but if not, it is not particularly important to understand now.</p>
-<div class="sagecell-sage"><script type="text/x-sage">A = matrix([[3, 1], [5,2]]); A
-</script></div>
-<div class="sagecell-sage"><script type="text/x-sage">print A; print ; A.inverse()
-</script></div>
-<section class="subsection" id="subsection-4"><header title="Subsection 1.3.1 Immediate Help"><h1 class="heading hide-type" alt="Subsection 1.3.1 Immediate Help">
-<span class="type">Subsection</span><span class="codenumber">1.3.1</span><span class="title">Immediate Help</span>
-</h1></header><p id="p-40">Some commands in Sage are “functions,” an example is <tt class="code-inline tex2jax_ignore">factorial()</tt> above. Other commands are “methods” of an object and are like characteristics of objects, an example is <tt class="code-inline tex2jax_ignore">.inverse()</tt> as a method of a matrix. Once you know how to create an object (such as a matrix), then it is easy to see all the available methods. Write the name of the object, place a period (“dot”) and hit the TAB key. If you have <tt class="code-inline tex2jax_ignore">A</tt> defined from above, then the compute cell below is ready to go, click into it and then hit TAB (not “evaluate”!). You should get a long list of
-                possible methods.
-            </p>
-<div class="sagecell-sage"><script type="text/x-sage">A.
-</script></div>
-<p id="p-41">To get some help on how to use a method with an object, write its name after a dot (with no parentheses) and then use a question-mark and hit TAB. (Hit the escape key “ESC” to remove the list, or click on the text for a method.)
-            </p>
-<div class="sagecell-sage"><script type="text/x-sage">A.inverse?
-</script></div>
-<p id="p-42">With one more question-mark and a TAB you can see the actual computer instructions that were programmed into Sage to make the method work, once you scoll down past the documentation delimited by the triple quotes (<tt class="code-inline tex2jax_ignore">"""</tt>):
-            </p>
-<div class="sagecell-sage"><script type="text/x-sage">A.inverse??
-</script></div>
-<p id="p-43">It is worthwhile to see what Sage does when there is an error. You will probably see a lot of these at first, and initially they will be a bit intimidating. But with time, you will learn how to use them effectively and you will also become more proficient with Sage and see them less often. Execute the compute cell below, it asks for the inverse of a matrix that has no inverse. Then reread the commentary.</p>
-<div class="sagecell-sage"><script type="text/x-sage">B = matrix([[2, 20], [5, 50]])
-B.inverse()
-</script></div>
-<p id="p-44">Click just to the left of the error message to expand it fully (another click hides it totally, and a third click brings back the abbreviated form). Read the bottom of an error message first, it is your best explanation. Here a <tt class="code-inline tex2jax_ignore">ZeroDivisionError</tt> is not 100
-                %
-                accurate, but is close. The matrix is not invertible, not dissimilar to how we cannot divide scalars by zero. The remainder of the message begins at the top showing were the error first happened in your code and then the various places where intermediate functions were called, until the actual piece of Sage where the problem occurred. Sometimes this information will give you some clues, sometimes it is totally undecipherable. So do not let it scare you if it seems mysterious, but do remember to always read the last line first, then go back and read the first few lines for
-                something that looks like your code.
-            </p></section></section></div></main>
+<div class="sagecell-sage"><script type="text/x-sage"></script></div></section></div></main>
 </div>
 </body>
 </html>

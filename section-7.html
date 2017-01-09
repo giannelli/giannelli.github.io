@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
 <!--**************************************-->
 <html>
 <head>
@@ -68,7 +64,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
 </div>
@@ -96,10 +92,10 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="sage-online.html">SageMath Online</a></li>
 <li><a href="section-2.html">Running From Source</a></li>
-<li><a href="section-3.html">Executing Sage Commands</a></li>
 </ul>
 <h2 class="link active"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
 <ul>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
 <li><a href="section-4.html">How to define functions</a></li>
 <li><a href="section-5.html">Symbolic Manipulation</a></li>
 <li><a href="section-6.html">Declaring Variables and Plotting</a></li>
@@ -130,23 +126,23 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-7"><header title="Section 2.4 Sage and Python"><h1 class="heading hide-type" alt="Section 2.4 Sage and Python">
-<span class="type">Section</span><span class="codenumber">2.4</span><span class="title">Sage and Python</span>
-</h1></header><p id="p-61">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-7"><header title="Section 2.5 Sage and Python"><h1 class="heading hide-type" alt="Section 2.5 Sage and Python">
+<span class="type">Section</span><span class="codenumber">2.5</span><span class="title">Sage and Python</span>
+</h1></header><p id="p-48">
             Sage is built on top of <a class="external-url" href="https://www.python.org/" target="_blank">Python</a>. It will do no harm to find
             out a little about this programming language and will aid your understanding of some of the
             examples used in this manual.
         </p>
-<section class="subsection" id="subsection-6"><header title="Subsection 2.4.1 Lists, Tuples, and Dictionaries"><h1 class="heading hide-type" alt="Subsection 2.4.1 Lists, Tuples, and Dictionaries">
-<span class="type">Subsection</span><span class="codenumber">2.4.1</span><span class="title">Lists, Tuples, and Dictionaries</span>
-</h1></header><p id="p-62">Python has a number of built in data types. We will look at three that will come up again and again
+<section class="subsection" id="subsection-5"><header title="Subsection 2.5.1 Lists, Tuples, and Dictionaries"><h1 class="heading hide-type" alt="Subsection 2.5.1 Lists, Tuples, and Dictionaries">
+<span class="type">Subsection</span><span class="codenumber">2.5.1</span><span class="title">Lists, Tuples, and Dictionaries</span>
+</h1></header><p id="p-49">Python has a number of built in data types. We will look at three that will come up again and again
             in this manual.</p>
-<section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.4.1.1 Lists"><h1 class="heading hide-type" alt="Subsubsection 2.4.1.1 Lists">
-<span class="type">Subsubsection</span><span class="codenumber">2.4.1.1</span><span class="title">Lists</span>
-</h1></header><p id="p-63">Creating Lists</p>
+<section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.5.1.1 Lists"><h1 class="heading hide-type" alt="Subsubsection 2.5.1.1 Lists">
+<span class="type">Subsubsection</span><span class="codenumber">2.5.1.1</span><span class="title">Lists</span>
+</h1></header><p id="p-50">Creating Lists</p>
 <ol style="list-style-type: decimal;">
 <li id="li-13">
-<p id="p-64">To create a list of items then use the <!--Style me with CSS--><em>[]</em> operator filled with the items:</p>
+<p id="p-51">To create a list of items then use the <!--Style me with CSS--><em>[]</em> operator filled with the items:</p>
 <div class="sagecell-sage"><script type="text/x-sage"># Creating lists with Python
 listTransport = ['car', 'bus', 'train', 'plane', 'ship']
 print("A list of vehicles: " + str(listTransport))
@@ -156,18 +152,18 @@ print("Some odd numbers: " + str(listNumbers))
 </script></div>
 </li>
 <li id="li-14">
-<p id="p-65">Creating an empty list and then adding items.</p>
+<p id="p-52">Creating an empty list and then adding items.</p>
 <div class="sagecell-sage"><script type="text/x-sage">myList = []
 print("Empty list: " + str(myList))
 myList.append('Car')
 myList.append(100)
 print("After appending some items: " + str(myList))
 </script></div>
-<p id="p-66">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
+<p id="p-53">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
                             In this cas a <!--Style me with CSS--><em>sting</em> and a <!--Style me with CSS--><em>number</em>.</p>
 </li>
 <li id="li-15">
-<p id="p-67">Creating lists using python methods.</p>
+<p id="p-54">Creating lists using python methods.</p>
 <div class="sagecell-sage"><script type="text/x-sage">myBigList = list()
 myBigList.extend(myList)
 print("List after extending: " + str(myBigList))
@@ -177,14 +173,14 @@ print("List after appending another list:" + str(myBigList))
 listNumbers = range(1, 31, 5)
 print("A list of integers: " + str(listNumbers))
 </script></div>
-<p id="p-68">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
+<p id="p-55">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
                             range() and append().</p>
 </li>
 </ol>
-<p id="p-69">Accessing items in a list
+<p id="p-56">Accessing items in a list
                     
                 </p>
-<p id="p-70"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
+<p id="p-57"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
                 </p>
 <div class="sagecell-sage"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 print("A list of words: " + str(myList))
@@ -207,18 +203,18 @@ print("myList[-1] = " + str(myList[-1]))
 
 print("\nThe last three items")
 print("myList[-3:] = " + str(myList[-3:]))
-</script></div></section><section class="subsubsection" id="subsubsection-2"><header title="Subsubsection 2.4.1.2 Tuples
+</script></div></section><section class="subsubsection" id="subsubsection-2"><header title="Subsubsection 2.5.1.2 Tuples
                     
-                "><h1 class="heading hide-type" alt="Subsubsection 2.4.1.2 Tuples
+                "><h1 class="heading hide-type" alt="Subsubsection 2.5.1.2 Tuples
                     
                 ">
-<span class="type">Subsubsection</span><span class="codenumber">2.4.1.2</span><span class="title">Tuples
+<span class="type">Subsubsection</span><span class="codenumber">2.5.1.2</span><span class="title">Tuples
                     
                 </span>
-</h1></header><p id="p-71">
+</h1></header><p id="p-58">
                    A tuple is an immutable list. A tuple can not be changed in once it is created.
                </p>
-<p id="p-72">
+<p id="p-59">
                     Tuples are defined exactly like lists except by using \(()\) brackets rather than \([]\) brackets.
                </p>
 <div class="sagecell-sage"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
@@ -236,7 +232,7 @@ print("t[2:5] = " + str(t[2:5]))
 print("\nThird to last items (alternate)")
 print("t[2:] = " + str(t[2:]))
 </script></div>
-<p id="p-73">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
+<p id="p-60">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
                     in the examples and exercises in this manual.  For example, as co-ordinate ranges for plots.
                     See for example <a knowl="./knowl/plot_tangentline.html" knowl-id="xref-plot_tangentline" alt="Definition 3.2.1 Utility method plot_tangentline()" title="Definition 3.2.1 Utility method plot_tangentline()">the utility method plot_tangentline() 3.2.1</a>.</p></section></section></section></div></main>
 </div>

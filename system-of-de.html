@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
 <!--**************************************-->
 <html>
 <head>
@@ -68,7 +64,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
 </div>
@@ -96,10 +92,10 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="sage-online.html">SageMath Online</a></li>
 <li><a href="section-2.html">Running From Source</a></li>
-<li><a href="section-3.html">Executing Sage Commands</a></li>
 </ul>
 <h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
 <ul>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
 <li><a href="section-4.html">How to define functions</a></li>
 <li><a href="section-5.html">Symbolic Manipulation</a></li>
 <li><a href="section-6.html">Declaring Variables and Plotting</a></li>
@@ -132,9 +128,9 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="system-of-de"><header title="Section 4.3 Systems Of Equations"><h1 class="heading hide-type" alt="Section 4.3 Systems Of Equations">
 <span class="type">Section</span><span class="codenumber">4.3</span><span class="title">Systems Of Equations</span><a href="system-of-de.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-12"><header title="Subsection 4.3.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.3.1 First Example">
+</h1></header><section class="subsection" id="subsection-11"><header title="Subsection 4.3.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.3.1 First Example">
 <span class="type">Subsection</span><span class="codenumber">4.3.1</span><span class="title">First Example</span>
-</h1></header><p id="p-189">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-19}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-20}\tag{4.3.2}\end{equation}<p id="p-190">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-21}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-22}\tag{4.3.4}\end{equation}<p id="p-191">You should now be comfortable with defining the variables, the functions, and the initial conditions.
+</h1></header><p id="p-176">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-19}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-20}\tag{4.3.2}\end{equation}<p id="p-177">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-21}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-22}\tag{4.3.4}\end{equation}<p id="p-178">You should now be comfortable with defining the variables, the functions, and the initial conditions.
                 The only difference is the use of the desolve_system() method. So let us jump straight in:
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">t = var('t')
@@ -145,7 +141,7 @@ de2 = diff(y,t) - x == 0
 solution = desolve_system([de1,de2],[x,y],ics=[0,1,2])
 show(solution)
 </script></div>
-<p id="p-192">Try this for fun:</p>
+<p id="p-179">Try this for fun:</p>
 <div class="sagecell-sage"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
@@ -164,7 +160,7 @@ parametric_plot((solnx,solny), (t,0, 50*pi))
 </script></div>
 <div class="sagecell-sage"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
 </script></div>
-<p id="p-193">A controlled explosion!</p></section></section></div></main>
+<p id="p-180">A controlled explosion!</p></section></section></div></main>
 </div>
 </body>
 </html>
