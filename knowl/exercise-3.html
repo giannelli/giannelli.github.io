@@ -1,31 +1,22 @@
-<!doctype html>
-<html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-03T00:27:13Z    *-->
+<!--*    on 2017-01-09T11:19:11Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="robots" content="noindex, nofollow">
-</head>
-<body>
 <article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">2</span>
 </h5>
-<p id="p-168">Response to Oscillating Input</p>
-<p id="p-169">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\tag{4.4.10}\end{equation}<p id="p-170">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
-<p id="p-171">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-172">where \(M\) and \(N\) are constants.</p>
-<p id="p-173">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-174">Sage Commands:</p>
+<p id="p-219">Response to Oscillating Input</p>
+<p id="p-220">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\tag{4.4.10}\end{equation}<p id="p-221">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
+<p id="p-222">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-223">where \(M\) and \(N\) are constants.</p>
+<p id="p-224">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-225">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
 y = function('y')(t)
 de = diff(y,t) == a*y + cos(omega*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<p id="p-175">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article><span class="incontext"><a href="exercises-de.html#exercise-3">in-context</a></span>
-</body>
-</html>
+<p id="p-226">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article><span class="incontext"><a href="exercises-de.html#exercise-3">in-context</a></span>
