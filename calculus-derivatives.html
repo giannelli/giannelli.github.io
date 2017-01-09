@@ -328,11 +328,12 @@ point(pt1,rgbcolor='black', pointsize=30)+plot(y,-3,3)+plot(y_line,-3,3,color='r
 <p>
                 </p>
 <p id="p-100">
-                    See the examples below for how these are defined.  Running the next sage cell
-                    will not produce any results but just stores the result in memory for future use.
+                    Running the next sage cell will not produce any visible results but will just stores this
+                    user defined method in memory for use in other cells.
                     The next few examples make use of this <!--Style me with CSS--><em>user defined function</em>
                     to save a bit of typing.
                 </p>
+<p id="p-101">Remember to run this before running any other Sage Cell that makes use of it.</p>
 <article class="definition-like" id="plot_tangentline"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.2.1</span><span class="title">Utility method plot_tangentline()</span>
 </h5>
@@ -348,11 +349,11 @@ point(pt1,rgbcolor='black', pointsize=30)+plot(y,-3,3)+plot(y_line,-3,3,color='r
         +plot(f,xrange,legend_label='f(x)',detect_poles='show') \
         +plot(dydx,xrange, color='green',legend_label='f\'(x)',linestyle='--',detect_poles='show') \
         +plot(y,xrange,color='red',legend_label=tangent)
-</script></div></article><p id="p-101">Redo the previous example using our method:</p>
+</script></div></article><p id="p-102">Redo the previous example using our method:</p>
 <div class="sagecell-sage"><script type="text/x-sage">plot_tangentline(f=(x^2-1)/(x^2+x+1), pt=(1,0), xrange=(x,-3,3))
 </script></div>
-<p id="p-102">Now wasn't that a lot easier!  No for the rest.</p>
-<p id="p-103">
+<p id="p-103">Now wasn't that a lot easier!  No for the rest.</p>
+<p id="p-104">
                     Section 2.4, Exercises 28 - 31, Page 112
                 </p>
 <div class="sagecell-sage"><script type="text/x-sage">f28=sqrt(x)/(x+1)
@@ -371,10 +372,10 @@ f31=1/(1+x^2)
 show(f31)
 plot_tangentline(f31, pt=(-1,1/2), xrange=(x,-5,5)).show(ymin=-1,ymax=2)
 </script></div>
-<p id="p-104">
+<p id="p-105">
                     Section 2.4, Exercise 36, Page 113, Nth Derivative of a function
                 </p>
-<p id="p-105">The second argument to the diff method is the derivative order: 1 for 1st derivative, 2 for second derivative, etc.</p>
+<p id="p-106">The second argument to the diff method is the derivative order: 1 for 1st derivative, 2 for second derivative, etc.</p>
 <div class="sagecell-sage"><script type="text/x-sage">f=x*sin(x)
 f.show()
 f.diff(x,1).show()
@@ -385,10 +386,10 @@ f.diff(x,34).show()
 f.diff(x,35).show()
 f.diff(x,36).show()
 </script></div>
-<p id="p-106">
+<p id="p-107">
                     Section 2.4, Exercise 52, Page 114
                 </p>
-<p id="p-107">
+<p id="p-108">
                     This demonstrates the use of some predefined names: <!--Style me with CSS--><em>omega</em> and <!--Style me with CSS--><em>mu</em>. These will get formatted to
                     \(\omega\) and \(\mu\) when you use <!--Style me with CSS--><em>show()</em>.  Find out about <!--Style me with CSS--><em>LaTex</em> to see what the other possibilities
                     are, for example, <!--Style me with CSS--><em>xi</em> for \(\xi\) and <!--Style me with CSS--><em>Xi</em> for uppercase \(\Xi\), and so on.
@@ -406,14 +407,14 @@ for solution in solve(dF,theta):
 plot(F(W=50, mu=0.6), (theta,-2*pi,2*pi),ymin=-1000,ymax=1000,detect_poles='show')
 </script></div></section></section><section class="subsection" id="subsection-8"><header title="Subsection 3.2.2 Section 2.6 Implicit Differentiation"><h1 class="heading hide-type" alt="Subsection 3.2.2 Section 2.6 Implicit Differentiation">
 <span class="type">Subsection</span><span class="codenumber">3.2.2</span><span class="title">Section 2.6 Implicit Differentiation</span>
-</h1></header><p id="p-108">
+</h1></header><p id="p-109">
                 Section 2.6, Example 2 - The Folium Of Descartes
-            </p>\begin{equation*}x^3+y^3 = 6 x y\end{equation*}<p id="p-109">To plot this function we use the SageMath <!--Style me with CSS--><em>implicit_plot</em> method.</p>
+            </p>\begin{equation*}x^3+y^3 = 6 x y\end{equation*}<p id="p-110">To plot this function we use the SageMath <!--Style me with CSS--><em>implicit_plot</em> method.</p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var ('x y')
 expr=x^3+y^3==6*x*y
 implicit_plot(expr, (x,-2,5), (y,-2,5), figsize=4, axes="true" )
 </script></div>
-<p id="p-110">
+<p id="p-111">
                 Lets explore this function a bit more with SageMath.  Some of this may not make anysense just now
                 but will become clearer as course proceeds.
             </p>
@@ -439,13 +440,13 @@ pretty_print(html("$$D=%s$$"%H(2,2).det()))
 pretty_print(html("$$f_{xx}=%s$$"%H(0,0)[0,0]))
 pretty_print(html("$$D=%s$$"%H(0,0).det()))
 </script></div>
-<p id="p-111">
+<p id="p-112">
                 Now that we have familiarised our self with the shape of this equation lets now use sage to find the equation of the line at \((3,3)\).
                 Implicit differentiation is required here to compute \(\frac{dy}{dx}\) so that we can find the gradient at this point.</p>
-<p id="p-112"> Next find the horizontal axis of the curve by using the <!--Style me with CSS--><em>solve()</em>
+<p id="p-113"> Next find the horizontal axis of the curve by using the <!--Style me with CSS--><em>solve()</em>
                 passing in our expression and the partial derivative (set equal to zero - although this is assumed if we do not explicitly say so).
             </p>
-<p id="p-113">
+<p id="p-114">
                 The solutions are printed using a for loop (learn some Python!) and an <!--Style me with CSS--><em>if</em> statement that prints results
                 only if \(x\) and \(y\) are real - in the 'ring' <!--Style me with CSS--><em>RR</em>.  There are two solutions,
                 which we can see from the plot that this is correct.  Take some time to understand the code used to do the plotting.
@@ -502,7 +503,7 @@ for pt in pts:
 
 show(P)
 </script></div>
-<p id="p-114">
+<p id="p-115">
                 Section 2.6, Exercise 3, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
@@ -512,17 +513,17 @@ f(x) = expr.lhs() - expr.rhs() # Notice the '1' has been moved to the same side.
 dydx = f.implicit_derivative(y,x)
 show("Derivative: ", dydx)
 </script></div>
-<p id="p-115">Summary</p>
-<p id="p-116">
+<p id="p-116">Summary</p>
+<p id="p-117">
                 Differentiate the full equation with respect to \(x\).  Use the chain rule for \(y\) variable results in:
                 \begin{equation*}x \ {\mapsto}\ 3 \, x^{2} + 3 \, y^{2} \frac {dy}{dx} = 0\end{equation*}
                 Rearranging gives: \begin{equation*}\frac {dy}{dx} = - \frac {x^2}{y^2}\end{equation*}</p>
-<p id="p-117">
+<p id="p-118">
                 The remaining equations in this section will be solved without explanation.
             </p>
-<p id="p-118">The following examples make use of this predefined function.  It is not very robust
+<p id="p-119">The following examples make use of this predefined function.  It is not very robust
             and assumes that the \(expr\) argumnet is sage Expression type with variable \(x\) and \(y\).</p>
-<p id="p-119">Make sure you run this before running the other examples.  There will be no output but the function
+<p id="p-120">Make sure you run this before running the other examples.  There will be no output but the function
             will be stored in memory available for use in other cells.</p>
 <article class="definition-like" id="my_implicit_derivative"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.2.4</span>
@@ -533,7 +534,7 @@ show("Derivative: ", dydx)
     pretty_print(r'\frac {dy}{dx}='+LatexExpr(latex(dydx)))
     # show("Dy=",dydx) #Use this instead of the one above if you are using the online sage notebook.
     return dydx
-</script></div></article><p id="p-120">
+</script></div></article><p id="p-121">
                 Section 2.6, Exercise 4, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
@@ -543,7 +544,7 @@ f(x) = expr.lhs() - expr.rhs() # Notice the '2' has been moved to the other side
 dydx = f.implicit_derivative(y,x)
 show("Derivative: ", dydx)
 </script></div>
-<p id="p-121">
+<p id="p-122">
                 Section 2.6, Exercise 5, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
@@ -553,7 +554,7 @@ f(x) = expr.lhs() - expr.rhs()
 dydx = f.implicit_derivative(y,x)
 show("Derivative: ", dydx)
 </script></div>
-<p id="p-122">
+<p id="p-123">
                 Section 2.6, Exercise 6, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
@@ -563,7 +564,7 @@ f(x) = expr.lhs() - expr.rhs()
 dydx = f.implicit_derivative(y,x)
 show("Derivative: ", dydx)
 </script></div>
-<p id="p-123">
+<p id="p-124">
                 Section 2.6, Exercise 7 - 16, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
@@ -590,7 +591,7 @@ my_implicit_derivative(y*cos(x) == 1+sin(x*y))
 my_implicit_derivative(tan(x-y) == y/(1+x^2))
 pretty_print('Is this last one correct??!!')
 </script></div>
-<p id="p-124">
+<p id="p-125">
                 Section 2.6, Exercise 19, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y,m= var('x,y,m')
@@ -609,7 +610,7 @@ P2=implicit_plot(expr, (x,-2,2), (y,-2,2))
 P3=plot(Y,(x,-2,2),color='red',legend_label=tangent)
 P1+P2+P3
 </script></div>
-<p id="p-125">
+<p id="p-126">
                 Section 2.6, Exercise 20, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y,m= var('x,y,m')
@@ -628,7 +629,7 @@ P2=implicit_plot(expr, (x,-10,10), (y,-10,10),axes="true")
 P3=plot(Y,(x,-5,5),color='red',legend_label=tangent,ymin=-5,ymax=5)
 P1+P2+P3
 </script></div>
-<p id="p-126">
+<p id="p-127">
                 Section 2.6, Exercise 21 - Cardioid, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y,m= var('x,y,m')
@@ -647,7 +648,7 @@ P2=implicit_plot(expr, (x,-1,1), (y,-1,1),axes="true")
 P3=plot(Y,(x,-1,1),color='red',legend_label=tangent,ymin=-1,ymax=1)
 P1+P2+P3
 </script></div>
-<p id="p-127">
+<p id="p-128">
                 Section 2.6, Exercise 23 - Lemniscate, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y,m= var('x,y,m')

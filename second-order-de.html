@@ -134,9 +134,9 @@ MathJax.Hub.Config({
 <span class="type">Section</span><span class="codenumber">4.2</span><span class="title">Second Order Differential Equations</span><a href="second-order-de.html" class="permalink">¶ permalink</a>
 </h1></header><section class="subsection" id="subsection-11"><header title="Subsection 4.2.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.2.1 First Example">
 <span class="type">Subsection</span><span class="codenumber">4.2.1</span><span class="title">First Example</span>
-</h1></header><p id="p-172">For this first example, we'll look at a harmonic oscillator problem with unit constants.</p>\begin{equation}\frac{d^2 y}{dx^2} + y(x) = 0\label{men-11}\tag{4.2.1}\end{equation}<p id="p-173">Initial conditions:</p>\begin{equation}y(0) = 0\label{men-12}\tag{4.2.2}\end{equation}\begin{equation}\frac{dy}{dx}(0) = 1\label{men-13}\tag{4.2.3}\end{equation}<section class="subsubsection" id="subsubsection-12"><header title="Subsubsection 4.2.1.1 The General Solution"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.1 The General Solution">
+</h1></header><p id="p-173">For this first example, we'll look at a harmonic oscillator problem with unit constants.</p>\begin{equation}\frac{d^2 y}{dx^2} + y(x) = 0\label{men-11}\tag{4.2.1}\end{equation}<p id="p-174">Initial conditions:</p>\begin{equation}y(0) = 0\label{men-12}\tag{4.2.2}\end{equation}\begin{equation}\frac{dy}{dx}(0) = 1\label{men-13}\tag{4.2.3}\end{equation}<section class="subsubsection" id="subsubsection-12"><header title="Subsubsection 4.2.1.1 The General Solution"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.1 The General Solution">
 <span class="type">Subsubsection</span><span class="codenumber">4.2.1.1</span><span class="title">The General Solution</span>
-</h1></header><p id="p-174">As before, we define \(y(x)\) and our DE. Notice the \(2\) as the third argument to the 
+</h1></header><p id="p-175">As before, we define \(y(x)\) and our DE. Notice the \(2\) as the third argument to the 
                     diff()
                  method.
                     This tells the method to differentiate twice. We could have used diff(y,x,x) instead.
@@ -146,44 +146,44 @@ MathJax.Hub.Config({
 harmonic = diff(y,x,2) + y == 0
 harmonic
 </script></div>
-<p id="p-175">Now obtain the general solution:</p>
+<p id="p-176">Now obtain the general solution:</p>
 <div class="sagecell-sage"><script type="text/x-sage">sol_general = desolve(harmonic,y)
 show(sol_general)
 </script></div>
-<p id="p-176">This is the general solution as can be seen by the \(K_1,K_2\) constants.
+<p id="p-177">This is the general solution as can be seen by the \(K_1,K_2\) constants.
                 </p>
-<p id="p-177">
+<p id="p-178">
                     \begin{equation}K_{2} \cos\left(x\right) + K_{1} \sin\left(x\right)\label{men-14}\tag{4.2.4}\end{equation}
                 </p></section><section class="subsubsection" id="subsubsection-13"><header title="Subsubsection 4.2.1.2 Initial Conditions"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.2 Initial Conditions">
 <span class="type">Subsubsection</span><span class="codenumber">4.2.1.2</span><span class="title">Initial Conditions</span>
-</h1></header><p id="p-178">From the <!--Style me with CSS--><em>Docstring</em> for desolve we find that \(ics\) should be \([0,0,1]\) so
+</h1></header><p id="p-179">From the <!--Style me with CSS--><em>Docstring</em> for desolve we find that \(ics\) should be \([0,0,1]\) so
                     let us try it.
                 </p>
 <div class="sagecell-sage"><script type="text/x-sage">sol_initial_con = desolve(harmonic,y,ics=[0,0,1])
 show(sol_initial_con)
 </script></div>
-<p id="p-179">
+<p id="p-180">
                     \begin{equation}\sin\left(x\right)\label{men-15}\tag{4.2.5}\end{equation}
                 </p>
-<p id="p-180">Here we have again stored the solution to a variable sol_initial_con and used 
+<p id="p-181">Here we have again stored the solution to a variable sol_initial_con and used 
                     show()
                  to pretty=print the output.
                 </p>
-<p id="p-181">Try using some other initial conditions, for example,
+<p id="p-182">Try using some other initial conditions, for example,
                     \([0,1,1]\)
                 </p>
 <div class="sagecell-sage"><script type="text/x-sage">sol_initial_con = desolve(harmonic,y,ics=[0,1,1])
 show(sol_initial_con)
 </script></div>
-<p id="p-182">
+<p id="p-183">
                     \begin{equation}\cos\left(x\right) + \sin\left(x\right)\label{men-16}\tag{4.2.6}\end{equation}
                 </p>
-<p id="p-183">As you can see these two <!--Style me with CSS--><em>particular</em> solutions are instances of the <!--Style me with CSS--><em>general</em> solution
+<p id="p-184">As you can see these two <!--Style me with CSS--><em>particular</em> solutions are instances of the <!--Style me with CSS--><em>general</em> solution
                     given above.
                 </p></section><section class="subsubsection" id="subsubsection-14"><header title="Subsubsection 4.2.1.3 Symbolic Differential Equations"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.3 Symbolic Differential Equations">
 <span class="type">Subsubsection</span><span class="codenumber">4.2.1.3</span><span class="title">Symbolic Differential Equations</span>
-</h1></header><p id="p-184">Let us now try and solve the same equation this time with a mass \(m\) and spring constant \(k\).
-                </p>\begin{equation}m\frac{d^2 y}{dx^2} + ky(x) = 0\label{men-17}\tag{4.2.7}\end{equation}<p id="p-185">Now we have to define additional variables for the two constants. It is also useful to add some
+</h1></header><p id="p-185">Let us now try and solve the same equation this time with a mass \(m\) and spring constant \(k\).
+                </p>\begin{equation}m\frac{d^2 y}{dx^2} + ky(x) = 0\label{men-17}\tag{4.2.7}\end{equation}<p id="p-186">Now we have to define additional variables for the two constants. It is also useful to add some
                     constraints onto these variables.
                     We do this using the assume() method:
                 </p>
@@ -196,12 +196,12 @@ harmonic2 = m*diff(y,x,2) + k*y == 0
 sol2=desolve(harmonic2,y,ivar=x)
 show(sol2)
 </script></div>
-<p id="p-186">
+<p id="p-187">
                     \begin{equation}K_{2} \cos\left(\frac{\sqrt{k} x}{\sqrt{m}}\right) + K_{1} \sin\left(\frac{\sqrt{k}
                         x}{\sqrt{m}}\right)
                     \label{men-18}\tag{4.2.8}\end{equation}
                 </p>
-<p id="p-187">Notice that we had to specify which of the variables \((x,m,k)\) is the independent variable using
+<p id="p-188">Notice that we had to specify which of the variables \((x,m,k)\) is the independent variable using
                     the ivar=x argument.
                 </p></section></section></section></div></main>
 </div>
