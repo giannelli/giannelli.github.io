@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-09T11:19:11Z    *-->
+    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -333,7 +333,10 @@ point(pt1,rgbcolor='black', pointsize=30)+plot(y,-3,3)+plot(y_line,-3,3,color='r
                     The next few examples make use of this <!--Style me with CSS--><em>user defined function</em>
                     to save a bit of typing.
                 </p>
-<figure class="figure-like" id="plot_tangentline"><div class="sagecell-sage"><script type="text/x-sage">def plot_tangentline(f, pt, xrange ):
+<article class="definition-like" id="plot_tangentline"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.1</span><span class="title">Utility method plot_tangentline()</span>
+</h5>
+<div class="sagecell-sage"><script type="text/x-sage">def plot_tangentline(f, pt, xrange ):
     (a,b) = pt
     dydx=f.diff(x)
     m=dydx(x=a)
@@ -345,8 +348,7 @@ point(pt1,rgbcolor='black', pointsize=30)+plot(y,-3,3)+plot(y_line,-3,3,color='r
         +plot(f,xrange,legend_label='f(x)',detect_poles='show') \
         +plot(dydx,xrange, color='green',legend_label='f\'(x)',linestyle='--',detect_poles='show') \
         +plot(y,xrange,color='red',legend_label=tangent)
-</script></div>
-<figcaption><span class="heading">Figure</span><span class="codenumber">3.2.1</span>Utility method plot_tangentline()</figcaption></figure><p id="p-101">Redo the previous example using our method:</p>
+</script></div></article><p id="p-101">Redo the previous example using our method:</p>
 <div class="sagecell-sage"><script type="text/x-sage">plot_tangentline(f=(x^2-1)/(x^2+x+1), pt=(1,0), xrange=(x,-3,3))
 </script></div>
 <p id="p-102">Now wasn't that a lot easier!  No for the rest.</p>
@@ -448,7 +450,27 @@ pretty_print(html("$$D=%s$$"%H(0,0).det()))
                 only if \(x\) and \(y\) are real - in the 'ring' <!--Style me with CSS--><em>RR</em>.  There are two solutions,
                 which we can see from the plot that this is correct.  Take some time to understand the code used to do the plotting.
             </p>
-<div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
+<article class="definition-like" id="point_with_coords"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.2</span><span class="title">Utility method point_with_coords()</span>
+</h5>
+<div class="sagecell-sage"><script type="text/x-sage">def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
+    plt=point(pt,rgbcolor=color, pointsize=pointsize)
+    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
+    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
+    return plt
+</script></div></article><article class="definition-like" id="cross_hair"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.3</span><span class="title">Utility method cross_hair()</span>
+</h5>
+<div class="sagecell-sage"><script type="text/x-sage">def cross_hair(pt, xrange, yrange):
+    plt=point_with_coords(pt,xrange,yrange)
+    pt1=(xrange[1],pt[1])
+    pt2=(xrange[2],pt[1])
+    plt += line([pt1, pt2], linestyle='--')
+    pt1=(pt[0], yrange[1])
+    pt2=(pt[0],yrange[2])
+    plt += line([pt1, pt2], linestyle='--')
+    return plt
+</script></div></article><div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
 expr = x^3+y^3==6*x*y
 show(expr)
 f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
@@ -457,13 +479,6 @@ show(dydx)
 
 xrange = (x,-2,5)
 yrange = (y,-2,5)
-
-def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
-    plt=point(pt,rgbcolor=color, pointsize=pointsize)
-    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
-    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
-    return plt
-
 
 pt=(3,3)
 m=dydx(x=pt[0],y=pt[1])
@@ -480,17 +495,6 @@ for solution in solve([expr, dydx==0],x,y,solution_dict=True):
     if solution[x] in RR and solution[y] in RR:
         print("x = {0}   y = {1}".format(solution[x], solution[y]))
         pts.append((solution[x],solution[y]))
-
-
-def cross_hair(pt, xrange, yrange):
-    plt=point_with_coords(pt,xrange,yrange)
-    pt1=(xrange[1],pt[1])
-    pt2=(xrange[2],pt[1])
-    plt += line([pt1, pt2], linestyle='--')
-    pt1=(pt[0], yrange[1])
-    pt2=(pt[0],yrange[2])
-    plt += line([pt1, pt2], linestyle='--')
-    return plt
 
 P += implicit_plot(expr, xrange, yrange, axes="true" )
 for pt in pts:
@@ -520,15 +524,16 @@ show("Derivative: ", dydx)
             and assumes that the \(expr\) argumnet is sage Expression type with variable \(x\) and \(y\).</p>
 <p id="p-119">Make sure you run this before running the other examples.  There will be no output but the function
             will be stored in memory available for use in other cells.</p>
-<div class="sagecell-sage"><script type="text/x-sage">def my_implicit_derivative(expr):
+<article class="definition-like" id="my_implicit_derivative"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.4</span>
+</h5>Utility method my_implicit_derivative()<div class="sagecell-sage"><script type="text/x-sage">def my_implicit_derivative(expr):
     show(expr)
     f(x,y) = expr.lhs() - expr.rhs()
     dydx = f.implicit_derivative(y,x)
     pretty_print(r'\frac {dy}{dx}='+LatexExpr(latex(dydx)))
     # show("Dy=",dydx) #Use this instead of the one above if you are using the online sage notebook.
     return dydx
-</script></div>
-<p id="p-120">
+</script></div></article><p id="p-120">
                 Section 2.6, Exercise 4, Page 127
             </p>
 <div class="sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
