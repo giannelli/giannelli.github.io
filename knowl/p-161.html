@@ -1,4 +1,11 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
 <!--**************************************-->
-<h5 class="heading"><span class="type">Paragraph</span></h5><p>For this first example, we'll look at a harmonic oscillator problem with unit constants.</p><span class="incontext"><a href="second-order-de.html#p-161">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5><p>
+                Second, notice the appearance of the \(e^{\left(\frac{t}{c r}\right)}\) and \(e^{\left(-\frac{t}{c
+                r}\right)}
+            \) terms in the result.
+                These are present because the DE solver wrongly assumes that an initial value is present or needed.
+                The secret to putting this equation into the desired form is to remove these exponential terms.
+                What you need to do is set the constant <!--Style me with CSS--><em>C</em> ( <!--Style me with CSS--><em>_C</em> in the raw Sage response) to zero:
+            </p><span class="incontext"><a href="first-order-de.html#p-161">in-context</a></span>

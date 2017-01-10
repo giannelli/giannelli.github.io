@@ -2,17 +2,14 @@
 <!--* Generated from MathBook XML source *-->
 <!--**************************************-->
 <article class="list"><h5 class="heading">
-<span class="type">Item</span><span class="codenumber">3</span>
+<span class="type">Item</span><span class="codenumber">2</span>
 </h5>
-<p id="p-55">Creating lists using python methods.</p>
-<div class="sagecell-sage"><script type="text/x-sage">myBigList = list()
-myBigList.extend(myList)
-print("List after extending: " + str(myBigList))
-myBigList.append(listTransport)
-print("List after appending another list:" + str(myBigList))
-
-listNumbers = range(1, 31, 5)
-print("A list of integers: " + str(listNumbers))
+<p id="p-55">Creating an empty list and then adding items.</p>
+<div class="sagecell-sage"><script type="text/x-sage">myList = []
+print("Empty list: " + str(myList))
+myList.append('Car')
+myList.append(100)
+print("After appending some items: " + str(myList))
 </script></div>
-<p id="p-56">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
-                            <tt class="code-inline tex2jax_ignore">range()</tt> and <tt class="code-inline tex2jax_ignore">append()</tt>.</p></article><span class="incontext"><a href="section-7.html#li-15">in-context</a></span>
+<p id="p-56">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
+                            In this cas a <!--Style me with CSS--><em>sting</em> and a <!--Style me with CSS--><em>number</em>.</p></article><span class="incontext"><a href="section-7.html#li-15">in-context</a></span>
