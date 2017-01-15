@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -63,7 +63,7 @@ MathJax.Hub.Config({
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
 \)</div>
-<header id="masthead"><div class="banner"><div class="container">
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
@@ -71,13 +71,13 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="previous-button toolbar-item button" href="basics.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-4.html">Next</a>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="basics.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="basics.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-4.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="basics.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-4.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="basics.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="basics.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-4.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -118,6 +118,8 @@ MathJax.Hub.Config({
 <li><a href="exercises-de.html">Exercises</a></li>
 <li><a href="references-2.html">References (places I plagiarized)</a></li>
 </ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul><li><a href="section-15.html">A1</a></li></ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="appendix-1.html">Notation</a></li>
@@ -132,13 +134,13 @@ MathJax.Hub.Config({
             Click once inside the compute cell and if you are in the Sage Notebook, you will get a more distinctive border around it,
             a blinking cursor inside, plus an “evaluate” link below.
         </p>
-<div class="sagecell-sage"><script type="text/x-sage"></script></div>
+<div class="sagecell-sage" id="sage-1"><script type="text/x-sage"></script></div>
 <p id="p-34">At the cursor, type <tt class="code-inline tex2jax_ignore">2+2</tt> and then click on the evaluate link. Did a <tt class="code-inline tex2jax_ignore">4</tt> appear below the cell?
             If so, you have successfully sent a command off for Sage to evaluate and you have received back the (correct) answer.
         </p>
 <p id="p-35">Here is another compute cell. Try evaluating the command <tt class="code-inline tex2jax_ignore">factorial(300)</tt> here.
         </p>
-<div class="sagecell-sage"><script type="text/x-sage"></script></div></section></div></main>
+<div class="sagecell-sage" id="sage-2"><script type="text/x-sage"></script></div></section></div></main>
 </div>
 </body>
 </html>

@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -63,7 +63,7 @@ MathJax.Hub.Config({
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
 \)</div>
-<header id="masthead"><div class="banner"><div class="container">
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
@@ -71,13 +71,13 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="previous-button toolbar-item button" href="section-6.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="integers.html">Next</a>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-6.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="basics.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-6.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="integers.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-6.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="basics.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -118,6 +118,8 @@ MathJax.Hub.Config({
 <li><a href="exercises-de.html">Exercises</a></li>
 <li><a href="references-2.html">References (places I plagiarized)</a></li>
 </ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul><li><a href="section-15.html">A1</a></li></ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="appendix-1.html">Notation</a></li>
@@ -128,22 +130,22 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-7"><header title="Section 2.5 Sage and Python"><h1 class="heading hide-type" alt="Section 2.5 Sage and Python">
 <span class="type">Section</span><span class="codenumber">2.5</span><span class="title">Sage and Python</span>
-</h1></header><p id="p-51">
+</h1></header><p id="p-52">
             Sage is built on top of <a class="external-url" href="https://www.python.org/" target="_blank">Python</a>. It will do no harm to find
             out a little about this programming language and will aid your understanding of some of the
             examples used in this manual.
         </p>
 <section class="subsection" id="subsection-5"><header title="Subsection 2.5.1 Lists, Tuples, and Dictionaries"><h1 class="heading hide-type" alt="Subsection 2.5.1 Lists, Tuples, and Dictionaries">
 <span class="type">Subsection</span><span class="codenumber">2.5.1</span><span class="title">Lists, Tuples, and Dictionaries</span>
-</h1></header><p id="p-52">Python has a number of built in data types. We will look at three that will come up again and again
+</h1></header><p id="p-53">Python has a number of built in data types. We will look at three that will come up again and again
             in this manual.</p>
 <section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.5.1.1 Lists"><h1 class="heading hide-type" alt="Subsubsection 2.5.1.1 Lists">
 <span class="type">Subsubsection</span><span class="codenumber">2.5.1.1</span><span class="title">Lists</span>
-</h1></header><p id="p-53">Creating Lists</p>
-<ol style="list-style-type: decimal;">
+</h1></header><p id="p-54">Creating Lists</p>
+<ol id="ol-1" style="list-style-type: decimal;">
 <li id="li-14">
-<p id="p-54">To create a list of items then use the <!--Style me with CSS--><em>[]</em> operator filled with the items:</p>
-<div class="sagecell-sage"><script type="text/x-sage"># Creating lists with Python
+<p id="p-55">To create a list of items then use the <tt class="code-inline tex2jax_ignore">[]</tt> operator filled with the items:</p>
+<div class="sagecell-sage" id="sage-18"><script type="text/x-sage"># Creating lists with Python
 listTransport = ['car', 'bus', 'train', 'plane', 'ship']
 print("A list of vehicles: " + str(listTransport))
 
@@ -152,19 +154,19 @@ print("Some odd numbers: " + str(listNumbers))
 </script></div>
 </li>
 <li id="li-15">
-<p id="p-55">Creating an empty list and then adding items.</p>
-<div class="sagecell-sage"><script type="text/x-sage">myList = []
+<p id="p-56">Creating an empty list and then adding items.</p>
+<div class="sagecell-sage" id="sage-19"><script type="text/x-sage">myList = []
 print("Empty list: " + str(myList))
 myList.append('Car')
 myList.append(100)
 print("After appending some items: " + str(myList))
 </script></div>
-<p id="p-56">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
+<p id="p-57">Notice that the items inside the list can be different <!--Style me with CSS--><em>types</em>.
                             In this cas a <!--Style me with CSS--><em>sting</em> and a <!--Style me with CSS--><em>number</em>.</p>
 </li>
 <li id="li-16">
-<p id="p-57">Creating lists using python methods.</p>
-<div class="sagecell-sage"><script type="text/x-sage">myBigList = list()
+<p id="p-58">Creating lists using python methods.</p>
+<div class="sagecell-sage" id="sage-20"><script type="text/x-sage">myBigList = list()
 myBigList.extend(myList)
 print("List after extending: " + str(myBigList))
 myBigList.append(listTransport)
@@ -173,16 +175,16 @@ print("List after appending another list:" + str(myBigList))
 listNumbers = range(1, 31, 5)
 print("A list of integers: " + str(listNumbers))
 </script></div>
-<p id="p-58">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
+<p id="p-59">This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on
                             <tt class="code-inline tex2jax_ignore">range()</tt> and <tt class="code-inline tex2jax_ignore">append()</tt>.</p>
 </li>
 </ol>
-<p id="p-59">Accessing items in a list
+<p id="p-60">Accessing items in a list
                     
                 </p>
-<p id="p-60"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
+<p id="p-61"><a class="external-url" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.
                 </p>
-<div class="sagecell-sage"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+<div class="sagecell-sage" id="sage-21"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 print("A list of words: " + str(myList))
 
 print("\nIndices start at '0'")
@@ -211,13 +213,13 @@ print("myList[-3:] = " + str(myList[-3:]))
 <span class="type">Subsubsection</span><span class="codenumber">2.5.1.2</span><span class="title">Tuples
                     
                 </span>
-</h1></header><p id="p-61">
+</h1></header><p id="p-62">
                    A tuple is an immutable list. A tuple can not be changed in once it is created.
                </p>
-<p id="p-62">
-                    Tuples are defined exactly like lists except by using \(()\) brackets rather than \([]\) brackets.
+<p id="p-63">
+                    Tuples are defined exactly like lists except by using <tt class="code-inline tex2jax_ignore">()</tt> brackets rather than <tt class="code-inline tex2jax_ignore">[]</tt> brackets.
                </p>
-<div class="sagecell-sage"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
+<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
 print("A tuple: " + str(t))
 
 print("\nFirst item")
@@ -232,9 +234,47 @@ print("t[2:5] = " + str(t[2:5]))
 print("\nThird to last items (alternate)")
 print("t[2:] = " + str(t[2:]))
 </script></div>
-<p id="p-63">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
+<p id="p-64">Tuples are handy structures for thing like \((x,y,z)\) coordinates and are used extensively
                     in the examples and exercises in this manual.  For example, as co-ordinate ranges for plots.
-                    See for example <a knowl="./knowl/plot_tangentline.html" knowl-id="xref-plot_tangentline" alt="Definition 3.2.1 Utility method plot_tangentline()" title="Definition 3.2.1 Utility method plot_tangentline()">the utility method plot_tangentline() 3.2.1</a>.</p></section></section></section></div></main>
+                    See for example <a knowl="./knowl/plot_tangentline.html" knowl-id="xref-plot_tangentline" alt="Definition 3.2.1 Utility method plot_tangentline()" title="Definition 3.2.1 Utility method plot_tangentline()">the utility method plot_tangentline() 3.2.1</a>.</p></section><section class="subsubsection" id="subsubsection-3"><header title="Subsubsection 2.5.1.3 Dictionaries (Associative Arrays)
+                    
+                "><h1 class="heading hide-type" alt="Subsubsection 2.5.1.3 Dictionaries (Associative Arrays)
+                    
+                ">
+<span class="type">Subsubsection</span><span class="codenumber">2.5.1.3</span><span class="title">Dictionaries (Associative Arrays)
+                    
+                </span>
+</h1></header><p id="p-65">
+                    Unlike lists, which are indexed by a numbers, dictionaries are indexed by keys,
+                    which can be any immutable type.
+                </p>
+<p id="p-66">
+                    A dictionary is an <!--Style me with CSS--><em>unordered</em> set of key : value pairs, with the requirement
+                    that the keys are unique (within the dictionary). A pair of braces creates an empty
+                    dictionary: <tt class="code-inline tex2jax_ignore">{}</tt>. Placing a comma-separated list of key:value pairs within the braces
+                    adds initial key:value pairs to the dictionary.
+                </p>
+<div class="sagecell-sage" id="sage-23"><script type="text/x-sage">print("Creating a dictionary")
+ids = {'jack': 123, 'john': 345}
+ids['gill'] = 456
+print("ids = " + str(ids))
+
+print("\nAccess an item using the key 'jack'")
+print(ids['jack'])
+
+print("\nDelete item with key 'john'")
+del ids['john']
+print(ids)
+
+print("\nCheck if jack is present")
+print('jack' in ids)
+
+print("\nCheck if john is present")
+print('john' in ids)
+
+print("\nList all the keys")
+print(ids.keys())
+</script></div></section></section></section></div></main>
 </div>
 </body>
 </html>
