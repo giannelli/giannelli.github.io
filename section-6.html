@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -63,7 +63,7 @@ MathJax.Hub.Config({
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
 \)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<header id="masthead"><div class="banner"><div class="container">
 <a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
@@ -71,13 +71,13 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-5.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="basics.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-7.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="section-5.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-7.html">Next</a>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-5.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="basics.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-7.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-5.html">Previous</a><a class="up-button button toolbar-item" href="basics.html">Up</a><a class="next-button button toolbar-item" href="section-7.html">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -118,8 +118,11 @@ MathJax.Hub.Config({
 <li><a href="exercises-de.html">Exercises</a></li>
 <li><a href="references-2.html">References (places I plagiarized)</a></li>
 </ul>
-<h2 class="link"><a href="differential.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
-<ul><li><a href="section-15.html">A1</a></li></ul>
+<h2 class="link"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-15.html">A1</a></li>
+<li><a href="section-16.html">A2</a></li>
+</ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="appendix-1.html">Notation</a></li>
@@ -145,7 +148,7 @@ MathJax.Hub.Config({
                 well as Initial Value Problems (IVPs). The chapter on differential equations <a href="differential.html" alt="Chapter 4 Differential Equations" title="Chapter 4 Differential Equations">Chapter 4</a> will
                 go into more details.  This particular example just uses DE to illustrate how variables are declared and used.
             </p>
-<div class="sagecell-sage" id="sage-13"><script type="text/x-sage">var('a b c x y z')
+<div class="sagecell-sage"><script type="text/x-sage">var('a b c x y z')
 </script></div>
 <p id="p-45">For this first example, I'll express the differential equation using common mathematical notation, then
                 enter it into Sage using Sage's notation. Here's the mathematical notation for our example:
@@ -157,18 +160,18 @@ MathJax.Hub.Config({
             </p></section><p id="p-47">(From
             <a class="external-url" href="http://arachnoid.com/sage/differential1.html#Second_Example" target="_blank">P Lutus - Applying Sage to physics</a>)
         </p>
-<div class="sagecell-sage" id="sage-14"><script type="text/x-sage">var('r c t')
+<div class="sagecell-sage"><script type="text/x-sage">var('r c t')
 y = function('y')(t)
 de = y + r*c*diff(y,t) == 0
 des = desolve(de,[y,t],[0,1]);des
 </script></div>
 <p id="p-48">Or in the prettier format:</p>
-<div class="sagecell-sage" id="sage-15"><script type="text/x-sage">show(des)
+<div class="sagecell-sage"><script type="text/x-sage">show(des)
 </script></div>
 <p id="p-49">Let us break this entry down:
 
             </p>
-<ul id="ul-3" style="list-style-type: disc;">
+<ul style="list-style-type: disc;">
 <li id="li-8">
                     <tt class="code-inline tex2jax_ignore">var('r c t')</tt> tells Sage to pre-declare the variables that will be used.
                 </li>
@@ -198,12 +201,12 @@ des = desolve(de,[y,t],[0,1]);des
 <p>
 
             <p id="p-50">Now let us plot this</p>
-            <div class="sagecell-sage" id="sage-16"><script type="text/x-sage">f(t,r,c) = des
+            <div class="sagecell-sage"><script type="text/x-sage">f(t,r,c) = des
 plot(f(t,1,1),(t,0,5),figsize=(4,3))
 </script></div>
 
             <p id="p-51">Let us now take a more general solution.</p>
-            <div class="sagecell-sage" id="sage-17"><script type="text/x-sage">f(t,a,b,r,c) = (a-b) * des + b
+            <div class="sagecell-sage"><script type="text/x-sage">f(t,a,b,r,c) = (a-b) * des + b
 show(f)
 lbl = text("$RC \, Circuit, \, r = 10000\Omega, \, c = 100\mu f $",(3,3),fontsize=12,rgbcolor='#006000')
 p = plot(f(t,0,10,10000,100e-6),(t,0,5), figsize=(4,3),axes_labels=['time','v'])

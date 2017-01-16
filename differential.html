@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG Linear Algebra</title>
+<title>JAG Differential Equations</title>
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -63,7 +63,7 @@ MathJax.Hub.Config({
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
 \)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<header id="masthead"><div class="banner"><div class="container">
 <a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
@@ -71,13 +71,13 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="references-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-15.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="references-1.html">Previous</a><a class="up-button button toolbar-item" href="index.html">Up</a><a class="next-button button toolbar-item" href="first-order-de.html">Next</a>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="references-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-15.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="references-1.html">Previous</a><a class="up-button button toolbar-item" href="index.html">Up</a><a class="next-button button toolbar-item" href="first-order-de.html">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -110,7 +110,7 @@ MathJax.Hub.Config({
 <li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
 <li><a href="references-1.html">References</a></li>
 </ul>
-<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<h2 class="link active"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
 <ul>
 <li><a href="first-order-de.html">First Order Differential Equations</a></li>
 <li><a href="second-order-de.html">Second Order Differential Equations</a></li>
@@ -118,8 +118,11 @@ MathJax.Hub.Config({
 <li><a href="exercises-de.html">Exercises</a></li>
 <li><a href="references-2.html">References (places I plagiarized)</a></li>
 </ul>
-<h2 class="link active"><a href="differential.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
-<ul><li><a href="section-15.html">A1</a></li></ul>
+<h2 class="link"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-15.html">A1</a></li>
+<li><a href="section-16.html">A2</a></li>
+</ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="appendix-1.html">Notation</a></li>
@@ -128,11 +131,13 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="differential"><header title="Chapter 5 Linear Algebra"><h1 class="heading" alt="Chapter 5 Linear Algebra">
-<span class="type">Chapter</span><span class="codenumber">5</span><span class="title">Linear Algebra</span><a href="differential.html" class="permalink">¶ permalink</a>
-</h1></header><section class="introduction" id="introduction-7"><p id="p-224">
-            MATH08057: Introduction to Linear Algebra : December 2016
-        </p></section><nav class="summary-links"><a href="section-15.html"><span class="codenumber">5.1</span><span class="title">A1</span></a></nav></section></div></main>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="differential"><header title="Chapter 4 Differential Equations"><h1 class="heading" alt="Chapter 4 Differential Equations">
+<span class="type">Chapter</span><span class="codenumber">4</span><span class="title">Differential Equations</span><a href="differential.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-6"><p id="p-128">Gilbert Strang, and Cleve Moler. RES.18-009 Learn Differential Equations: Up Close with Gilbert Strang and
+            Cleve Moler. Fall 2015.
+            Massachusetts Institute of Technology: <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/" target="_blank">
+                MIT OpenCourseWare</a>.
+        </p></section><nav class="summary-links"><a href="first-order-de.html"><span class="codenumber">4.1</span><span class="title">First Order Differential Equations</span></a><a href="second-order-de.html"><span class="codenumber">4.2</span><span class="title">Second Order Differential Equations</span></a><a href="system-of-de.html"><span class="codenumber">4.3</span><span class="title">Systems Of Equations</span></a><a href="exercises-de.html"><span class="codenumber">4.4</span><span class="title">Exercises</span></a><a href="references-2.html"><span class="codenumber">4.5</span><span class="title">References (places I plagiarized)</span></a></nav></section></div></main>
 </div>
 </body>
 </html>
