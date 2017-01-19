@@ -33,7 +33,15 @@ MathJax.Hub.Config({
         scale: 88,
     },
 });
-    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate Sage Code'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
@@ -145,9 +153,108 @@ MathJax.Hub.Config({
                  [7 marks] 
             </p></article></div>
 <p id="p-246">
-            If b ∈ A then it is a linear combination of vectors already in A and for all a ∈ A it follows thata+b∈A. HenceA′ ⊆A. Leta∈Athensinceb∈Aitfollowsthata−b∈A. Therefore (a−b)+b ∈ A′. Hence A ⊆ A′. Thus A′ = A. Since A is a subspace, it follows that A′ is a subspace.
-            Ifb̸∈Aandb̸=0thenfornovalueofa∈Ais−a=b. Inparticulara+b̸=0. Thisshows that 0 ̸= A′ and so A′ cannot be a subspace.
-        </p></section></div></main>
+            If b ∈ A then it is a linear combination of vectors already in A and for all a ∈ A it follows that
+            a+b∈A.
+            Hence A′ ⊆ A. Let a ∈A then since b ∈ A it follows that a−b ∈ A. Therefore (a−b)+b ∈ A′. Hence A ⊆ A′.
+            Thus A′ = A. Since A is a subspace, it follows that A′ is a subspace.
+            If b ̸ ∈A and b ̸= 0 then for no value of a ∈ A is −a=b. In particular a+b ̸= 0. This
+            shows that 0 ̸= A′ and so A′ cannot be a subspace.
+        </p>
+<p id="p-247">
+            Before grappling this problem it helps  to get a picture.  I believe this is the best way to approach any problem.
+            (Maybe this is just the old physicist in me).  Sometimes it is not possible but not very often.
+        </p>
+<p id="p-248">
+            So lets first look at how SageMath can help us here. Since \(A\) is a subspace \(\mathbb{R}3\) then it must
+            be a plane passing through the origin; subspaces must contain the \(\left\{0\right\}\) vector and pass through the origin.
+        </p>
+<p id="p-249">
+            Take, for example, the plane passing through the origin given by:
+            \begin{equation*}2x+3y-z = 0\end{equation*}
+        </p>
+<p id="p-250">
+            Consider the case where our vector \(\vec{a}\) is the direction vector starting at position \((2,2,2)\)
+            and extending to \((3,4,5)\). This lies on the plane going through the origin and is our subspace \(A\).
+        </p>
+<p id="p-251">
+            There are several ways of plotting this plane in SageMath. The first one is to find the normal to the plane and use it
+            in an  implicit_plot3d().
+        </p>
+<p id="p-252">
+            Lets call the start point of \(\vec{a}\) \(P\) and the endpoint \(Q\).  These points are also the position
+            vectors \(\vec{OP}\) and \(\vec{OQ}\) and also lie on the plane (since the origin is on the plane).  Hence,
+            a normal to the plane is given by: \begin{equation*}\vec{n} = \vec{OP} \times \vec{OQ}\end{equation*}.
+            We know that the dot product of the normal \(\vec{n}\) with any of our three vectors should be zero. This
+            enables us to use implicit_plot3d() with an implicit equation for any point on the plane.
+        </p>
+<div class="sagecell-sage"><script type="text/x-sage">var ('x,y,z')
+ptP=(2,2,2)
+ptQ=(3,4,5)
+ptR=(5,0,7)
+ptS=(-2,4,10)
+
+P=vector(ptP);
+Q=vector(ptQ);
+R=vector(ptR)
+S=vector(ptS)
+
+nPQ=P.cross_product(Q);
+show("nPQ = ", nPQ.normalized())
+
+nPR=P.cross_product(R);
+show("nPR = ", nPR.normalized())
+
+nPS=P.cross_product(S);
+show("nPS = ", nPS.normalized())
+
+nQR=Q.cross_product(R);
+show("nQR = ", nQR.normalized())
+
+nQS=Q.cross_product(S);
+show("nQS = ", nQS.normalized())
+
+nRS=R.cross_product(S);
+show("nRS = ", nRS.normalized())
+
+
+a=Q-P
+b=S-P
+b2=R-P
+
+show("a X b = ", a.cross_product(b))
+show("a X b2 = ", a.cross_product(b2))
+
+n=P.cross_product(Q);
+show(n.normalized())
+
+f=n[0]*x+n[1]*y+n[2]*z==0
+f(x=1,y=3,z=5)
+f(x=-1,y=2,z=5)
+
+n2=P.cross_product(S)
+show(n2.normalized())
+n3=a.cross_product(b2)
+show(n3.normalized())
+
+
+pv = vector([x, y, z])
+AQ = pv - Q; AQ;
+BR = pv - R; BR;
+
+P0 = point3d((0, 0, 0), color = 'black', size = 10)
+a_arrow=arrow(P,Q,color='red',width=10)
+b_arrow=arrow(P,S,color='green',width=10)
+b2_arrow=arrow(P,R,color='black',width=10)
+n_arrow=arrow((0,0,0),n,color='purple',width=10)
+n3_arrow=arrow((5,0,7),n3,color='purple',width=10)
+show("n3 dot BR = ", n3.dot_product(BR))
+
+
+plane=implicit_plot3d(n.dot_product(AQ), (x, -10, 10), (y, -10, 10), (z, -10, 10), color = 'blue',opacity=0.6,aspect_ratio=1)
+plane2=implicit_plot3d(n3.dot_product(BR), (x, -10, 10), (y, -10, 10), (z, -10, 10), color = 'green',opacity=0.6,aspect_ratio=1)
+final_plot=P0+a_arrow+b_arrow+b2_arrow+n_arrow+plane+n_arrow+plane2+n3_arrow
+final_plot.show(aspect_ratio=1)
+</script></div></section></div></main>
 </div>
 </body>
 </html>
