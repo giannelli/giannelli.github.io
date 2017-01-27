@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-01-27T22:58:44Z    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG The Product Rule</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-17.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-17.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html">About John A Giannelli</a></li>
+<li><a href="dedication-1.html">Dedication</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html">SageMath Online</a></li>
+<li><a href="section-2.html">Running From Source</a></li>
+</ul>
+<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
+<li><a href="section-4.html">How to define functions</a></li>
+<li><a href="section-5.html">Symbolic Manipulation</a></li>
+<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html">Sage and Python</a></li>
+</ul>
+<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html">Derivatives</a></li>
+<li><a href="calculus-integration.html">Integration</a></li>
+<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
+<li><a href="references-1.html">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html">Systems Of Equations</a></li>
+<li><a href="exercises-de.html">Exercises</a></li>
+<li><a href="references-2.html">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link active"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-15.html">A1</a></li>
+<li><a href="section-16.html">A2</a></li>
+<li><a href="section-17.html">A3</a></li>
+<li><a href="section-product-rule.html" class="active">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-product-rule"><header title="Section 5.4 The Product Rule"><h1 class="heading hide-type" alt="Section 5.4 The Product Rule">
+<span class="type">Section</span><span class="codenumber">5.4</span><span class="title">The Product Rule</span><a href="section-product-rule.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-265">The next rule we are going to explore is called the <em class="terminology">product rule</em> of differentiation.  We use this rule when there are two or more variable factors in the expression we are differentiating. (Remember, we already have the constant factor rule to deal with two factors when one of the two factors is a constant.)\begin{equation}\lzoo{x}{\fe{f}{x}\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}\label{equation-product-rule}\tag{5.4.1}\end{equation}</p>
+<p id="p-266">Intuitively, what is happening in this rule is that we are alternately treating one factor as a constant (the one not being differentiated) and the other factor as a variable function (the one that is being differentiated).  We then add these two rates of change together.</p>
+<p id="p-267">Ultimately, you want to perform this rule in your head just like all of the other rules.  Your instructor, however, may initially want you to show steps; under that presumption, steps are going to be shown in each and every example of this lab when the product rule is applied. Two simple examples of the product rule are shown in <a knowl="./knowl/table-product-rule.html" knowl-id="xref-table-product-rule" alt="Table 5.4.1 " title="Table 5.4.1 ">5.4.1</a>.</p>
+<figure class="figure-like" id="table-product-rule"><table>
+<tr>
+<td class="c t b2 r0 l0 t3 lines">Given function</td>
+<td class="c t b2 r0 l0 t3 lines">Derivative</td>
+</tr>
+<tr>
+<td class="c t b1 r0 l0 t0 lines">\(\fe{y}{x}=x^2\fe{\sin}{x}\phantom{\displaystyle\lzoo{x}{x^2}}\)</td>
+<td class="c t b1 r0 l0 t0 lines">\(\begin{aligned}[t]\fe{\fd{y}}{x}&amp;=\lzoo{x}{x^2}\cdot\fe{\sin}{x}+x^2\cdot\lzoo{x}{\fe{\sin}{x}}\\&amp;=2x\fe{\sin}{x}+x^2\fe{\cos}{x}\end{aligned}\)</td>
+</tr>
+<tr>
+<td class="c t b3 r0 l0 t0 lines">\(P=e^t\fe{\cos}{t}\phantom{\displaystyle\lzoo{t}{e^t}}\)</td>
+<td class="c t b3 r0 l0 t0 lines">\(\begin{aligned}[t]\lz{P}{t}&amp;=\lzoo{t}{e^t}\cdot\fe{\cos}{t}+e^t\cdot\lzoo{t}{\fe{\cos}{t}}\\&amp;=e^t\fe{\cos}{t}-e^t\fe{\sin}{t}\end{aligned}\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">5.4.1</span>Examples of the Product Rule</figcaption></figure><p id="p-268">A decision you'll need to make is how to handle a constant factor in a term that requires the product rule.  Two options for taking the derivative of \(\fe{f}{x}=5x^2\fe{\ln}{x}\) are shown in <a knowl="./knowl/figure-constant-factors-with-product-rule.html" knowl-id="xref-figure-constant-factors-with-product-rule" alt="Figure 5.4.2 " title="Figure 5.4.2 ">5.4.2</a>.</p>
+<div class="sidebyside" style="" id="figure-constant-factors-with-product-rule">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;">Option A</h5>
+<h5 class="sbsheader" style="width:50%;">Option B</h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-269">\begin{align*}
+\fe{\fd{f}}{x}&amp;=5\left[\lzoo{x}{x^2}\fe{\ln}{x}+x^2\lzoo{x}{\fe{\ln}{x}}\right]\\
+&amp;=5\left[2x\fe{\ln}{x}+x^2\cdot\frac{1}{x}\right]\\
+&amp;=10x\fe{\ln}{x}+5x
+\end{align*}</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-270">\begin{align*}
+\fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}\\
+&amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}\\
+&amp;=10x\fe{\ln}{x}+5x
+\end{align*}</p></div>
+</div>
+<figcaption><span class="heading">Figure</span><span class="codenumber">5.4.2</span></figcaption>
+</div>
+<p id="p-271">In Option B we are treating the factor of \(5\) as a part of the first variable factor.  In doing so, the factor of \(5\) distributes itself.  This is the preferred treatment of the author, so this is what you will see illustrated in this lab.</p>
+<section class="exercises" id="exercises-3"><header title="Exercises 5.4.1 Exercises"><h1 class="heading hide-type" alt="Exercises 5.4.1 Exercises">
+<span class="type">Subsection</span><span class="codenumber">5.4.1</span><span class="title">Exercises</span>
+</h1></header><div class="exercisegroup" id="exercisegroup-1">
+<article class="introduction" id="introduction-8"><p id="p-272">Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p></article><div class="exercisegroup-exercises cols2">
+<article class="exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-273">\(\fe{T}{t}=2\fe{\sec}{t}\fe{\tan}{t}\)</p></article><article class="exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-274">\(k=\dfrac{e^t\sqrt{t}}{2}\)</p></article><article class="exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-275">\(y=4x\fe{\ln}{x}+3^x-x^3\)</p></article><article class="exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-276">\(\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-unsimplified-product">
+<article class="introduction" id="introduction-9"><p id="p-277">Find each of the following derivatives <!--Style me with CSS--><em>without first simplifying the formula</em>; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, <!--Style me with CSS--><em>check</em> your answer by simplifying the original expression and then taking the derivative of that simplified expression.</p></article><div class="exercisegroup-exercises cols3">
+<article class="exercise-like" id="unsimplified-product-first"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-278">\(\lzoo{x}{x^4x^7}\)</p></article><article class="exercise-like" id="exercise-9"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-279">\(\lzoo{x}{x\cdot x^{10}}\)</p></article><article class="exercise-like" id="unsimplified-product-last"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-280">\(\lzoo{x}{\sqrt{x}\sqrt{x^{21}}}\)</p></article>
+</div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
