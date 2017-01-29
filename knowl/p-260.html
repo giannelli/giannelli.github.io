@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-27T22:58:44Z    *-->
+<!--*    on 2017-01-29T22:30:30Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,18 +14,12 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                        If \(\vec{b} \in A\)and \(\vec{b} \ne 0\) then
-                        \begin{equation*}\vec{b} = b_1 \vec{v_1} + b_2 \vec{v_2}\end{equation*}
-                        and so \(A'\) is
-
-
-                        \begin{equation*}A′ = \{ t_1\vec{v_1} + t_2 \vec{v_2} + b_1 \vec{v_1} + b_2 \vec{v_2} | t_1,t_2 \in \mathbb{R} \}\end{equation*}
-                        \begin{equation*} = \{ (t_1 + b_1)\vec{v_1} + (t_2 + b_2)\vec{v_2}  | t_1,t_2 \in \mathbb{R} \}\end{equation*}
-                        \begin{equation*} = \{ s_1 \vec{v_1} + s_2 \vec{v_2}  | s_1,s_2 \in \mathbb{R} \}\end{equation*}
-                        \begin{equation*} = A\end{equation*}
-
-                        Hence \(A'\) is also a plane through the origin.
-                    </p>
-<span class="incontext"><a href="section-16.html#p-260">in-context</a></span>
+            Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath.
+            The one adopted here is to use implicit_plot3d().  We pass into this method the above
+            function \(f\) set equal to zero and the \(x,y,z\) ranges. The next Sage Cell brings this together.
+            Our vector \(\vec{a}\) is the yellow arrow,  the origin is shown as the black dot in the centre,
+            the plane is drawn in blue.
+        </p>
+<span class="incontext"><a href="section-17.html#p-260">in-context</a></span>
 </body>
 </html>

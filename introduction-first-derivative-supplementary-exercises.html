@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-01-29T22:30:29Z    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG CAP 2017, HW 2 due January 31</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="integers-sage.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="references-1.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="integers-sage.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="references-1.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html">About John A Giannelli</a></li>
+<li><a href="dedication-1.html">Dedication</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html">SageMath Online</a></li>
+<li><a href="section-2.html">Running From Source</a></li>
+</ul>
+<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-3.html">Executing Sage Commands</a></li>
+<li><a href="section-4.html">How to define functions</a></li>
+<li><a href="section-5.html">Symbolic Manipulation</a></li>
+<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html">Sage and Python</a></li>
+</ul>
+<h2 class="link active"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html">Derivatives</a></li>
+<li><a href="calculus-integration.html">Integration</a></li>
+<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="introduction-first-derivative-supplementary-exercises.html" class="active">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="references-1.html">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html">Systems Of Equations</a></li>
+<li><a href="exercises-de.html">Exercises</a></li>
+<li><a href="references-2.html">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-16.html">A1</a></li>
+<li><a href="section-17.html">A2</a></li>
+<li><a href="section-18.html">A3</a></li>
+<li><a href="section-product-rule.html">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="introduction-first-derivative-supplementary-exercises"><header title="Section 3.5 CAP 2017, HW 2 due January 31"><h1 class="heading hide-type" alt="Section 3.5 CAP 2017, HW 2 due January 31">
+<span class="type">Section</span><span class="codenumber">3.5</span><span class="title">CAP 2017, HW 2 due January 31</span><a href="introduction-first-derivative-supplementary-exercises.html" class="permalink">¶ permalink</a>
+</h1></header><section class="exercises" id="exercises-1"><header title="Exercises 3.5.1 Exercises"><h1 class="heading hide-type" alt="Exercises 3.5.1 Exercises">
+<span class="type">Subsection</span><span class="codenumber">3.5.1</span><span class="title">Exercises</span>
+</h1></header><article class="definition-like" id="definition-derivative"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.5.1</span><span class="title">The Definition of a Derivative</span>
+</h5>
+<p id="p-126">The computation of the slope of a tangent line, the <!--Style me with CSS--><em>instantaneous</em> rate of change of a function,
+                    at \(x=a\) can be found from the following limit:</p>\begin{equation}f'(x)=\lim_{a \to x} \frac {f(x) - f(a)} {x-a}\label{men-3}\tag{3.5.1}\end{equation}<p id="p-127">With a small adjustment in notation this limit can be rephrased.</p>
+<p id="p-128">The derivative of \(f(x)\) with respect to \(x\) is the function \(f'(x)\) and is defined as:</p>\begin{equation}f'(x)=\lim_{h \to 0} \frac {f(x+h) - f(x)} {h}\label{men-4}\tag{3.5.2}\end{equation}</article><article class="exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-129">\(\fe{f}{x}=\sqrt{3x+1}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-130">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-131">First Method:</p>
+<p id="p-132">
+                    \begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\cdot\frac{\sqrt{3x+1}+\sqrt{3a+1}}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\lim_{a\to x}\frac{(3x+1)-(3a+1)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3(x-a)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
+                </p>
+<p id="p-133">Second Method:</p>
+<p id="p-134">
+                    \begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\cdot\frac{\sqrt{3(x+h)+1}+\sqrt{3x+1}}{\sqrt{3(x+h)+1}+\sqrt{3x+1}}\\
+&amp;=\lim_{h\to0}\frac{\left(3(x+h)+1\right)-(3x+1)}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3h}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3}{\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
+                </p></span></span> </article></section></section></div></main>
+</div>
+</body>
+</html>

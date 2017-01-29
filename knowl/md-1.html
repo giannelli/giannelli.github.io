@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-27T22:58:44Z    *-->
+<!--*    on 2017-01-29T22:30:29Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,11 +11,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>\begin{gather*}
-\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=0 \text{ or } \pm\infty,\\
-g'(x)\ne 0 \text{ for all } x \text{ in } I \text{ with } x \neq c \text{ , and}\\
-\lim_{x\to c}\frac{f'(x)}{g'(x)} \text{ exists, then }\\
-\lim_{x\to c}\frac{f(x)}{g(x)} = \lim_{x\to c}\frac{f'(x)}{g'(x)}
-\end{gather*}<span class="incontext"><a href="differential.html#md-1">in-context</a></span>
+<body>\begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\cdot\frac{\sqrt{3x+1}+\sqrt{3a+1}}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\lim_{a\to x}\frac{(3x+1)-(3a+1)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3(x-a)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}<span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#md-1">in-context</a></span>
 </body>
 </html>

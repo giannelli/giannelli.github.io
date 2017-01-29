@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-27T22:58:44Z    *-->
+<!--*    on 2017-01-29T22:30:29Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -53,17 +53,27 @@ MathJax.Hub.Config({
 <link href="jagbook.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
 \newcommand{\lt}{ &lt; }
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
@@ -77,12 +87,12 @@ MathJax.Hub.Config({
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="references-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-15.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="references-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-16.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="references-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-15.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="references-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-16.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -112,7 +122,7 @@ MathJax.Hub.Config({
 <li><a href="calculus-derivatives.html">Derivatives</a></li>
 <li><a href="calculus-integration.html">Integration</a></li>
 <li><a href="integers-sage.html">Sage</a></li>
-<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
+<li><a href="introduction-first-derivative-supplementary-exercises.html">CAP 2017, HW 2 due January 31</a></li>
 <li><a href="references-1.html">References</a></li>
 </ul>
 <h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
@@ -125,9 +135,9 @@ MathJax.Hub.Config({
 </ul>
 <h2 class="link active"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="section-15.html">A1</a></li>
-<li><a href="section-16.html">A2</a></li>
-<li><a href="section-17.html">A3</a></li>
+<li><a href="section-16.html">A1</a></li>
+<li><a href="section-17.html">A2</a></li>
+<li><a href="section-18.html">A3</a></li>
 <li><a href="section-product-rule.html">The Product Rule</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
@@ -140,9 +150,9 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="linear-algebra-exam"><header title="Chapter 5 Linear Algebra"><h1 class="heading" alt="Chapter 5 Linear Algebra">
 <span class="type">Chapter</span><span class="codenumber">5</span><span class="title">Linear Algebra</span><a href="linear-algebra-exam.html" class="permalink">¶ permalink</a>
-</h1></header><section class="introduction" id="introduction-7"><p id="p-224">
+</h1></header><section class="introduction" id="introduction-6"><p id="p-231">
             MATH08057: Introduction to Linear Algebra : December 2016
-        </p></section><nav class="summary-links"><a href="section-15.html"><span class="codenumber">5.1</span><span class="title">A1</span></a><a href="section-16.html"><span class="codenumber">5.2</span><span class="title">A2</span></a><a href="section-17.html"><span class="codenumber">5.3</span><span class="title">A3</span></a><a href="section-product-rule.html"><span class="codenumber">5.4</span><span class="title">The Product Rule</span></a></nav></section></div></main>
+        </p></section><nav class="summary-links"><a href="section-16.html"><span class="codenumber">5.1</span><span class="title">A1</span></a><a href="section-17.html"><span class="codenumber">5.2</span><span class="title">A2</span></a><a href="section-18.html"><span class="codenumber">5.3</span><span class="title">A3</span></a><a href="section-product-rule.html"><span class="codenumber">5.4</span><span class="title">The Product Rule</span></a></nav></section></div></main>
 </div>
 </body>
 </html>
