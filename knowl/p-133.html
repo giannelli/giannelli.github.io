@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-29T22:30:29Z    *-->
+<!--*    on 2017-01-31T21:27:36Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Second Method:</p>
+<p>
+                    \begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\cdot\frac{\sqrt{3x+1}+\sqrt{3a+1}}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\lim_{a\to x}\frac{(3x+1)-(3a+1)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3(x-a)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
+                </p>
 <span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#p-133">in-context</a></span>
 </body>
 </html>

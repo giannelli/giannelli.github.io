@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-29T22:30:29Z    *-->
+<!--*    on 2017-01-31T21:27:36Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,11 +13,18 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Gilbert Strang, and Cleve Moler. RES.18-009 Learn Differential Equations: Up Close with Gilbert Strang and
-            Cleve Moler. Fall 2015.
-            Massachusetts Institute of Technology: <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/" target="_blank">
-                MIT OpenCourseWare</a>.
-        </p>
-<span class="incontext"><a href="differential.html#p-135">in-context</a></span>
+<p>
+                    \begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\cdot\frac{\sqrt{3(x+h)+1}+\sqrt{3x+1}}{\sqrt{3(x+h)+1}+\sqrt{3x+1}}\\
+&amp;=\lim_{h\to0}\frac{\left(3(x+h)+1\right)-(3x+1)}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3h}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3}{\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
+                </p>
+<span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#p-135">in-context</a></span>
 </body>
 </html>

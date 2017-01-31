@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-29T22:30:29Z    *-->
+<!--*    on 2017-01-31T21:27:35Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -37,7 +37,15 @@ MathJax.Hub.Config({
         scale: 88,
     },
 });
-    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate Sage Code'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
@@ -66,6 +74,9 @@ MathJax.Hub.Config({
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\sech}{\operatorname{sech}}
 \newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
 \newcommand{\lt}{ &lt; }
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
@@ -149,10 +160,16 @@ MathJax.Hub.Config({
 </h5>
 <p id="p-126">The computation of the slope of a tangent line, the <!--Style me with CSS--><em>instantaneous</em> rate of change of a function,
                     at \(x=a\) can be found from the following limit:</p>\begin{equation}f'(x)=\lim_{a \to x} \frac {f(x) - f(a)} {x-a}\label{men-3}\tag{3.5.1}\end{equation}<p id="p-127">With a small adjustment in notation this limit can be rephrased.</p>
-<p id="p-128">The derivative of \(f(x)\) with respect to \(x\) is the function \(f'(x)\) and is defined as:</p>\begin{equation}f'(x)=\lim_{h \to 0} \frac {f(x+h) - f(x)} {h}\label{men-4}\tag{3.5.2}\end{equation}</article><article class="exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-129">\(\fe{f}{x}=\sqrt{3x+1}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-130">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-131">First Method:</p>
-<p id="p-132">
+<p id="p-128">The derivative of \(f(x)\) with respect to \(x\) is the function \(f'(x)\) and is defined as:</p>\begin{equation}f'(x)=\lim_{h \to 0} \frac {f(x+h) - f(x)} {h}\label{men-4}\tag{3.5.2}\end{equation}</article><article class="definition-like" id="definition-derivative-power"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.5.2</span><span class="title">The Power Rule</span>
+</h5>
+<p id="p-129">
+                    If \(f: \mathbb{R} \rightarrow \mathbb{R}\) is a function such that \(f(x) = x^r\), and \(f\) is differentiable at \(x\), then,
+                    : \begin{equation}f'(x) = rx^{r-1}\label{men-5}\tag{3.5.3}\end{equation}
+                </p></article><article class="exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-130">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-131">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-132">First Method:</p>
+<p id="p-133">
                     \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
 &amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
@@ -164,8 +181,8 @@ MathJax.Hub.Config({
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
                 </p>
-<p id="p-133">Second Method:</p>
-<p id="p-134">
+<p id="p-134">Second Method:</p>
+<p id="p-135">
                     \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
 &amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
@@ -176,7 +193,68 @@ MathJax.Hub.Config({
 &amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
-                </p></span></span> </article></section></section></div></main>
+                </p></span></span> </article><article class="exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-136">
+                    Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.
+                </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-137">
+                    \(1+\dfrac{1}{\sqrt{x^3}}\)
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-138">
+                    \begin{align*}
+\fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
+\text{Expand this to:}\\
+\fe{f}{x}&amp;=x - \frac{2}{\sqrt{x}}\\
+\text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
+\fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
+\end{align*}
+                </p></span></span> </article></section><p id="p-139">Exercise 2.1</p>
+<div class="sagecell-sage" id="sage-61"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
+show("f(x) = ", f)
+show("f(x) = ", f.expand())
+show("f'(x) = ", f.expand().diff())
+</script></div>
+<p id="p-140">Exercise 2.2</p>
+<div class="sagecell-sage" id="sage-62"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
+show(f.diff().simplify_trig())
+show(f.diff().simplify_full())
+show(f.diff())
+show(f.diff().expand())
+show("Which is simpler?")
+show("Note that Sage doesn't seem to like sec() cosec()")
+</script></div>
+<p id="p-141">Exercise 2.3</p>
+<div class="sagecell-sage" id="sage-63"><script type="text/x-sage">var('t')
+f=(1+tan(t))^(1/3)
+show("f(t) = ", f)
+show("f'(t) = ", f.diff(t))
+</script></div>
+<p id="p-142">Exercise 2.4</p>
+<div class="sagecell-sage" id="sage-64"><script type="text/x-sage">f=x*sin(1/x)
+show("f(x) = ", f)
+show("f'(x) = ", f.diff())
+show("f'(x) = ",f.diff().simplify_full())
+</script></div>
+<p id="p-143">Exercise 2.5</p>
+<div class="sagecell-sage" id="sage-65"><script type="text/x-sage">var('v')
+f=(v/(v^3+1))^6
+show("f(v) = ", f)
+show("f'(v) = ", f.diff(v))
+show("f'(v) = ",f.diff(v).simplify_full())
+</script></div>
+<p id="p-144">Exercise 3.1</p>
+<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">f(x)=x+tan(x)
+Df=f.diff()
+show(f,Df)
+m,c=var('m c')
+pt1=(pi,pi)
+m=Df(x=pi)
+#y=m*x+c => c=y-mx at (1,2)
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (pi,pi), pt2[1]  is the second
+y(x)=m*x+c
+
+Plot=point(pt1,rgbcolor='black', pointsize=30)+plot(f,-1,3)+plot(y,-1,3,color='red')
+Plot.show(ymax=6,ymin=-2)
+</script></div></section></div></main>
 </div>
 </body>
 </html>
