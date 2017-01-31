@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T21:27:36Z    *-->
+<!--*    on 2017-01-31T21:51:34Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -156,7 +156,7 @@ MathJax.Hub.Config({
 </h1></header><article class="example-like" id="exam_a1"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.1.1</span>
 </h5>
-<p id="p-242">
+<p id="p-244">
                 Let \(T\) be a linear transformation from \(\mathbb{R}2 \mapsto \mathbb{R}2\)
                 which is a projection and suppose that
                 \begin{equation*}T \left(\begin{array}{r}
@@ -168,17 +168,17 @@ MathJax.Hub.Config({
                     \end{array}\right)\end{equation*}
                 Find the standard matrix of \(T\) (The Projection Matrix).
             </p>
-<p id="p-243">
+<p id="p-245">
                  [6 marks] 
-            </p></article><p id="p-244">
+            </p></article><p id="p-246">
             We will use the techniques detailed by Professor Strang in the lecture series 18.06 Linear Algebra
             <a class="external-url" href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-15-projections-onto-subspaces/" target="_blank">
                 Lecture 15: Projections onto subspaces</a>
         </p>
-<figure class="figure-like" id="figure-8"><img width="100%" src="images/strang_projection_1.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.2</span>Diagram Of The Problem</figcaption></figure><figure class="figure-like" id="figure-9"><img width="100%" src="images/strang_projection_2.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.3</span>Professor Strang In Action</figcaption></figure><figure class="figure-like" id="fig_projection_matrix"><img width="100%" src="images/strang_projection_3.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.4</span>Projection Matrix Formula</figcaption></figure><p id="p-245">
+<figure class="figure-like" id="figure-8"><img width="100%" src="images/strang_projection_1.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.2</span>Diagram Of The Problem</figcaption></figure><figure class="figure-like" id="figure-9"><img width="100%" src="images/strang_projection_2.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.3</span>Professor Strang In Action</figcaption></figure><figure class="figure-like" id="fig_projection_matrix"><img width="100%" src="images/strang_projection_3.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.4</span>Projection Matrix Formula</figcaption></figure><p id="p-247">
             In these screenshots we can see that vector \(\vec{p}\) is the projection of vector \(\vec{b}\) onto \(\vec{a}\).
         </p>
-<p id="p-246">
+<p id="p-248">
             \(\vec{p}\) is a multiple,\(x\), of \(\vec{a}\):
             \begin{equation*}\vec{p} = x \vec{a}\end{equation*}
             The error vector \(\vec{e}\) is given by:
@@ -186,51 +186,51 @@ MathJax.Hub.Config({
             The other piece of information we require is that \(\vec{e}\) is perpendicular to \(\vec{p}\).
             In other words, the dot product of these two vectors is zero. Recall that the dot product of two vectors is
             the same as the <!--Style me with CSS--><em>transpose</em> of one with the other.</p>
-<p id="p-247">
+<p id="p-249">
             Combining the above gives us:
-        </p>\begin{equation*}\vec{a}^T (\vec{b} - x \vec{a}) = 0\end{equation*}\begin{equation*}\implies x = \frac{\vec{a}^T \vec{b}}{\vec{a}^T \vec{a}}\end{equation*}<p id="p-248">
+        </p>\begin{equation*}\vec{a}^T (\vec{b} - x \vec{a}) = 0\end{equation*}\begin{equation*}\implies x = \frac{\vec{a}^T \vec{b}}{\vec{a}^T \vec{a}}\end{equation*}<p id="p-250">
             Since \(\vec{p} = x \vec{a}\) then:
-        </p>\begin{equation}\vec{p} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}} \vec{b}\label{men-32}\tag{5.1.1}\end{equation}<p id="p-249">
+        </p>\begin{equation}\vec{p} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}} \vec{b}\label{men-32}\tag{5.1.1}\end{equation}<p id="p-251">
             From this we can see that the Projection Matrix, \(\textbf{P}\), is given by:
-        </p>\begin{equation}\textbf{P} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}}\label{men-33}\tag{5.1.2}\end{equation}<p id="p-250">
+        </p>\begin{equation}\textbf{P} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}}\label{men-33}\tag{5.1.2}\end{equation}<p id="p-252">
             This matches the formula in the screenshot shown in <a knowl="./knowl/fig_projection_matrix.html" knowl-id="xref-fig_projection_matrix" alt="Figure 5.1.4 " title="Figure 5.1.4 ">figure 5.1.4</a> above.
             In our exercise \(\textbf{P}\) becomes \(\textbf{T}\).
         </p>
-<p id="p-251">
+<p id="p-253">
             Now lets see how we can solve this example using SageMath.
         </p>
-<p id="p-252">
+<p id="p-254">
             One of the most annoying points is that vectors are represented as rows.
             Usually, we prefer to write them in column form.  However, we can switch the view by
             using the <tt class="code-inline tex2jax_ignore">column()</tt> method on the vector.
         </p>
-<div class="sagecell-sage" id="sage-89"><script type="text/x-sage">a=vector([1,2])
+<div class="sagecell-sage" id="sage-91"><script type="text/x-sage">a=vector([1,2])
 b=vector([3,1])
 show(a)
 show("a = ", a.column())
 show(b)
 show("b = ", b.column())
 </script></div>
-<p id="p-253">
+<p id="p-255">
             The vector \(\vec{a}\) times the transpose of itself can be found by taking the <tt class="code-inline tex2jax_ignore">outer_product()</tt>:
         </p>
-<div class="sagecell-sage" id="sage-90"><script type="text/x-sage">show(a.outer_product(a))
+<div class="sagecell-sage" id="sage-92"><script type="text/x-sage">show(a.outer_product(a))
 </script></div>
-<p id="p-254">The dot product (inner product) given by \(\vec{a}^T \vec{a}\) is easily found by either of these two steps:</p>
-<div class="sagecell-sage" id="sage-91"><script type="text/x-sage">show(a*a)
+<p id="p-256">The dot product (inner product) given by \(\vec{a}^T \vec{a}\) is easily found by either of these two steps:</p>
+<div class="sagecell-sage" id="sage-93"><script type="text/x-sage">show(a*a)
 show(a.inner_product(a))
 </script></div>
-<p id="p-255">
+<p id="p-257">
             Combining these we get the complete solution for \(\textbf{T}\),
             what Strang calls \(\textbf{P}\) as:
         </p>
-<div class="sagecell-sage" id="sage-92"><script type="text/x-sage">T=a.outer_product(a)/(a*a)
+<div class="sagecell-sage" id="sage-94"><script type="text/x-sage">T=a.outer_product(a)/(a*a)
 show("Projection Matrix, T = ",T)
 </script></div>
-<p id="p-256">
+<p id="p-258">
             These concepts are combined with some fancy plotting methods to give us a nice visualisation of the problem:
         </p>
-<div class="sagecell-sage" id="sage-93"><script type="text/x-sage">def plot2d_vector(v,name,color='blue'):
+<div class="sagecell-sage" id="sage-95"><script type="text/x-sage">def plot2d_vector(v,name,color='blue'):
     p=plot(v,color=color)
     delta=v*v/40
     midpoint=(v[0]/2+delta,v[1]/2+delta)
@@ -258,12 +258,12 @@ plt=plot2d_vector(a, "a")+plot2d_vector(b, "b")+ plot2d_vector(p,"p",color='red'
 plt += text("e", e_midpoint,fontweight='extra bold',fontsize=14,color='black')
 plt
 </script></div>
-<p id="p-257">
+<p id="p-259">
             Notice that the diagram is <!--Style me with CSS--><em>upside down</em> compared with Strang's and that we multiplied
             \(\vec{a}\) by a factor of 2 so that we could more clearly see that \(\vec{p}\) lies on the same line as \(\vec{a}\).
         </p>
-<p id="p-258">Let us now check some other properties of the projection matrix \(\textbf{T}\)</p>
-<div class="sagecell-sage" id="sage-94"><script type="text/x-sage">show("Is invertible = ", T.is_invertible())
+<p id="p-260">Let us now check some other properties of the projection matrix \(\textbf{T}\)</p>
+<div class="sagecell-sage" id="sage-96"><script type="text/x-sage">show("Is invertible = ", T.is_invertible())
 show("Is symmetric = ", T.is_symmetric())
 show("Is the same as its transpose = ", T.transpose() == T)
 show("Is the same as its square = ", T*T == T)

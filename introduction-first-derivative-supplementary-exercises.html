@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T21:27:35Z    *-->
+<!--*    on 2017-01-31T21:51:34Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -242,18 +242,43 @@ show("f'(v) = ", f.diff(v))
 show("f'(v) = ",f.diff(v).simplify_full())
 </script></div>
 <p id="p-144">Exercise 3.1</p>
-<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">f(x)=x+tan(x)
-Df=f.diff()
-show(f,Df)
+<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">y(x)=x + tan(x)
+y.show()
+dydx=y.diff(x).simplify_full()
+
 m,c=var('m c')
 pt1=(pi,pi)
-m=Df(x=pi)
-#y=m*x+c => c=y-mx at (1,2)
-c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (pi,pi), pt2[1]  is the second
-y(x)=m*x+c
+m=dydx(x=pi)
+#y=m*x+c => c=y-mx at x = pi
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (pi,pi) tuple = pi, pt2[1] = pi
+y_line(x)=m*x+c
+tangent="y={}".format(y_line(x))
+p1=point(pt1,rgbcolor='black', pointsize=30)
+p2=plot(y,0,2*pi, ymin=-10,ymax=10,detect_poles='show')
+p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
+p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
+p1+p2+p3+p4
+</script></div>
+<p id="p-145">Exercise 3.2</p>
+<div class="sagecell-sage" id="sage-67"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
+y.show()
+dydx=y.diff(x).simplify_full()
 
-Plot=point(pt1,rgbcolor='black', pointsize=30)+plot(f,-1,3)+plot(y,-1,3,color='red')
-Plot.show(ymax=6,ymin=-2)
+m,c=var('m c')
+pt1=(4,0.4)
+m=dydx(x=4)
+#y=m*x+c => c=y-mx at x = 4
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (4,0.4) tuple = 4, pt2[1] = 0.4
+y_line(x)=m*x+c
+tangent="y={}".format(y_line(x))
+p1=point(pt1,rgbcolor='black', pointsize=30)
+p2=plot(y,0,2*pi, ymin=-0.1,ymax=1,detect_poles='show')
+p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
+p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
+p1+p2+p3+p4
+</script></div>
+<p id="p-146">Exercise 4</p>
+<div class="sagecell-sage" id="sage-68"><script type="text/x-sage">
 </script></div></section></div></main>
 </div>
 </body>

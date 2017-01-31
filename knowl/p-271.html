@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T21:27:36Z    *-->
+<!--*    on 2017-01-31T21:51:34Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,18 +14,18 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-            Now add another vector \(\vec{b}\) which is also on the same plane. This shown as the green arrow.
-            To do this we introduce another point \(S=(-1,2,5)\).  You might wonder how we know that this
-            point lies on our plane.  It was found using the following trick.
-            <pre class="code-block tex2jax_ignore">f=n[0]*x+n[1]*y+n[2]*z==0
-show(f(x=-1,y=2))
+            We know that the dot product of the normal \(\vec{n}\) with any of our three vectors should be zero. This
+            enables us to use implicit_plot3d() passing in an equation for any point on the plane.
+            We have defined \(f(x,y,z)\) as the function to represent any point on this plane. In the sage cell
+            this is achieved by the following technique:
+            <pre class="code-block tex2jax_ignore">p = vector([x, y, z])
+pA = a - p
+f(x,y,z) = n.dot_product(pA)
 </pre>
-            Here \(n[0]\) is the \(x\)-coordinate of the normal, \(n[1]\) is the \(y\)-coordinate, and so on.
-            They are the coefficients of the standard equation of a plane (\(a x + b y + c z = d\)). With \(d = 0\)
-            is the plane case when the plane passes through the origin.  The results are: \begin{equation*}2 z - 10 = 0\end{equation*}
 
-            From this, we can find the \(z\)-coordinate of \(S\) which ensure that the point fits onto
-            our plane.
+            The resultant function is:
+            \begin{equation*}2 x - 4 y + 2 z = 0\end{equation*}
+            This confirms our initial equation above.
         </p>
 <span class="incontext"><a href="section-17.html#p-271">in-context</a></span>
 </body>

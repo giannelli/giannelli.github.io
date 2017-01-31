@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T21:27:36Z    *-->
+<!--*    on 2017-01-31T21:51:34Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -145,9 +145,9 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-product-rule"><header title="Section 5.4 The Product Rule"><h1 class="heading hide-type" alt="Section 5.4 The Product Rule">
 <span class="type">Section</span><span class="codenumber">5.4</span><span class="title">The Product Rule</span><a href="section-product-rule.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-282">The next rule we are going to explore is called the <em class="terminology">product rule</em> of differentiation.  We use this rule when there are two or more variable factors in the expression we are differentiating. (Remember, we already have the constant factor rule to deal with two factors when one of the two factors is a constant.)\begin{equation}\lzoo{x}{\fe{f}{x}\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}\label{equation-product-rule}\tag{5.4.1}\end{equation}</p>
-<p id="p-283">Intuitively, what is happening in this rule is that we are alternately treating one factor as a constant (the one not being differentiated) and the other factor as a variable function (the one that is being differentiated).  We then add these two rates of change together.</p>
-<p id="p-284">Ultimately, you want to perform this rule in your head just like all of the other rules.  Your instructor, however, may initially want you to show steps; under that presumption, steps are going to be shown in each and every example of this lab when the product rule is applied. Two simple examples of the product rule are shown in <a knowl="./knowl/table-product-rule.html" knowl-id="xref-table-product-rule" alt="Table 5.4.1 " title="Table 5.4.1 ">5.4.1</a>.</p>
+</h1></header><p id="p-284">The next rule we are going to explore is called the <em class="terminology">product rule</em> of differentiation.  We use this rule when there are two or more variable factors in the expression we are differentiating. (Remember, we already have the constant factor rule to deal with two factors when one of the two factors is a constant.)\begin{equation}\lzoo{x}{\fe{f}{x}\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}\label{equation-product-rule}\tag{5.4.1}\end{equation}</p>
+<p id="p-285">Intuitively, what is happening in this rule is that we are alternately treating one factor as a constant (the one not being differentiated) and the other factor as a variable function (the one that is being differentiated).  We then add these two rates of change together.</p>
+<p id="p-286">Ultimately, you want to perform this rule in your head just like all of the other rules.  Your instructor, however, may initially want you to show steps; under that presumption, steps are going to be shown in each and every example of this lab when the product rule is applied. Two simple examples of the product rule are shown in <a knowl="./knowl/table-product-rule.html" knowl-id="xref-table-product-rule" alt="Table 5.4.1 " title="Table 5.4.1 ">5.4.1</a>.</p>
 <figure class="figure-like" id="table-product-rule"><table>
 <tr>
 <td class="c t b2 r0 l0 t3 lines">Given function</td>
@@ -162,19 +162,19 @@ MathJax.Hub.Config({
 <td class="c t b3 r0 l0 t0 lines">\(\begin{aligned}[t]\lz{P}{t}&amp;=\lzoo{t}{e^t}\cdot\fe{\cos}{t}+e^t\cdot\lzoo{t}{\fe{\cos}{t}}\\&amp;=e^t\fe{\cos}{t}-e^t\fe{\sin}{t}\end{aligned}\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">5.4.1</span>Examples of the Product Rule</figcaption></figure><p id="p-285">A decision you'll need to make is how to handle a constant factor in a term that requires the product rule.  Two options for taking the derivative of \(\fe{f}{x}=5x^2\fe{\ln}{x}\) are shown in <a knowl="./knowl/figure-constant-factors-with-product-rule.html" knowl-id="xref-figure-constant-factors-with-product-rule" alt="Figure 5.4.2 " title="Figure 5.4.2 ">5.4.2</a>.</p>
+<figcaption><span class="heading">Table</span><span class="codenumber">5.4.1</span>Examples of the Product Rule</figcaption></figure><p id="p-287">A decision you'll need to make is how to handle a constant factor in a term that requires the product rule.  Two options for taking the derivative of \(\fe{f}{x}=5x^2\fe{\ln}{x}\) are shown in <a knowl="./knowl/figure-constant-factors-with-product-rule.html" knowl-id="xref-figure-constant-factors-with-product-rule" alt="Figure 5.4.2 " title="Figure 5.4.2 ">5.4.2</a>.</p>
 <div class="sidebyside" style="" id="figure-constant-factors-with-product-rule">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <h5 class="sbsheader" style="width:50%;">Option A</h5>
 <h5 class="sbsheader" style="width:50%;">Option B</h5>
 </div>
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-286">\begin{align*}
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-288">\begin{align*}
 \fe{\fd{f}}{x}&amp;=5\left[\lzoo{x}{x^2}\fe{\ln}{x}+x^2\lzoo{x}{\fe{\ln}{x}}\right]\\
 &amp;=5\left[2x\fe{\ln}{x}+x^2\cdot\frac{1}{x}\right]\\
 &amp;=10x\fe{\ln}{x}+5x
 \end{align*}</p></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-287">\begin{align*}
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-289">\begin{align*}
 \fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}\\
 &amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}\\
 &amp;=10x\fe{\ln}{x}+5x
@@ -182,24 +182,24 @@ MathJax.Hub.Config({
 </div>
 <figcaption><span class="heading">Figure</span><span class="codenumber">5.4.2</span></figcaption>
 </div>
-<p id="p-288">In Option B we are treating the factor of \(5\) as a part of the first variable factor.  In doing so, the factor of \(5\) distributes itself.  This is the preferred treatment of the author, so this is what you will see illustrated in this lab.</p>
+<p id="p-290">In Option B we are treating the factor of \(5\) as a part of the first variable factor.  In doing so, the factor of \(5\) distributes itself.  This is the preferred treatment of the author, so this is what you will see illustrated in this lab.</p>
 <section class="exercises" id="exercises-3"><header title="Exercises 5.4.1 Exercises"><h1 class="heading hide-type" alt="Exercises 5.4.1 Exercises">
 <span class="type">Subsection</span><span class="codenumber">5.4.1</span><span class="title">Exercises</span>
 </h1></header><div class="exercisegroup" id="exercisegroup-1">
-<article class="introduction" id="introduction-7"><p id="p-289">Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-7"><p id="p-291">Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-290">\(\fe{T}{t}=2\fe{\sec}{t}\fe{\tan}{t}\)</p></article><article class="exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-291">\(k=\dfrac{e^t\sqrt{t}}{2}\)</p></article><article class="exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-292">\(y=4x\fe{\ln}{x}+3^x-x^3\)</p></article><article class="exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-293">\(\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1\)</p></article>
+<p id="p-292">\(\fe{T}{t}=2\fe{\sec}{t}\fe{\tan}{t}\)</p></article><article class="exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-293">\(k=\dfrac{e^t\sqrt{t}}{2}\)</p></article><article class="exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-294">\(y=4x\fe{\ln}{x}+3^x-x^3\)</p></article><article class="exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-295">\(\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-unsimplified-product">
-<article class="introduction" id="introduction-8"><p id="p-294">Find each of the following derivatives <!--Style me with CSS--><em>without first simplifying the formula</em>; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, <!--Style me with CSS--><em>check</em> your answer by simplifying the original expression and then taking the derivative of that simplified expression.</p></article><div class="exercisegroup-exercises cols3">
+<article class="introduction" id="introduction-8"><p id="p-296">Find each of the following derivatives <!--Style me with CSS--><em>without first simplifying the formula</em>; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, <!--Style me with CSS--><em>check</em> your answer by simplifying the original expression and then taking the derivative of that simplified expression.</p></article><div class="exercisegroup-exercises cols3">
 <article class="exercise-like" id="unsimplified-product-first"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-295">\(\lzoo{x}{x^4x^7}\)</p></article><article class="exercise-like" id="exercise-10"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-296">\(\lzoo{x}{x\cdot x^{10}}\)</p></article><article class="exercise-like" id="unsimplified-product-last"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-297">\(\lzoo{x}{\sqrt{x}\sqrt{x^{21}}}\)</p></article>
+<p id="p-297">\(\lzoo{x}{x^4x^7}\)</p></article><article class="exercise-like" id="exercise-10"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-298">\(\lzoo{x}{x\cdot x^{10}}\)</p></article><article class="exercise-like" id="unsimplified-product-last"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-299">\(\lzoo{x}{\sqrt{x}\sqrt{x^{21}}}\)</p></article>
 </div>
 </div></section></section></div></main>
 </div>
