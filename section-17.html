@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T09:16:40Z    *-->
+<!--*    on 2017-02-02T09:25:45Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -156,45 +156,45 @@ MathJax.Hub.Config({
 </h1></header><article class="example-like" id="exam_a2"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.2.1</span>
 </h5>
-<p id="p-272">
+<p id="p-273">
 
                 Let \(A\) be a subspace of \(\mathbb{R}3\) of dimension 2 and let \(\vec{b}\) be
                 a fixed non-zero vector in \(\mathbb{R}3\).
             </p>
-<p id="p-273">
+<p id="p-274">
                 Let \(A′\) denote the subset of \(\mathbb{R}3\) consisting of all vectors of the
                 form \(\vec{a} + \vec{b}\) where \(\vec{a}\) is in the
                 subspace \(A\).
             </p>
-<p id="p-274">
+<p id="p-275">
                 For which vectors \(\vec{b}\) is \(A′\) also a subspace? Justify your answer.
             </p>
-<p id="p-275">
+<p id="p-276">
                  [7 marks] 
-            </p></article><p id="p-276">
+            </p></article><p id="p-277">
             Before grappling this problem it helps  to get a picture.  I believe this is the best way to approach any problem.
             (Maybe this is just the old physicist in me).  Sometimes it is not possible but not very often.
         </p>
-<p id="p-277">
+<p id="p-278">
             So lets first look at how SageMath can help us here. Since \(A\) is a subspace \(\mathbb{R}3\) then it must
             be a plane passing through the origin; subspaces must contain the \(\left\{0\right\}\) vector and pass through the origin.
         </p>
-<p id="p-278">
+<p id="p-279">
             Take, for example, the plane passing through the origin given by:
             \begin{equation*}2 x - 4 y + 2 z = 0\end{equation*}
         </p>
-<p id="p-279">
+<p id="p-280">
             Consider the case where our vector \(\vec{a}\) is the direction vector starting at position \((2,2,2)\)
             and extending to \((3,4,5)\). This lies on the plane going through the origin and is our subspace \(A\).
         </p>
-<p id="p-280">
+<p id="p-281">
             Let the point \(P\)  be the start of \(\vec{a}\) and the point \(Q\) be the endpoint.
             These points are also the position vectors \(\vec{OP}\) and \(\vec{OQ}\) and also lie on the
             plane (since the origin is on the plane).  Hence, a normal to the plane is given by the cross-product:
-        </p>\begin{equation*}\vec{n} = \vec{OP} \times \vec{a}\end{equation*}<p id="p-281">
+        </p>\begin{equation*}\vec{n} = \vec{OP} \times \vec{a}\end{equation*}<p id="p-282">
             (We could have taken the cross product of any of these three vectors since they are all in the same plane.)
         </p>
-<p id="p-282">
+<p id="p-283">
             We know that the dot product of the normal \(\vec{n}\) with any of our three vectors should be zero. This
             enables us to use implicit_plot3d() passing in an equation for any point on the plane.
             We have defined \(f(x,y,z)\) as the function to represent any point on this plane. In the sage cell
@@ -208,14 +208,14 @@ f(x,y,z) = n.dot_product(pA)
             \begin{equation*}2 x - 4 y + 2 z = 0\end{equation*}
             This confirms our initial equation above.
         </p>
-<p id="p-283">
+<p id="p-284">
             Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath.
             The one adopted here is to use implicit_plot3d().  We pass into this method the above
             function \(f\) set equal to zero and the \(x,y,z\) ranges. The next Sage Cell brings this together.
             Our vector \(\vec{a}\) is the yellow arrow,  the origin is shown as the black dot in the centre,
             the plane is drawn in blue.
         </p>
-<p id="p-284">
+<p id="p-285">
             Now add another vector \(\vec{b}\) which is also on the same plane. This shown as the green arrow.
             To do this we introduce another point \(S=(-1,2,5)\).  You might wonder how we know that this
             point lies on our plane.  It was found using the following trick.
@@ -229,18 +229,18 @@ show(f(x=-1,y=2))
             From this, we can find the \(z\)-coordinate of \(S\) which ensure that the point fits onto
             our plane.
         </p>
-<p id="p-285">
+<p id="p-286">
             Now for the full picture.  Lets find another vector \(\vec{c}\) that does not lie on our plane.
             Lets also form another plane which contains this new vector and vector \(\vec{a}\) (the yellow arrow).
         </p>
-<p id="p-286">
+<p id="p-287">
             Try the point \(R=(5,0,3)\).
         </p>
-<p id="p-287">
+<p id="p-288">
             Evaluating the following SageCell and playing with the resultant plot (zooming in and out and rotating)
             should convince you of the official Edinburgh University <a knowl="./knowl/a2_solution.html" knowl-id="xref-a2_solution" alt="Solution 5.2.1 " title="Solution 5.2.1 ">solution 5.2.1</a> to the problem.
         </p>
-<div class="sagecell-sage" id="sage-97"><script type="text/x-sage">var ('x,y,z')
+<div class="sagecell-sage" id="sage-98"><script type="text/x-sage">var ('x,y,z')
 ptP=(2,2,2)
 ptQ=(3,4,5)
 
@@ -306,15 +306,15 @@ final_plot.show(aspect_ratio=1)
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-a2_solution" id="a2_solution"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-a2_solution" style="display: none;" class="tex2jax_ignore"><span class="solution"><article class="theorem-like" id="proposition-1"><h5 class="heading">
 <span class="type">Proposition</span><span class="codenumber">5.2.2</span>
 </h5>
-<p id="p-288">\(A'\) is a subspace if and only if \(\vec{b} \in A\).</p></article><div class="posterior">
+<p id="p-289">\(A'\) is a subspace if and only if \(\vec{b} \in A\).</p></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-1" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-289">
+<div id="hk-proof-1" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-290">
                         If \(A \subset \mathbb{R}3\) be a subspace of rank 2 then it is a plane through the origin.
                         If \(\vec{x} \in A\) then
                         \begin{equation*}\vec{x} = t_1 \vec{v_1} + t_2 \vec{v_2}\end{equation*}
                         for direction vectors \(\vec{v_1},\vec{v_2}\).
                     </p>
-<p id="p-290">
+<p id="p-291">
                         If \(\vec{b} \in A\)and \(\vec{b} \ne 0\) then
                         \begin{equation*}\vec{b} = b_1 \vec{v_1} + b_2 \vec{v_2}\end{equation*}
                         and so \(A'\) is
@@ -327,12 +327,12 @@ final_plot.show(aspect_ratio=1)
 
                         Hence \(A'\) is also a plane through the origin.
                     </p>
-<p id="p-291">
+<p id="p-292">
                         If \(\vec{b} \notin A\) then
                         \begin{equation*}A′ = \{ \vec{b} + t_1 \vec{v_1} + t_2 \vec{v_2} | t_1,t_2 \in \mathbb{R} \}\end{equation*}
                         which is a plane <!--Style me with CSS--><em>not</em> through the origin, and so is not a subspace.
                     </p>
-<p id="p-292">(This is hopefully illustrated with the Sage Cell simulation.)</p></article></div>
+<p id="p-293">(This is hopefully illustrated with the Sage Cell simulation.)</p></article></div>
 </div></span></span></section></div></main>
 </div>
 </body>
