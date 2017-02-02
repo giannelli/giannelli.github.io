@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T09:25:46Z    *-->
+<!--*    on 2017-02-02T20:56:03Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,11 +14,19 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                        If \(A \subset \mathbb{R}3\) be a subspace of rank 2 then it is a plane through the origin.
-                        If \(\vec{x} \in A\) then
-                        \begin{equation*}\vec{x} = t_1 \vec{v_1} + t_2 \vec{v_2}\end{equation*}
-                        for direction vectors \(\vec{v_1},\vec{v_2}\).
-                    </p>
+            Now add another vector \(\vec{b}\) which is also on the same plane. This shown as the green arrow.
+            To do this we introduce another point \(S=(-1,2,5)\).  You might wonder how we know that this
+            point lies on our plane.  It was found using the following trick.
+            <pre class="code-block tex2jax_ignore">f=n[0]*x+n[1]*y+n[2]*z==0
+show(f(x=-1,y=2))
+</pre>
+            Here \(n[0]\) is the \(x\)-coordinate of the normal, \(n[1]\) is the \(y\)-coordinate, and so on.
+            They are the coefficients of the standard equation of a plane (\(a x + b y + c z = d\)). With \(d = 0\)
+            is the plane case when the plane passes through the origin.  The results are: \begin{equation*}2 z - 10 = 0\end{equation*}
+
+            From this, we can find the \(z\)-coordinate of \(S\) which ensure that the point fits onto
+            our plane.
+        </p>
 <span class="incontext"><a href="section-17.html#p-290">in-context</a></span>
 </body>
 </html>

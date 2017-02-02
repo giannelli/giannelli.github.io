@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T09:25:45Z    *-->
+<!--*    on 2017-02-02T20:56:03Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -16,33 +16,28 @@
 <span class="type">Solution</span><span class="codenumber">3.5.1.4.1</span>
 </h5>
 <p id="p-146">
-                    Implicit:
-                    \begin{gather*}
-xy+2x+3x^2 = 4\\
-\text{Differentiate each part using the product rule for } xy\\
-x\frac{dy}{dx} + y\frac{dx}{dx} + 2 + 6x = 0\\
-x\frac{dy}{dx} + y + 2 + 6x = 0\\
-\text{Rearranging gives:} \\
-\frac{dy}{dx} = -\frac{\left(y+2+6x\right)}{x}\\
-\text{Rearranging original equation for } y\\
-y = \frac{4}{x} -2 -3x\\
-\text{Substituting gives } y\\
-\frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
-\frac{dy}{dx} = -\frac{4}{x^2}-3
-\end{gather*}
-                </p>
-<p id="p-147">
-                    Explicit:
-                    \begin{gather*}
-xy+2x+3x^2 = 4\\
-\text{Solve for } y\\
-y = \frac{4}{x} -2 -3x\\
-\text{And differentiate } y\\
-\frac{dy}{dx} = -\frac{4}{x^2} -3
-\end{gather*}
-                </p>
-<p id="p-148">As you can see the results are the same for each method.</p>
-<p id="p-149">The problem that implicit differentiation solves is that it is often difficult or
-                    impossible to rearrange to have \(y\) on the left by its own.</p></span><span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#solution-4">in-context</a></span>
+                    \begin{align*}
+y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
+\text{Differentiate through:}\\
+y \frac{d\left(\cos\left(x\right)\right)}{dx} + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                         \frac{d\left(\sin\left(xy\right)\right)}{dx}\\
+
+                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                            \frac{d\left(\sin\left(xy\right)\right)}{dx}
+                        \\
+\text{Now set } u = xy\\
+\frac{d\left(\sin\left(u\right)\right)}{dx}&amp;= \frac{d\left(\sin\left(u\right)\right)}{du}\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\left(x\frac{dy}{dx} + y\frac{dx}{dx}\right)\\
+&amp;= x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
+\text{Substituting this into our main equation:}\\
+
+                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                            x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)
+                        \\
+\text{Rearranging:}\\
+\frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
+\end{align*}
+                </p></span><span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#solution-4">in-context</a></span>
 </body>
 </html>

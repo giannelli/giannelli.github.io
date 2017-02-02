@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T09:25:45Z    *-->
+<!--*    on 2017-02-02T20:56:03Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,10 +13,16 @@
 </head>
 <body>\begin{gather*}
 xy+2x+3x^2 = 4\\
-\text{Solve for } y\\
+\text{Differentiate each part using the product rule for } xy\\
+x\frac{dy}{dx} + y\frac{dx}{dx} + 2 + 6x = 0\\
+x\frac{dy}{dx} + y + 2 + 6x = 0\\
+\text{Rearranging gives:} \\
+\frac{dy}{dx} = -\frac{\left(y+2+6x\right)}{x}\\
+\text{Rearranging original equation for } y\\
 y = \frac{4}{x} -2 -3x\\
-\text{And differentiate } y\\
-\frac{dy}{dx} = -\frac{4}{x^2} -3
+\text{Substituting gives } y\\
+\frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
+\frac{dy}{dx} = -\frac{4}{x^2}-3
 \end{gather*}<span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#md-6">in-context</a></span>
 </body>
 </html>

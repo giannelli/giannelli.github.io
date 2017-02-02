@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T09:25:45Z    *-->
+<!--*    on 2017-02-02T20:56:03Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -155,10 +155,10 @@ MathJax.Hub.Config({
 <span class="type">Section</span><span class="codenumber">4.3</span><span class="title">Systems Of Equations</span><a href="system-of-de.html" class="permalink">¶ permalink</a>
 </h1></header><section class="subsection" id="subsection-11"><header title="Subsection 4.3.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.3.1 First Example">
 <span class="type">Subsection</span><span class="codenumber">4.3.1</span><span class="title">First Example</span>
-</h1></header><p id="p-213">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-23}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-24}\tag{4.3.2}\end{equation}<p id="p-214">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-25}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-26}\tag{4.3.4}\end{equation}<p id="p-215">You should now be comfortable with defining the variables, the functions, and the initial conditions.
+</h1></header><p id="p-218">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-23}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-24}\tag{4.3.2}\end{equation}<p id="p-219">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-25}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-26}\tag{4.3.4}\end{equation}<p id="p-220">You should now be comfortable with defining the variables, the functions, and the initial conditions.
                 The only difference is the use of the <tt class="code-inline tex2jax_ignore">desolve_system()</tt> method. So let us jump straight in:
             </p>
-<div class="sagecell-sage" id="sage-89"><script type="text/x-sage">t = var('t')
+<div class="sagecell-sage" id="sage-90"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
 de1 = diff(x,t) + y == 0
@@ -166,8 +166,8 @@ de2 = diff(y,t) - x == 0
 solution = desolve_system([de1,de2],[x,y],ics=[0,1,2])
 show(solution)
 </script></div>
-<p id="p-216">Try this for fun:</p>
-<div class="sagecell-sage" id="sage-90"><script type="text/x-sage">t = var('t')
+<p id="p-221">Try this for fun:</p>
+<div class="sagecell-sage" id="sage-91"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
 de1 = diff(x,t) + y == t*cos(3*t)
@@ -183,9 +183,9 @@ solnx;solny
 #plot([solnx,solny],(0,20*pi))
 parametric_plot((solnx,solny), (t,0, 50*pi))
 </script></div>
-<div class="sagecell-sage" id="sage-91"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
+<div class="sagecell-sage" id="sage-92"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
 </script></div>
-<p id="p-217">A controlled explosion!</p></section></section></div></main>
+<p id="p-222">A controlled explosion!</p></section></section></div></main>
 </div>
 </body>
 </html>

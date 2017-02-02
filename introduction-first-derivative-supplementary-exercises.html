@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T09:25:45Z    *-->
+<!--*    on 2017-02-02T20:56:02Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -175,7 +175,7 @@ MathJax.Hub.Config({
                     \begin{equation*} f(x) = f(a) + f'(a)(x - a) + R_2\ \end{equation*}
 
                     where \(R_2\) is the remainder term. The linear approximation is obtained by dropping the remainder:
-                    \begin{equation} f(x) \approx f(a) + f'(a)(x - a)\label{men-6}\tag{3.5.4}\end{equation}.
+                    \begin{equation} f(x) \approx f(a) + f'(a)(x - a)\text{.}\label{men-6}\tag{3.5.4}\end{equation}
 
                     This is a good approximation for \(x\) when it is close enough to \(a\);
                     since a curve, when closely observed, will begin to resemble a straight line.
@@ -237,10 +237,38 @@ TBD
 \end{align*}
                 </p></span></span> </article><article class="exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4</span></h5>
 <p id="p-143">Implicit Differentiation</p>
-<p id="p-144"> \(xy+2x+3x^2 = 4\)</p>
+<p id="p-144">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-145">
-                    \(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)
+                    \(\frac{dy}{dx} = -\frac{y \cos\left(x y\right)}{x \cos\left(x y\right) - \cos\left(x\right)} - \frac{y \sin\left(x\right)}{x \cos\left(x y\right) - \cos\left(x\right)}\)
                 </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">
+                    \begin{align*}
+y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
+\text{Differentiate through:}\\
+y \frac{d\left(\cos\left(x\right)\right)}{dx} + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                         \frac{d\left(\sin\left(xy\right)\right)}{dx}\\
+
+                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                            \frac{d\left(\sin\left(xy\right)\right)}{dx}
+                        \\
+\text{Now set } u = xy\\
+\frac{d\left(\sin\left(u\right)\right)}{dx}&amp;= \frac{d\left(\sin\left(u\right)\right)}{du}\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\left(x\frac{dy}{dx} + y\frac{dx}{dx}\right)\\
+&amp;= x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
+\text{Substituting this into our main equation:}\\
+
+                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                            x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)
+                        \\
+\text{Rearranging:}\\
+\frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
+\end{align*}
+                </p></span></span> </article><article class="exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-147">Implicit Differentiation</p>
+<p id="p-148"> \(xy+2x+3x^2 = 4\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-5" id="answer-5"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-149">
+                    \(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-150">
                     Implicit:
                     \begin{gather*}
 xy+2x+3x^2 = 4\\
@@ -256,7 +284,7 @@ y = \frac{4}{x} -2 -3x\\
 \frac{dy}{dx} = -\frac{4}{x^2}-3
 \end{gather*}
                 </p>
-<p id="p-147">
+<p id="p-151">
                     Explicit:
                     \begin{gather*}
 xy+2x+3x^2 = 4\\
@@ -266,24 +294,32 @@ y = \frac{4}{x} -2 -3x\\
 \frac{dy}{dx} = -\frac{4}{x^2} -3
 \end{gather*}
                 </p>
-<p id="p-148">As you can see the results are the same for each method.</p>
-<p id="p-149">The problem that implicit differentiation solves is that it is often difficult or
-                    impossible to rearrange to have \(y\) on the left by its own.</p></span></span> </article></section><p id="p-150">Implicit Differentiation of \(xy+2x+3x^2 = 4\)</p>
+<p id="p-152">As you can see the results are the same for each method.</p>
+<p id="p-153">The problem that implicit differentiation solves is that it is often difficult or
+                    impossible to rearrange to have \(y\) on the left by its own.</p></span></span> </article></section><p id="p-154">Implicit Differentiation of \(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
 <div class="sagecell-sage" id="sage-61"><script type="text/x-sage">x,y = var('x,y')
+expr = y*cos(x) == 1 + sin(x*y)
+show(expr)
+f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
+dydx(x,y) = f.implicit_derivative(y,x)
+show(dydx)
+</script></div>
+<p id="p-155">Implicit Differentiation of \(xy+2x+3x^2 = 4\)</p>
+<div class="sagecell-sage" id="sage-62"><script type="text/x-sage">x,y = var('x,y')
 expr = x*y+2*x+3*x^2 == 4
 show(expr)
 f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
 dydx(x,y) = f.implicit_derivative(y,x).expand()
 show(dydx)
 </script></div>
-<p id="p-151">Exercise 2.1</p>
-<div class="sagecell-sage" id="sage-62"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
+<p id="p-156">Exercise 2.1</p>
+<div class="sagecell-sage" id="sage-63"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
 show("f(x) = ", f)
 show("f(x) = ", f.expand())
 show("f'(x) = ", f.expand().diff())
 </script></div>
-<p id="p-152">Exercise 2.2</p>
-<div class="sagecell-sage" id="sage-63"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
+<p id="p-157">Exercise 2.2</p>
+<div class="sagecell-sage" id="sage-64"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
 show(f.diff().simplify_trig())
 show(f.diff().simplify_full())
 show(f.diff())
@@ -291,27 +327,27 @@ show(f.diff().expand())
 show("Which is simpler?")
 show("Note that Sage doesn't seem to like sec() cosec()")
 </script></div>
-<p id="p-153">Exercise 2.3</p>
-<div class="sagecell-sage" id="sage-64"><script type="text/x-sage">var('t')
+<p id="p-158">Exercise 2.3</p>
+<div class="sagecell-sage" id="sage-65"><script type="text/x-sage">var('t')
 f=(1+tan(t))^(1/3)
 show("f(t) = ", f)
 show("f'(t) = ", f.diff(t))
 </script></div>
-<p id="p-154">Exercise 2.4</p>
-<div class="sagecell-sage" id="sage-65"><script type="text/x-sage">f=x*sin(1/x)
+<p id="p-159">Exercise 2.4</p>
+<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">f=x*sin(1/x)
 show("f(x) = ", f)
 show("f'(x) = ", f.diff())
 show("f'(x) = ",f.diff().simplify_full())
 </script></div>
-<p id="p-155">Exercise 2.5</p>
-<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">var('v')
+<p id="p-160">Exercise 2.5</p>
+<div class="sagecell-sage" id="sage-67"><script type="text/x-sage">var('v')
 f=(v/(v^3+1))^6
 show("f(v) = ", f)
 show("f'(v) = ", f.diff(v))
 show("f'(v) = ",f.diff(v).simplify_full())
 </script></div>
-<p id="p-156">Exercise 3.1</p>
-<div class="sagecell-sage" id="sage-67"><script type="text/x-sage">y(x)=x + tan(x)
+<p id="p-161">Exercise 3.1</p>
+<div class="sagecell-sage" id="sage-68"><script type="text/x-sage">y(x)=x + tan(x)
 y.show()
 dydx=y.diff(x).simplify_full()
 
@@ -328,8 +364,8 @@ p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
 p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
 p1+p2+p3+p4
 </script></div>
-<p id="p-157">Exercise 3.2</p>
-<div class="sagecell-sage" id="sage-68"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
+<p id="p-162">Exercise 3.2</p>
+<div class="sagecell-sage" id="sage-69"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
 y.show()
 dydx=y.diff(x).simplify_full()
 
@@ -346,8 +382,8 @@ p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
 p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
 p1+p2+p3+p4
 </script></div>
-<p id="p-158">Exercise 4</p>
-<div class="sagecell-sage" id="sage-69"><script type="text/x-sage">
+<p id="p-163">Exercise 4</p>
+<div class="sagecell-sage" id="sage-70"><script type="text/x-sage">
 </script></div></section></div></main>
 </div>
 </body>
