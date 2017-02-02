@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T22:01:42Z    *-->
+<!--*    on 2017-02-02T09:16:40Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,19 +13,40 @@
 </head>
 <body>
 <article class="exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="codenumber">2</span>
+<span class="type">Exercise</span><span class="codenumber">4</span>
 </h5>
-<p id="p-232">Response to Oscillating Input</p>
-<p id="p-233">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\tag{4.4.10}\end{equation}<p id="p-234">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
-<p id="p-235">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-236">where \(M\) and \(N\) are constants.</p>
-<p id="p-237">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-238">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + cos(omega*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-239">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article><span class="incontext"><a href="exercises-de.html#exercise-4">in-context</a></span>
+<p id="p-143">Implicit Differentiation</p>
+<p id="p-144"> \(xy+2x+3x^2 = 4\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-145">
+                    \(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">
+                    Implicit:
+                    \begin{gather*}
+xy+2x+3x^2 = 4\\
+\text{Differentiate each part using the product rule for } xy\\
+x\frac{dy}{dx} + y\frac{dx}{dx} + 2 + 6x = 0\\
+x\frac{dy}{dx} + y + 2 + 6x = 0\\
+\text{Rearranging gives:} \\
+\frac{dy}{dx} = -\frac{\left(y+2+6x\right)}{x}\\
+\text{Rearranging original equation for } y\\
+y = \frac{4}{x} -2 -3x\\
+\text{Substituting gives } y\\
+\frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
+\frac{dy}{dx} = -\frac{4}{x^2}-3
+\end{gather*}
+                </p>
+<p id="p-147">
+                    Explicit:
+                    \begin{gather*}
+xy+2x+3x^2 = 4\\
+\text{Solve for } y\\
+y = \frac{4}{x} -2 -3x\\
+\text{And differentiate } y\\
+\frac{dy}{dx} = -\frac{4}{x^2} -3
+\end{gather*}
+                </p>
+<p id="p-148">As you can see the results are the same for each method.</p>
+<p id="p-149">The problem that implicit differentiation solves is that it is often difficult or
+                    impossible to rearrange to have \(y\) on the left by its own.</p></span></span> </article><span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#exercise-4">in-context</a></span>
 </body>
 </html>

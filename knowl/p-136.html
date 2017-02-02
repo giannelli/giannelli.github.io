@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T22:01:42Z    *-->
+<!--*    on 2017-02-02T09:16:40Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,7 +14,16 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                    Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.
+                    \begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\cdot\frac{\sqrt{3(x+h)+1}+\sqrt{3x+1}}{\sqrt{3(x+h)+1}+\sqrt{3x+1}}\\
+&amp;=\lim_{h\to0}\frac{\left(3(x+h)+1\right)-(3x+1)}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3h}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3}{\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
                 </p>
 <span class="incontext"><a href="introduction-first-derivative-supplementary-exercises.html#p-136">in-context</a></span>
 </body>

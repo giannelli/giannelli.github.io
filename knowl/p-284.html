@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T22:01:42Z    *-->
+<!--*    on 2017-02-02T09:16:40Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,20 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The next rule we are going to explore is called the <em class="terminology">product rule</em> of differentiation.  We use this rule when there are two or more variable factors in the expression we are differentiating. (Remember, we already have the constant factor rule to deal with two factors when one of the two factors is a constant.)\begin{equation}\lzoo{x}{\fe{f}{x}\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}\tag{5.4.1}\end{equation}</p>
-<span class="incontext"><a href="section-product-rule.html#p-284">in-context</a></span>
+<p>
+            Now add another vector \(\vec{b}\) which is also on the same plane. This shown as the green arrow.
+            To do this we introduce another point \(S=(-1,2,5)\).  You might wonder how we know that this
+            point lies on our plane.  It was found using the following trick.
+            <pre class="code-block tex2jax_ignore">f=n[0]*x+n[1]*y+n[2]*z==0
+show(f(x=-1,y=2))
+</pre>
+            Here \(n[0]\) is the \(x\)-coordinate of the normal, \(n[1]\) is the \(y\)-coordinate, and so on.
+            They are the coefficients of the standard equation of a plane (\(a x + b y + c z = d\)). With \(d = 0\)
+            is the plane case when the plane passes through the origin.  The results are: \begin{equation*}2 z - 10 = 0\end{equation*}
+
+            From this, we can find the \(z\)-coordinate of \(S\) which ensure that the point fits onto
+            our plane.
+        </p>
+<span class="incontext"><a href="section-17.html#p-284">in-context</a></span>
 </body>
 </html>

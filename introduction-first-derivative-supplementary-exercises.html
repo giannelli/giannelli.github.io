@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-31T22:01:42Z    *-->
+<!--*    on 2017-02-02T09:16:40Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -166,10 +166,27 @@ MathJax.Hub.Config({
 <p id="p-129">
                     If \(f: \mathbb{R} \rightarrow \mathbb{R}\) is a function such that \(f(x) = x^r\), and \(f\) is differentiable at \(x\), then,
                     : \begin{equation}f'(x) = rx^{r-1}\label{men-5}\tag{3.5.3}\end{equation}
+                </p></article><article class="definition-like" id="definition-linear-approx"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.5.3</span><span class="title">Linear Approximation</span>
+</h5>
+<p id="p-130">
+                    Given a twice continuously differentiable function \(f\) of one real number variable,
+                    Taylor's theorem for the case \(n = 1 \) states that:
+                    \begin{equation*} f(x) = f(a) + f'(a)(x - a) + R_2\ \end{equation*}
+
+                    where \(R_2\) is the remainder term. The linear approximation is obtained by dropping the remainder:
+                    \begin{equation} f(x) \approx f(a) + f'(a)(x - a)\label{men-6}\tag{3.5.4}\end{equation}.
+
+                    This is a good approximation for \(x\) when it is close enough to \(a\);
+                    since a curve, when closely observed, will begin to resemble a straight line.
+                    Therefore, the expression on the right-hand side is just the equation for the tangent line
+                    to the graph of \(f\) at \((a,f(a))\).  For this reason, this process is also called
+                    the <!--Style me with CSS--><em>tangent line approximation</em>.
+
                 </p></article><article class="exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-130">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-131">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-132">First Method:</p>
-<p id="p-133">
+<p id="p-131">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-132">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-133">First Method:</p>
+<p id="p-134">
                     \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
 &amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
@@ -181,8 +198,8 @@ MathJax.Hub.Config({
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
                 </p>
-<p id="p-134">Second Method:</p>
-<p id="p-135">
+<p id="p-135">Second Method:</p>
+<p id="p-136">
                     \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
 &amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
@@ -194,12 +211,12 @@ MathJax.Hub.Config({
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
                 </p></span></span> </article><article class="exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-136">
+<p id="p-137">
                     Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.
                 </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-137">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-138">
                     \(1+\dfrac{1}{\sqrt{x^3}}\)
-                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-138">
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-139">
                     \begin{align*}
 \fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
 \text{Expand this to:}\\
@@ -207,13 +224,57 @@ MathJax.Hub.Config({
 \text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
 \fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
 \end{align*}
-                </p></span></span> </article></section><p id="p-139">Exercise 2.1</p>
+                </p></span></span> </article><article class="exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-140">
+                    Use <a knowl="./knowl/definition-linear-approx.html" knowl-id="xref-definition-linear-approx" alt="Definition 3.5.3 Linear Approximation" title="Definition 3.5.3 Linear Approximation">Linear Approximation 3.5.3</a> to calculate \(\sqrt{99.8}\).
+                </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-3" id="answer-3"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-141">
+                    \(9.9000\)
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-142">
+                    \begin{align*}
+\fe{f}{x}&amp;=\fe{f}{a} + \fe{\fd{f}}{a}(x-a)\\
+TBD
+\end{align*}
+                </p></span></span> </article><article class="exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-143">Implicit Differentiation</p>
+<p id="p-144"> \(xy+2x+3x^2 = 4\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-145">
+                    \(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">
+                    Implicit:
+                    \begin{gather*}
+xy+2x+3x^2 = 4\\
+\text{Differentiate each part using the product rule for } xy\\
+x\frac{dy}{dx} + y\frac{dx}{dx} + 2 + 6x = 0\\
+x\frac{dy}{dx} + y + 2 + 6x = 0\\
+\text{Rearranging gives:} \\
+\frac{dy}{dx} = -\frac{\left(y+2+6x\right)}{x}\\
+\text{Rearranging original equation for } y\\
+y = \frac{4}{x} -2 -3x\\
+\text{Substituting gives } y\\
+\frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
+\frac{dy}{dx} = -\frac{4}{x^2}-3
+\end{gather*}
+                </p>
+<p id="p-147">
+                    Explicit:
+                    \begin{gather*}
+xy+2x+3x^2 = 4\\
+\text{Solve for } y\\
+y = \frac{4}{x} -2 -3x\\
+\text{And differentiate } y\\
+\frac{dy}{dx} = -\frac{4}{x^2} -3
+\end{gather*}
+                </p>
+<p id="p-148">As you can see the results are the same for each method.</p>
+<p id="p-149">The problem that implicit differentiation solves is that it is often difficult or
+                    impossible to rearrange to have \(y\) on the left by its own.</p></span></span> </article></section><p id="p-150">Exercise 2.1</p>
 <div class="sagecell-sage" id="sage-61"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
 show("f(x) = ", f)
 show("f(x) = ", f.expand())
 show("f'(x) = ", f.expand().diff())
 </script></div>
-<p id="p-140">Exercise 2.2</p>
+<p id="p-151">Exercise 2.2</p>
 <div class="sagecell-sage" id="sage-62"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
 show(f.diff().simplify_trig())
 show(f.diff().simplify_full())
@@ -222,26 +283,26 @@ show(f.diff().expand())
 show("Which is simpler?")
 show("Note that Sage doesn't seem to like sec() cosec()")
 </script></div>
-<p id="p-141">Exercise 2.3</p>
+<p id="p-152">Exercise 2.3</p>
 <div class="sagecell-sage" id="sage-63"><script type="text/x-sage">var('t')
 f=(1+tan(t))^(1/3)
 show("f(t) = ", f)
 show("f'(t) = ", f.diff(t))
 </script></div>
-<p id="p-142">Exercise 2.4</p>
+<p id="p-153">Exercise 2.4</p>
 <div class="sagecell-sage" id="sage-64"><script type="text/x-sage">f=x*sin(1/x)
 show("f(x) = ", f)
 show("f'(x) = ", f.diff())
 show("f'(x) = ",f.diff().simplify_full())
 </script></div>
-<p id="p-143">Exercise 2.5</p>
+<p id="p-154">Exercise 2.5</p>
 <div class="sagecell-sage" id="sage-65"><script type="text/x-sage">var('v')
 f=(v/(v^3+1))^6
 show("f(v) = ", f)
 show("f'(v) = ", f.diff(v))
 show("f'(v) = ",f.diff(v).simplify_full())
 </script></div>
-<p id="p-144">Exercise 3.1</p>
+<p id="p-155">Exercise 3.1</p>
 <div class="sagecell-sage" id="sage-66"><script type="text/x-sage">y(x)=x + tan(x)
 y.show()
 dydx=y.diff(x).simplify_full()
@@ -259,7 +320,7 @@ p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
 p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
 p1+p2+p3+p4
 </script></div>
-<p id="p-145">Exercise 3.2</p>
+<p id="p-156">Exercise 3.2</p>
 <div class="sagecell-sage" id="sage-67"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
 y.show()
 dydx=y.diff(x).simplify_full()
@@ -277,7 +338,7 @@ p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
 p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
 p1+p2+p3+p4
 </script></div>
-<p id="p-146">Exercise 4</p>
+<p id="p-157">Exercise 4</p>
 <div class="sagecell-sage" id="sage-68"><script type="text/x-sage">
 </script></div></section></div></main>
 </div>
