@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T21:07:26Z    *-->
+<!--*    on 2017-02-03T08:58:26Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -175,7 +175,7 @@ MathJax.Hub.Config({
                     \begin{equation*} f(x) = f(a) + f'(a)(x - a) + R_2\ \end{equation*}
 
                     where \(R_2\) is the remainder term. The linear approximation is obtained by dropping the remainder:
-                    \begin{equation} f(x) \approx f(a) + f'(a)(x - a)\text{.}\label{men-6}\tag{3.5.4}\end{equation}
+                    \begin{equation} f(x) \approx f(a) + f'(a)(x - a)\label{men-6}\tag{3.5.4}\end{equation}.
 
                     This is a good approximation for \(x\) when it is close enough to \(a\);
                     since a curve, when closely observed, will begin to resemble a straight line.
@@ -239,7 +239,7 @@ TBD
 <p id="p-143">Implicit Differentiation</p>
 <p id="p-144">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-145">
-                    \(\frac{dy}{dx} = \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }\)
+                    \(\frac{dy}{dx} = -\frac{y \cos\left(x y\right)}{x \cos\left(x y\right) - \cos\left(x\right)} - \frac{y \sin\left(x\right)}{x \cos\left(x y\right) - \cos\left(x\right)}\)
                 </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">
                     \begin{align*}
 y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
@@ -301,16 +301,16 @@ y = \frac{4}{x} -2 -3x\\
 expr = y*cos(x) == 1 + sin(x*y)
 show(expr)
 f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
-dydx(x,y) = f.implicit_derivative(y,x)
-show(dydx)
+dydx = f.implicit_derivative(y,x)
+show(LatexExpr(r"\frac{dy}{dx} = "), dydx)
 </script></div>
 <p id="p-155">Implicit Differentiation of \(xy+2x+3x^2 = 4\)</p>
 <div class="sagecell-sage" id="sage-62"><script type="text/x-sage">x,y = var('x,y')
 expr = x*y+2*x+3*x^2 == 4
 show(expr)
 f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
-dydx(x,y) = f.implicit_derivative(y,x).expand()
-show(dydx)
+dydx = f.implicit_derivative(y,x).expand()
+show(LatexExpr(r"\frac{dy}{dx} = "), dydx)
 </script></div>
 <p id="p-156">Exercise 2.1</p>
 <div class="sagecell-sage" id="sage-63"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
