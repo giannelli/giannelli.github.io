@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-03T08:58:27Z    *-->
+<!--*    on 2017-02-05T12:11:40Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>\begin{align*}
-\fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}\\
-&amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}\\
-&amp;=10x\fe{\ln}{x}+5x
-\end{align*}<span class="incontext"><a href="section-product-rule.html#md-10">in-context</a></span>
+p&amp;= \frac{1}{1+ a e^{-kt}}\\
+\text{Substitute p's for t's, and vice versa:}\\
+t&amp;= \frac{1}{1+ a e^{-kp}}\\
+\text{Solve for p:}\\
+1 + a e^{-kp}&amp;=\frac{1}{t}\\
+a e^{-kp}&amp;=\frac{1}{t} - 1\\
+e^{-kp}&amp;=\frac{1}{at} - \frac{1}{a}\\
+-kp&amp;=\ln \left(\frac{1}{at} - \frac{1}{a}\right)\\
+p&amp;=-\frac{1}{k}\ln \left(\frac{1-t}{at}\right)\\
+p&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
+\text{In other words the inverse is:}\\
+p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)
+\end{align*}<span class="incontext"><a href="cap-2017-hw3.html#md-10">in-context</a></span>
 </body>
 </html>

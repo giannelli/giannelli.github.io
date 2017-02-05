@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-03T08:58:27Z    *-->
+<!--*    on 2017-02-05T12:11:40Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,10 +13,22 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>This is a typical <!--Style me with CSS--><em>Docstring</em> output detailing the <!--Style me with CSS--><em>signature</em> (the required arguments)
-                    and
-                    details on how to use the method.
+<p>
+                    \begin{align*}
+p&amp;= \frac{1}{1+ a e^{-kt}}\\
+\text{Substitute p's for t's, and vice versa:}\\
+t&amp;= \frac{1}{1+ a e^{-kp}}\\
+\text{Solve for p:}\\
+1 + a e^{-kp}&amp;=\frac{1}{t}\\
+a e^{-kp}&amp;=\frac{1}{t} - 1\\
+e^{-kp}&amp;=\frac{1}{at} - \frac{1}{a}\\
+-kp&amp;=\ln \left(\frac{1}{at} - \frac{1}{a}\right)\\
+p&amp;=-\frac{1}{k}\ln \left(\frac{1-t}{at}\right)\\
+p&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
+\text{In other words the inverse is:}\\
+p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)
+\end{align*}
                 </p>
-<span class="incontext"><a href="first-order-de.html#p-171">in-context</a></span>
+<span class="incontext"><a href="cap-2017-hw3.html#p-171">in-context</a></span>
 </body>
 </html>
