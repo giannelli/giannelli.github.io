@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-12T16:49:20Z    *-->
+<!--*    on 2017-02-12T20:16:23Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,27 +13,29 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">4.4.1.1</span>
+<span class="type">Solution</span><span class="codenumber">3.7.2.1</span>
 </h5>
-<p id="p-288">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + e^(s*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-289">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-290">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
-<p id="p-291">
-                As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
-                We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
+<p id="p-211">
+                Let \(r\) be the rent per unit and \(R\) be the total rental income.  We want to maximise \(R\).
+                \begin{equation*}
+                    \begin{cases}
+                    R = 100r &amp; r\leq 800 \\
+                    R = \left[100 - \frac{r-800}{10}\right]r &amp; r &gt; 800
+                    \end{cases}
+                \end{equation*}
             </p>
-<p id="p-292">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
-numerator.diff(s)
-denominator= s - a
-denominator.diff(s)
-</pre>
-<p id="p-293">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
-<p id="p-294">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span><span class="incontext"><a href="exercises-de.html#solution-17">in-context</a></span>
+<p id="p-212">Rearranging the second part of this piecewise equation gives us the following equation to maximise:</p>\begin{equation*}R = 180r-\frac{r^2}{10}\end{equation*}<p id="p-213">Differentiate gives:</p>\begin{equation*}0=180-\frac{r}{5}\end{equation*}<p id="p-214">Solving gives us the stationary point (maxima):</p>\begin{equation*}r=900\end{equation*}<p id="p-215">Double check that the second derivative is negative for a maximum:</p>\begin{equation*}f''=-1/5\end{equation*}<p id="p-216">In this case this is easy to see because our equation is an upside down parabola.</p>
+<p id="p-217">
+                Since this is a <!--Style me with CSS--><em>discrete</em> problem and we solved using a <!--Style me with CSS--><em>continous</em> derivative it is always
+                wise to check with some values:
+
+                \begin{align*}
+\text{ Rent } = 880 \leadsto&amp;R=880 \times 92 = 80960\\
+\text{ Rent } = 890 \leadsto&amp;R=890 \times 91 = 80990\\
+\text{ Rent } = 900 \leadsto&amp;R=900 \times 90 = 81000\\
+\text{ Rent } = 910 \leadsto&amp;R=910 \times 89 = 80990\\
+\text{ Rent } = 920 \leadsto&amp;R=920 \times 88 = 80960
+\end{align*}
+            </p></span><span class="incontext"><a href="cap-2017-hw3.html#solution-17">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-12T16:49:19Z    *-->
+<!--*    on 2017-02-12T20:16:22Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -230,6 +230,124 @@ show("Gradient: ", dydx)
 p1=plot(y,-10,10,exclude=[1])
 p2=plot(dydx,-10,10, color='green')
 p1+p2
+</script></div>
+<article class="exercise-like" id="exercise-18"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">3.7.2</span>
+</h5>
+<p id="p-210">
+                The manager of a 100-unit apartment complex knows from experience that all units will be occupied
+                if the rent is £800 per month. A market survey suggests that, on average, one additional unit will
+                remain vacant for each £10 increase in rent. What rent should the manager charge to maximise profit?
+            </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-14" id="answer-14"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-14" style="display: none;" class="tex2jax_ignore"><span class="solution">\(900\)</span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-17" id="solution-17"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-17" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-211">
+                Let \(r\) be the rent per unit and \(R\) be the total rental income.  We want to maximise \(R\).
+                \begin{equation*}
+                    \begin{cases}
+                    R = 100r &amp; r\leq 800 \\
+                    R = \left[100 - \frac{r-800}{10}\right]r &amp; r &gt; 800
+                    \end{cases}
+                \end{equation*}
+            </p>
+<p id="p-212">Rearranging the second part of this piecewise equation gives us the following equation to maximise:</p>\begin{equation*}R = 180r-\frac{r^2}{10}\end{equation*}<p id="p-213">Differentiate gives:</p>\begin{equation*}0=180-\frac{r}{5}\end{equation*}<p id="p-214">Solving gives us the stationary point (maxima):</p>\begin{equation*}r=900\end{equation*}<p id="p-215">Double check that the second derivative is negative for a maximum:</p>\begin{equation*}f''=-1/5\end{equation*}<p id="p-216">In this case this is easy to see because our equation is an upside down parabola.</p>
+<p id="p-217">
+                Since this is a <!--Style me with CSS--><em>discrete</em> problem and we solved using a <!--Style me with CSS--><em>continous</em> derivative it is always
+                wise to check with some values:
+
+                \begin{align*}
+\text{ Rent } = 880 \leadsto&amp;R=880 \times 92 = 80960\\
+\text{ Rent } = 890 \leadsto&amp;R=890 \times 91 = 80990\\
+\text{ Rent } = 900 \leadsto&amp;R=900 \times 90 = 81000\\
+\text{ Rent } = 910 \leadsto&amp;R=910 \times 89 = 80990\\
+\text{ Rent } = 920 \leadsto&amp;R=920 \times 88 = 80960
+\end{align*}
+            </p></span></span> </article><article class="exercise-like" id="exercise-19"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">3.7.3</span>
+</h5>
+<p id="p-218">
+                Two balls are thrown upward from the edge of a cliff \(140\) meters above the ground.
+                The first is thrown with a speed of \(15 m/s\), the other is thrown a second later with
+                a speed of \(8 m/s\). Do the balls ever pass each other?
+            </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-15" id="answer-15"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-219">
+                The balls crossover below the cliff edge at the time \(4.33\) seconds and
+                at a distance of \(28.89\) metres below the cliff edge.
+            </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-18" id="solution-18"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-18" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-220">
+                The acceleration of the ball is a <!--Style me with CSS--><em>downward</em> (negative) force due to
+                the gravitational force on the earth's surface. This is commonly known as \(g\)
+                (units of \(m/s/s\) or \(ms^{-2}\). Normally distance is represented by \(s\).
+            </p>
+<p id="p-221">The acceleration is the second derivative of distance. Speed is the first derivative.</p>\begin{align*}
+\frac{d^2 s}{dt^2}&amp;=a\\
+\frac{ds}{dt}&amp;=at+u_0\\
+s&amp;=\frac{at^2}{2}+u_0 t + s_0
+\end{align*}<p id="p-222">
+                (where \(u_0\) is an integration constant representing the initial speed
+               and \(s_0\) is an integration constant representing the initial position.)
+            </p>
+<p id="p-223">
+                This is normally written as
+                \begin{equation*}s(t)=u_0t + \frac{1}{2}at^2\end{equation*}
+            </p>
+<p id="p-224">
+                For both balls \(s_0=0\) since we are free to set the zero of our
+                vertical axis to the height of the cliff edge.
+            </p>
+<p id="p-225">
+                For the first ball \(u_0=15\) and for the second ball \(u_0=8\).
+            </p>
+<p id="p-226">
+                Hence we have
+                \begin{equation*}s_1(t)=15t-\frac{1}{2}gt^2\end{equation*}
+                \begin{equation*}s_2(t)=8t-\frac{1}{2}gt^2\end{equation*}
+            </p>
+<p id="p-227">
+                \(g \approx 10\) hence
+                \begin{equation*}s_1(t)=15t-5t^2\end{equation*}
+                \begin{equation*}s_2(t)=8t-5t^2\end{equation*}
+            </p>
+<p id="p-228">
+                Since ball two is one second behind the first we can represent this as
+                \begin{equation*}s_1(t)=15t-5t^2\end{equation*}
+                \begin{equation*}s_2(t-1)=8(t-1)-5(t-1)^2\end{equation*}
+            </p>
+<p id="p-229">
+                These can be set equal to each other and solved
+                \begin{align*}
+15t-5t^2&amp;=8(t-1)-5(t-1)^2\\
+15t-5t^2&amp;=8t-8-5(t^2-2t+1)\\
+15t-5t^2&amp;=8t-8-5t^2+10t-5\\
+15t&amp;=18t-13\\
+t&amp;=\frac{13}{3}
+\end{align*}
+            </p>
+<p id="p-230">In other words there is a solution and the balls cross over.</p>
+<p id="p-231">See the sage plots below for a visual display of what is happening</p></span></span> </article><div class="sagecell-sage" id="sage-77"><script type="text/x-sage">var ('t')
+
+s_1(t)=15*t-5*t^2
+
+s_2(t)=8*(t-1)-5*(t-1)^2
+show(s_1)
+show(s_2)
+
+solution = solve(s_1==s_2,t)
+t_crossover = solution[0].right()
+
+p1=(t_crossover, s_1(t_crossover))
+show("Crossover Point (t,s) = ", p1)
+
+# For the dotted lines
+p2=(0, s_1(t_crossover))
+p3=(t_crossover, 0)
+
+pt1 = point(p1, rgbcolor='white', faceted=True, pointsize=30)
+
+
+P=plot(s_1,0,5)
+P += plot(s_2,1,5, color='green')
+P += pt1
+P += line([p1, p2], linestyle='--')
+P += line([p1, p3], linestyle='--')
+P
 </script></div></section></div></main>
 </div>
 </body>
