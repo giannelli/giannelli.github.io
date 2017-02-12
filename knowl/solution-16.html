@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-05T22:26:08Z    *-->
+<!--*    on 2017-02-12T16:49:20Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,27 +13,36 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">4.4.1.1</span>
+<span class="type">Solution</span><span class="codenumber">3.7.1.1</span>
 </h5>
-<p id="p-275">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + e^(s*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-276">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-277">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
-<p id="p-278">
-                As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
-                We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
-            </p>
-<p id="p-279">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
-numerator.diff(s)
-denominator= s - a
-denominator.diff(s)
-</pre>
-<p id="p-280">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
-<p id="p-281">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span><span class="incontext"><a href="exercises-de.html#solution-16">in-context</a></span>
+<p id="p-203">
+                <p id="p-204">First thing to note is we have a problem at \(x=-1\):
+                    \begin{equation*}\at{\left(\frac{x-1}{x+1}\right)}{x=-1} = \frac{-1 -1}{-1 + 1} = \frac{-2}{0}\end{equation*}
+                </p>
+
+                <p id="p-205">
+                    The sage calculations below calculate finite limits at \(x=-1\).  The graph does <!--Style me with CSS--><em>not</em>
+                    shoot of to \(\pm\infty\) at this value.
+                </p>
+                <p id="p-206">
+                    Next see how the gradient behaves:
+                </p>
+                \begin{align*}
+f(x)&amp;=\tan ^{-1} \left(\frac{x-1}{x+1}\right)\\
+\text{Let }u&amp;=\left(\frac{x-1}{x+1}\right)\\
+\frac{df}{dx}&amp;=\frac{df}{du}\frac{du}{dx}\\
+\frac{d}{du}\tan ^{ - 1} u&amp;=\frac{1}{1 + u^2 }\\
+\frac{du}{dx}&amp;=\frac{2}{(x+1)^2} \text{(Using quotient rule)}\\
+\therefore \frac{df}{dx}&amp;=\frac{1}{1 + u^2 }.\frac{2}{(x+1)^2}\\
+&amp;=\frac{1}{1+{\left(\frac{x-1}{x+1}\right)}^2}.\frac{2}{(x+1)^2}\\
+&amp;=\frac{(x+1)^2}{(x+1)^2+(x-1)^2}.\frac{2}{(x+1)^2}\\
+&amp;=\frac{1}{x^2+1}
+\end{align*}
+
+                <p id="p-207">Strange!  This function seems to have a continous and well defined gradient at \(x=-1\).</p>
+                <p id="p-208">
+                    The sage commands below plot the graph and gardient, and also calculates the limits as \(x \to -1\)
+                </p>
+            </p></span><span class="incontext"><a href="cap-2017-hw3.html#solution-16">in-context</a></span>
 </body>
 </html>

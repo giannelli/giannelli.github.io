@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-05T22:26:08Z    *-->
+<!--*    on 2017-02-12T16:49:20Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG A2</title>
+<title>JAG A1</title>
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -77,6 +77,8 @@ MathJax.Hub.Config({
 \newcommand \dd[1]  { \,\textrm d{#1}                       }   
 \newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
 \newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+
+\newcommand\at[2]{\left.#1\right|_{#2}}
 \newcommand{\lt}{ &lt; }
 \newcommand{\gt}{ &gt; }
 \newcommand{\amp}{ &amp; }
@@ -90,12 +92,12 @@ MathJax.Hub.Config({
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-17.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-19.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="linear-algebra-exam.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-19.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-17.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-19.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="linear-algebra-exam.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-19.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -127,6 +129,7 @@ MathJax.Hub.Config({
 <li><a href="integers-sage.html">Sage</a></li>
 <li><a href="cap-2017-hw2.html">CAP 2017, HW 2 due January 31</a></li>
 <li><a href="cap-2017-hw3.html">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html">CAP 2017, HW 4 due February 14</a></li>
 <li><a href="references-2.html">References</a></li>
 </ul>
 <h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
@@ -139,9 +142,9 @@ MathJax.Hub.Config({
 </ul>
 <h2 class="link active"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="section-17.html">A1</a></li>
-<li><a href="section-18.html" class="active">A2</a></li>
-<li><a href="section-19.html">A3</a></li>
+<li><a href="section-18.html" class="active">A1</a></li>
+<li><a href="section-19.html">A2</a></li>
+<li><a href="section-20.html">A3</a></li>
 <li><a href="section-product-rule.html">The Product Rule</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
@@ -152,189 +155,123 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-18"><header title="Section 5.2 A2"><h1 class="heading hide-type" alt="Section 5.2 A2">
-<span class="type">Section</span><span class="codenumber">5.2</span><span class="title">A2</span>
-</h1></header><article class="example-like" id="exam_a2"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.2.1</span>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-18"><header title="Section 5.1 A1"><h1 class="heading hide-type" alt="Section 5.1 A1">
+<span class="type">Section</span><span class="codenumber">5.1</span><span class="title">A1</span>
+</h1></header><article class="example-like" id="exam_a1"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.1.1</span>
 </h5>
+<p id="p-307">
+                Let \(T\) be a linear transformation from \(\mathbb{R}2 \mapsto \mathbb{R}2\)
+                which is a projection and suppose that
+                \begin{equation*}T \left(\begin{array}{r}
+                    3 \\
+                    1
+                    \end{array}\right) = \left(\begin{array}{r}
+                    1 \\
+                    2
+                    \end{array}\right)\end{equation*}
+                Find the standard matrix of \(T\) (The Projection Matrix).
+            </p>
+<p id="p-308">
+                 [6 marks] 
+            </p></article><p id="p-309">
+            We will use the techniques detailed by Professor Strang in the lecture series 18.06 Linear Algebra
+            <a class="external-url" href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/lecture-15-projections-onto-subspaces/" target="_blank">
+                Lecture 15: Projections onto subspaces</a>
+        </p>
+<figure class="figure-like" id="figure-8"><img width="100%" src="images/strang_projection_1.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.2</span>Diagram Of The Problem</figcaption></figure><figure class="figure-like" id="figure-9"><img width="100%" src="images/strang_projection_2.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.3</span>Professor Strang In Action</figcaption></figure><figure class="figure-like" id="fig_projection_matrix"><img width="100%" src="images/strang_projection_3.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">5.1.4</span>Projection Matrix Formula</figcaption></figure><p id="p-310">
+            In these screenshots we can see that vector \(\vec{p}\) is the projection of vector \(\vec{b}\) onto \(\vec{a}\).
+        </p>
 <p id="p-311">
-
-                Let \(A\) be a subspace of \(\mathbb{R}3\) of dimension 2 and let \(\vec{b}\) be
-                a fixed non-zero vector in \(\mathbb{R}3\).
-            </p>
+            \(\vec{p}\) is a multiple,\(x\), of \(\vec{a}\):
+            \begin{equation*}\vec{p} = x \vec{a}\end{equation*}
+            The error vector \(\vec{e}\) is given by:
+            \begin{equation*}\vec{e}=\vec{b}-\vec{p}\end{equation*}
+            The other piece of information we require is that \(\vec{e}\) is perpendicular to \(\vec{p}\).
+            In other words, the dot product of these two vectors is zero. Recall that the dot product of two vectors is
+            the same as the <!--Style me with CSS--><em>transpose</em> of one with the other.</p>
 <p id="p-312">
-                Let \(A′\) denote the subset of \(\mathbb{R}3\) consisting of all vectors of the
-                form \(\vec{a} + \vec{b}\) where \(\vec{a}\) is in the
-                subspace \(A\).
-            </p>
-<p id="p-313">
-                For which vectors \(\vec{b}\) is \(A′\) also a subspace? Justify your answer.
-            </p>
-<p id="p-314">
-                 [7 marks] 
-            </p></article><p id="p-315">
-            Before grappling this problem it helps  to get a picture.  I believe this is the best way to approach any problem.
-            (Maybe this is just the old physicist in me).  Sometimes it is not possible but not very often.
+            Combining the above gives us:
+        </p>\begin{equation*}\vec{a}^T (\vec{b} - x \vec{a}) = 0\end{equation*}\begin{equation*}\implies x = \frac{\vec{a}^T \vec{b}}{\vec{a}^T \vec{a}}\end{equation*}<p id="p-313">
+            Since \(\vec{p} = x \vec{a}\) then:
+        </p>\begin{equation}\vec{p} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}} \vec{b}\label{men-33}\tag{5.1.1}\end{equation}<p id="p-314">
+            From this we can see that the Projection Matrix, \(\textbf{P}\), is given by:
+        </p>\begin{equation}\textbf{P} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}}\label{men-34}\tag{5.1.2}\end{equation}<p id="p-315">
+            This matches the formula in the screenshot shown in <a knowl="./knowl/fig_projection_matrix.html" knowl-id="xref-fig_projection_matrix" alt="Figure 5.1.4 " title="Figure 5.1.4 ">figure 5.1.4</a> above.
+            In our exercise \(\textbf{P}\) becomes \(\textbf{T}\).
         </p>
 <p id="p-316">
-            So lets first look at how SageMath can help us here. Since \(A\) is a subspace \(\mathbb{R}3\) then it must
-            be a plane passing through the origin; subspaces must contain the \(\left\{0\right\}\) vector and pass through the origin.
+            Now lets see how we can solve this example using SageMath.
         </p>
 <p id="p-317">
-            Take, for example, the plane passing through the origin given by:
-            \begin{equation*}2 x - 4 y + 2 z = 0\end{equation*}
+            One of the most annoying points is that vectors are represented as rows.
+            Usually, we prefer to write them in column form.  However, we can switch the view by
+            using the <tt class="code-inline tex2jax_ignore">column()</tt> method on the vector.
         </p>
-<p id="p-318">
-            Consider the case where our vector \(\vec{a}\) is the direction vector starting at position \((2,2,2)\)
-            and extending to \((3,4,5)\). This lies on the plane going through the origin and is our subspace \(A\).
-        </p>
-<p id="p-319">
-            Let the point \(P\)  be the start of \(\vec{a}\) and the point \(Q\) be the endpoint.
-            These points are also the position vectors \(\vec{OP}\) and \(\vec{OQ}\) and also lie on the
-            plane (since the origin is on the plane).  Hence, a normal to the plane is given by the cross-product:
-        </p>\begin{equation*}\vec{n} = \vec{OP} \times \vec{a}\end{equation*}<p id="p-320">
-            (We could have taken the cross product of any of these three vectors since they are all in the same plane.)
-        </p>
-<p id="p-321">
-            We know that the dot product of the normal \(\vec{n}\) with any of our three vectors should be zero. This
-            enables us to use implicit_plot3d() passing in an equation for any point on the plane.
-            We have defined \(f(x,y,z)\) as the function to represent any point on this plane. In the sage cell
-            this is achieved by the following technique:
-            <pre class="code-block tex2jax_ignore">p = vector([x, y, z])
-pA = a - p
-f(x,y,z) = n.dot_product(pA)
-</pre>
-
-            The resultant function is:
-            \begin{equation*}2 x - 4 y + 2 z = 0\end{equation*}
-            This confirms our initial equation above.
-        </p>
-<p id="p-322">
-            Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath.
-            The one adopted here is to use implicit_plot3d().  We pass into this method the above
-            function \(f\) set equal to zero and the \(x,y,z\) ranges. The next Sage Cell brings this together.
-            Our vector \(\vec{a}\) is the yellow arrow,  the origin is shown as the black dot in the centre,
-            the plane is drawn in blue.
-        </p>
-<p id="p-323">
-            Now add another vector \(\vec{b}\) which is also on the same plane. This shown as the green arrow.
-            To do this we introduce another point \(S=(-1,2,5)\).  You might wonder how we know that this
-            point lies on our plane.  It was found using the following trick.
-            <pre class="code-block tex2jax_ignore">f=n[0]*x+n[1]*y+n[2]*z==0
-show(f(x=-1,y=2))
-</pre>
-            Here \(n[0]\) is the \(x\)-coordinate of the normal, \(n[1]\) is the \(y\)-coordinate, and so on.
-            They are the coefficients of the standard equation of a plane (\(a x + b y + c z = d\)). With \(d = 0\)
-            is the plane case when the plane passes through the origin.  The results are: \begin{equation*}2 z - 10 = 0\end{equation*}
-
-            From this, we can find the \(z\)-coordinate of \(S\) which ensure that the point fits onto
-            our plane.
-        </p>
-<p id="p-324">
-            Now for the full picture.  Lets find another vector \(\vec{c}\) that does not lie on our plane.
-            Lets also form another plane which contains this new vector and vector \(\vec{a}\) (the yellow arrow).
-        </p>
-<p id="p-325">
-            Try the point \(R=(5,0,3)\).
-        </p>
-<p id="p-326">
-            Evaluating the following SageCell and playing with the resultant plot (zooming in and out and rotating)
-            should convince you of the official Edinburgh University <a knowl="./knowl/a2_solution.html" knowl-id="xref-a2_solution" alt="Solution 5.2.1 " title="Solution 5.2.1 ">solution 5.2.1</a> to the problem.
-        </p>
-<div class="sagecell-sage" id="sage-102"><script type="text/x-sage">var ('x,y,z')
-ptP=(2,2,2)
-ptQ=(3,4,5)
-
-OP=vector(ptP);
-OQ=vector(ptQ);
-
-show("OP = ",OP.column())
-show("OQ = ",OQ.column())
-
-a=OQ-OP
-show("a = OQ - OP =",a.column())
-
-n=OP.cross_product(a);
-show("Normal to plane = ", n.normalized().column())
-
-f=n[0]*x+n[1]*y+n[2]*z==0
-show(f(x=1,y=3))
-show(f(x=-1,y=2))
-
-# p (lower case) is any position vector on the plane. Since 'a' is on the plane
-# we can write an general equation for the plane by this trick:
-p = vector([x, y, z])
-pA = a - p;
-f(x,y,z) = n.dot_product(pA)
-show("f(x,y,z) = ", f)
-
-#The Origin
-P0 = point3d((0, 0, 0), color = 'black', size = 15)
-
-# Vector a
-a_arrow=arrow(OP,OQ,color='yellow',width=10)
-
-ptS=(-1,2,5)
-OS=vector(ptS);
-
-show("OS = ",OS.column())
-
-b=OS-OP
-show("b = OS - OP =",b.column())
-b_arrow=arrow(OQ,OS,color='green',width=10)
-
-
-ptR=(5,0,3)
-OR=vector(ptR)
-show("OR = ",OR.column())
-
-c=OR-OP
-show("c = OR - OP =",c.column())
-c_arrow=arrow(OQ,OR,color='black',width=10)
-
-# normal to plane containing a and c
-n2=a.cross_product(c)
-
-pC = p - OR;
-g(x,y,z) = n2.dot_product(pC)
-show("g(x,y,z) = ", g)
-
-plane=implicit_plot3d(f, (x, -7, 7), (y, -7, 7), (z, -7, 7), color = 'blue',opacity=0.6)
-plane2=implicit_plot3d(g, (x, -7, 7), (y, -7, 7), (z, -7, 7), color = 'red',opacity=0.6)
-final_plot = P0 + a_arrow + b_arrow + c_arrow + plane + plane2
-final_plot.show(aspect_ratio=1)
+<div class="sagecell-sage" id="sage-99"><script type="text/x-sage">a=vector([1,2])
+b=vector([3,1])
+show(a)
+show("a = ", a.column())
+show(b)
+show("b = ", b.column())
 </script></div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-a2_solution" id="a2_solution"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-a2_solution" style="display: none;" class="tex2jax_ignore"><span class="solution"><article class="theorem-like" id="proposition-1"><h5 class="heading">
-<span class="type">Proposition</span><span class="codenumber">5.2.2</span>
-</h5>
-<p id="p-327">\(A'\) is a subspace if and only if \(\vec{b} \in A\).</p></article><div class="posterior">
-<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-1" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-328">
-                        If \(A \subset \mathbb{R}3\) be a subspace of rank 2 then it is a plane through the origin.
-                        If \(\vec{x} \in A\) then
-                        \begin{equation*}\vec{x} = t_1 \vec{v_1} + t_2 \vec{v_2}\end{equation*}
-                        for direction vectors \(\vec{v_1},\vec{v_2}\).
-                    </p>
-<p id="p-329">
-                        If \(\vec{b} \in A\)and \(\vec{b} \ne 0\) then
-                        \begin{equation*}\vec{b} = b_1 \vec{v_1} + b_2 \vec{v_2}\end{equation*}
-                        and so \(A'\) is
+<p id="p-318">
+            The vector \(\vec{a}\) times the transpose of itself can be found by taking the <tt class="code-inline tex2jax_ignore">outer_product()</tt>:
+        </p>
+<div class="sagecell-sage" id="sage-100"><script type="text/x-sage">show(a.outer_product(a))
+</script></div>
+<p id="p-319">The dot product (inner product) given by \(\vec{a}^T \vec{a}\) is easily found by either of these two steps:</p>
+<div class="sagecell-sage" id="sage-101"><script type="text/x-sage">show(a*a)
+show(a.inner_product(a))
+</script></div>
+<p id="p-320">
+            Combining these we get the complete solution for \(\textbf{T}\),
+            what Strang calls \(\textbf{P}\) as:
+        </p>
+<div class="sagecell-sage" id="sage-102"><script type="text/x-sage">T=a.outer_product(a)/(a*a)
+show("Projection Matrix, T = ",T)
+</script></div>
+<p id="p-321">
+            These concepts are combined with some fancy plotting methods to give us a nice visualisation of the problem:
+        </p>
+<div class="sagecell-sage" id="sage-103"><script type="text/x-sage">def plot2d_vector(v,name,color='blue'):
+    p=plot(v,color=color)
+    delta=v*v/40
+    midpoint=(v[0]/2+delta,v[1]/2+delta)
+    p += text(name, midpoint,fontweight='extra bold',fontsize=14,color='black')
+    return p
 
+b=vector([3,1])
+a=vector([1,2])*2
+show("a = ", a.column())
+show("b = ", b.column())
 
-                        \begin{equation*}A′ = \{ t_1\vec{v_1} + t_2 \vec{v_2} + b_1 \vec{v_1} + b_2 \vec{v_2} | t_1,t_2 \in \mathbb{R} \}\end{equation*}
-                        \begin{equation*} = \{ (t_1 + b_1)\vec{v_1} + (t_2 + b_2)\vec{v_2}  | t_1,t_2 \in \mathbb{R} \}\end{equation*}
-                        \begin{equation*} = \{ s_1 \vec{v_1} + s_2 \vec{v_2}  | s_1,s_2 \in \mathbb{R} \}\end{equation*}
-                        \begin{equation*} = A\end{equation*}
+T=a.outer_product(a)/(a*a)
+show("Projection Matrix, T = ",T)
 
-                        Hence \(A'\) is also a plane through the origin.
-                    </p>
-<p id="p-330">
-                        If \(\vec{b} \notin A\) then
-                        \begin{equation*}A′ = \{ \vec{b} + t_1 \vec{v_1} + t_2 \vec{v_2} | t_1,t_2 \in \mathbb{R} \}\end{equation*}
-                        which is a plane <!--Style me with CSS--><em>not</em> through the origin, and so is not a subspace.
-                    </p>
-<p id="p-331">(This is hopefully illustrated with the Sage Cell simulation.)</p></article></div>
-</div></span></span></section></div></main>
+p=T*b
+show("projection, Tb = ", p.column())
+e=b-p
+show("error = ",e.column())
+
+e_midpoint = ((b[0]+p[0])/2 + e*e/20, (b[1]+p[1])/2 + e*e/20)
+
+show("Projection of b onto a:")
+
+plt=plot2d_vector(a, "a")+plot2d_vector(b, "b")+ plot2d_vector(p,"p",color='red')+arrow(p, b, linestyle='--', color='green',aspect_ratio='1')
+plt += text("e", e_midpoint,fontweight='extra bold',fontsize=14,color='black')
+plt
+</script></div>
+<p id="p-322">
+            Notice that the diagram is <!--Style me with CSS--><em>upside down</em> compared with Strang's and that we multiplied
+            \(\vec{a}\) by a factor of 2 so that we could more clearly see that \(\vec{p}\) lies on the same line as \(\vec{a}\).
+        </p>
+<p id="p-323">Let us now check some other properties of the projection matrix \(\textbf{T}\)</p>
+<div class="sagecell-sage" id="sage-104"><script type="text/x-sage">show("Is invertible = ", T.is_invertible())
+show("Is symmetric = ", T.is_symmetric())
+show("Is the same as its transpose = ", T.transpose() == T)
+show("Is the same as its square = ", T*T == T)
+</script></div></section></div></main>
 </div>
 </body>
 </html>

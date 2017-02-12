@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-05T22:26:08Z    *-->
+<!--*    on 2017-02-12T16:49:20Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,8 +14,16 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                    The first derivative is given by:
-                    \begin{equation*}\frac{\Delta f(x)}{\Delta x} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{(x+h)-(x)} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{h}\end{equation*}
+                    Given a smooth function \(f\), we can always write down a Taylor series;
+                    there is no guarantee that the series converges to anything, let alone
+                    to the function.  Given a smooth function \(f : \mathbb{R} \to \mathbb{R}\), its Taylor
+                    series (around \(0\)) is
+                    \begin{equation*}\sum_{n=0}^\infty \frac{f^{(n)}(0) \, x^n}{n!}\end{equation*}
+                    A common mistake is to use \(f^{(n)}(x)\) instead of \(f^{(n)}(0)\).
+
+                    Given a smooth function \(f : \mathbb{R} \to \mathbb{R}\), its Taylor series expanded
+                    around \(a\) is
+                    \begin{equation*}\sum_{n=0}^\infty \frac{f^{(n)}(a) \, (x-a)^n}{n!}\end{equation*}
                 </p>
 <span class="incontext"><a href="cap-2017-hw3.html#p-193">in-context</a></span>
 </body>
