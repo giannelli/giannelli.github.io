@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-12T20:16:23Z    *-->
+<!--*    on 2017-02-12T20:55:50Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,27 +13,23 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">4.4.1.1</span>
+<span class="type">Solution</span><span class="codenumber">3.7.4.1</span>
 </h5>
-<p id="p-310">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + e^(s*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-311">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-312">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
-<p id="p-313">
-                As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
-                We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
+<p id="p-233">
+                All we can say about the acceleration in the interval is that its average has taken us from
+                \(50 km/h\) to \(65 km/h\) in a time of \(10\) minutes.
             </p>
-<p id="p-314">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
-numerator.diff(s)
-denominator= s - a
-denominator.diff(s)
-</pre>
-<p id="p-315">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
-<p id="p-316">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span><span class="incontext"><a href="exercises-de.html#solution-19">in-context</a></span>
+<p id="p-234">
+                The only thing we have to be careful with is to keep the <!--Style me with CSS--><em>units</em> consistent
+                \(\frac{km/hr}{hr} = km hr^{-2}\).
+                \begin{align*}
+acc_{av} &amp;=\frac{\text{change in speed}}{\text{change in time}}\\
+acc_{av} &amp;=\frac{65 - 50 \text{ km/hr}}{\frac{10}{60}\text{ hr}}\\
+&amp;=90 km h^{-2}\text{ (km per hour per hour)}
+\end{align*}
+            </p>
+<p id="p-235">
+                But to show this mathematically you probably have to give a bigger explanation!
+            </p></span><span class="incontext"><a href="cap-2017-hw3.html#solution-19">in-context</a></span>
 </body>
 </html>
