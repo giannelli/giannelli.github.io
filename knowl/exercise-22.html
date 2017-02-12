@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-12T20:55:51Z    *-->
+<!--*    on 2017-02-12T21:22:55Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,19 +13,8 @@
 </head>
 <body>
 <article class="exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="codenumber">2</span>
+<span class="type">Exercise</span><span class="codenumber">4</span>
 </h5>
-<p id="p-321">Response to Oscillating Input</p>
-<p id="p-322">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\tag{4.4.10}\end{equation}<p id="p-323">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
-<p id="p-324">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-325">where \(M\) and \(N\) are constants.</p>
-<p id="p-326">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-21" id="solution-21"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-21" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-327">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + cos(omega*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-328">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article><span class="incontext"><a href="exercises-de.html#exercise-22">in-context</a></span>
+<p id="p-349">\(\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1\)</p></article><span class="incontext"><a href="section-product-rule.html#exercise-22">in-context</a></span>
 </body>
 </html>

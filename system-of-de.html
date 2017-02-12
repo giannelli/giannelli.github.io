@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-12T20:55:50Z    *-->
+<!--*    on 2017-02-12T21:22:55Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -129,7 +129,6 @@ MathJax.Hub.Config({
 <li><a href="integers-sage.html">Sage</a></li>
 <li><a href="cap-2017-hw2.html">CAP 2017, HW 2 due January 31</a></li>
 <li><a href="cap-2017-hw3.html">CAP 2017, HW 3 due February 7</a></li>
-<li><a href="cap-2017-hw3.html">CAP 2017, HW 4 due February 14</a></li>
 <li><a href="references-2.html">References</a></li>
 </ul>
 <h2 class="link active"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
@@ -142,9 +141,9 @@ MathJax.Hub.Config({
 </ul>
 <h2 class="link"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="section-18.html">A1</a></li>
-<li><a href="section-19.html">A2</a></li>
-<li><a href="section-20.html">A3</a></li>
+<li><a href="section-17.html">A1</a></li>
+<li><a href="section-18.html">A2</a></li>
+<li><a href="section-19.html">A3</a></li>
 <li><a href="section-product-rule.html">The Product Rule</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
@@ -159,10 +158,10 @@ MathJax.Hub.Config({
 <span class="type">Section</span><span class="codenumber">4.3</span><span class="title">Systems Of Equations</span><a href="system-of-de.html" class="permalink">¶ permalink</a>
 </h1></header><section class="subsection" id="subsection-11"><header title="Subsection 4.3.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.3.1 First Example">
 <span class="type">Subsection</span><span class="codenumber">4.3.1</span><span class="title">First Example</span>
-</h1></header><p id="p-290">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-23}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-24}\tag{4.3.2}\end{equation}<p id="p-291">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-25}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-26}\tag{4.3.4}\end{equation}<p id="p-292">You should now be comfortable with defining the variables, the functions, and the initial conditions.
+</h1></header><p id="p-255">Let us look at the following pair of coupled first order differential equations:</p>\begin{equation}\frac{dx}{dt} + y(t) = 0\label{men-23}\tag{4.3.1}\end{equation}\begin{equation}\frac{dy}{dt} - x(t) = 0\label{men-24}\tag{4.3.2}\end{equation}<p id="p-256">Initial conditions:</p>\begin{equation}y(0) = 1\label{men-25}\tag{4.3.3}\end{equation}\begin{equation}x(0) = 2\label{men-26}\tag{4.3.4}\end{equation}<p id="p-257">You should now be comfortable with defining the variables, the functions, and the initial conditions.
                 The only difference is the use of the <tt class="code-inline tex2jax_ignore">desolve_system()</tt> method. So let us jump straight in:
             </p>
-<div class="sagecell-sage" id="sage-97"><script type="text/x-sage">t = var('t')
+<div class="sagecell-sage" id="sage-93"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
 de1 = diff(x,t) + y == 0
@@ -170,8 +169,8 @@ de2 = diff(y,t) - x == 0
 solution = desolve_system([de1,de2],[x,y],ics=[0,1,2])
 show(solution)
 </script></div>
-<p id="p-293">Try this for fun:</p>
-<div class="sagecell-sage" id="sage-98"><script type="text/x-sage">t = var('t')
+<p id="p-258">Try this for fun:</p>
+<div class="sagecell-sage" id="sage-94"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 y = function('y')(t)
 de1 = diff(x,t) + y == t*cos(3*t)
@@ -187,9 +186,9 @@ solnx;solny
 #plot([solnx,solny],(0,20*pi))
 parametric_plot((solnx,solny), (t,0, 50*pi))
 </script></div>
-<div class="sagecell-sage" id="sage-99"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
+<div class="sagecell-sage" id="sage-95"><script type="text/x-sage">plot([solnx,solny],(0,50*pi))
 </script></div>
-<p id="p-294">A controlled explosion!</p></section></section></div></main>
+<p id="p-259">A controlled explosion!</p></section></section></div></main>
 </div>
 </body>
 </html>
