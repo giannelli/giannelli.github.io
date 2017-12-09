@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,12 +11,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>\begin{gather*}
-xy+2x+3x^2 = 4\\
-\text{Solve for } y\\
-y = \frac{4}{x} -2 -3x\\
-\text{And differentiate } y\\
-\frac{dy}{dx} = -\frac{4}{x^2} -3
-\end{gather*}<span class="incontext"><a href="cap-2017-hw2.html#md-7">in-context</a></span>
+<body>\begin{align*}
+y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
+\text{Differentiate through:}\\
+y \frac{d\left(\cos\left(x\right)\right)}{dx} + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                         \frac{d\left(\sin\left(xy\right)\right)}{dx}\\
+
+                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                            \frac{d\left(\sin\left(xy\right)\right)}{dx}
+                        \\
+\text{Now set } u = xy\\
+\frac{d\left(\sin\left(u\right)\right)}{dx}&amp;= \frac{d\left(\sin\left(u\right)\right)}{du}\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\left(x\frac{dy}{dx} + y\frac{dx}{dx}\right)\\
+&amp;= x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
+\text{Substituting this into our main equation:}\\
+
+                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+                            x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)
+                        \\
+\text{Rearranging:}\\
+\frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
+\end{align*}<span class="incontext"><a href="cap-2017-hw2.html#md-7">in-context</a></span>
 </body>
 </html>

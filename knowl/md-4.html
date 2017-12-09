@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>\begin{align*}
-\fe{f}{x}&amp;=\fe{f}{a} + \fe{\fd{f}}{a}(x-a)\\
-TBD
+\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\cdot\frac{\sqrt{3(x+h)+1}+\sqrt{3x+1}}{\sqrt{3(x+h)+1}+\sqrt{3x+1}}\\
+&amp;=\lim_{h\to0}\frac{\left(3(x+h)+1\right)-(3x+1)}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3h}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3}{\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}<span class="incontext"><a href="cap-2017-hw2.html#md-4">in-context</a></span>
 </body>
 </html>

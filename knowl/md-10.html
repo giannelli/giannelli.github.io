@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,18 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>\begin{align*}
-p&amp;= \frac{1}{1+ a e^{-kt}}\\
-\text{Substitute p's for t's, and vice versa:}\\
-t&amp;= \frac{1}{1+ a e^{-kp}}\\
-\text{Solve for p:}\\
-1 + a e^{-kp}&amp;=\frac{1}{t}\\
-a e^{-kp}&amp;=\frac{1}{t} - 1\\
-e^{-kp}&amp;=\frac{1}{at} - \frac{1}{a}\\
--kp&amp;=\ln \left(\frac{1}{at} - \frac{1}{a}\right)\\
-p&amp;=-\frac{1}{k}\ln \left(\frac{1-t}{at}\right)\\
-p&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
-\text{In other words the inverse is:}\\
-p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)
+lim_{t \to \infty}\fe{p}{t}&amp;=\frac{1}{1+ a e^{-k\infty}}\\
+\text{Since }e^{-k\infty} = 0, \{ k \in \mathbb{R} | k &gt; 0 \}\\
+\therefore lim_{t \to \infty} p(t)&amp;= \frac{1}{1+0}\\
+&amp;=1
 \end{align*}<span class="incontext"><a href="cap-2017-hw3.html#md-10">in-context</a></span>
 </body>
 </html>

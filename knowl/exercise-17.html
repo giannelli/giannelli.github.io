@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,38 +13,37 @@
 </head>
 <body>
 <article class="exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="codenumber">3.7.1</span>
-</h5>
-<p id="p-202">Using the guidelines of <a knowl="./knowl/james_stewart.html" knowl-id="xref-james_stewart" alt="Bibliographic Entry 3.8.1 Essential Calculus: Early Transcendentals" title="Bibliographic Entry 3.8.1 Essential Calculus: Early Transcendentals">Stewart section 4.4 [3.8.1]</a>, sketch the graph of the curve \(\tan ^{-1} \left(\frac{x-1}{x+1}\right)\).</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-16" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-203">
-                <p id="p-204">First thing to note is we have a problem at \(x=-1\):
-                    \begin{equation*}\at{\left(\frac{x-1}{x+1}\right)}{x=-1} = \frac{-1 -1}{-1 + 1} = \frac{-2}{0}\end{equation*}
+<span class="type">Exercise</span><span class="codenumber">a)</span>
+</h5>\(800 mg\)\(t\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-10" id="answer-10"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-196">
+                    The mass (in \(mg\)) after time \(t\) (in days) is:
+                    \begin{equation*}M_t=800 e^{-0.1386t}\end{equation*}
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-197">
+                    The rate of change of mass is proportional to the current mass:
+                    \begin{equation*}\frac{dM}{dt} \propto M\end{equation*}
+                    Lets call the constant of proportionality \(\lambda\).
+                    \begin{equation*}\frac{dM}{dt} = -\lambda M\end{equation*}
+                    The negative is because this is a decay.
                 </p>
-
-                <p id="p-205">
-                    The sage calculations below calculate finite limits at \(x=-1\).  The graph does <!--Style me with CSS--><em>not</em>
-                    shoot of to \(\pm\infty\) at this value.
+<p id="p-198">
+                    The solution of this equation is:
+                    \begin{equation*}M_t = M_0 e^{-\lambda t}\end{equation*}
+                    (where \(M_0\) is the mass at \(t=0\).)
                 </p>
-                <p id="p-206">
-                    Next see how the gradient behaves:
+<p id="p-199">
+                    At the half-life \(t=T_{\frac{1}{2}}\) and \(M_t = \frac{M_0}{2}\):
+                    \begin{equation*}\frac{M_0}{2} = M_0 \exp\left({-\lambda T_{\frac{1}{2}}}\right)\end{equation*}
+                    \begin{equation*}2 = \exp\left({\lambda T_{\frac{1}{2}}}\right)\end{equation*}
+                    \begin{equation*}\log{2} = \lambda T_{\frac{1}{2}}\end{equation*}
+                    \begin{equation*}\lambda = \frac{log2}{T_{\frac{1}{2}}}\end{equation*}
                 </p>
-                \begin{align*}
-f(x)&amp;=\tan ^{-1} \left(\frac{x-1}{x+1}\right)\\
-\text{Let }u&amp;=\left(\frac{x-1}{x+1}\right)\\
-\frac{df}{dx}&amp;=\frac{df}{du}\frac{du}{dx}\\
-\frac{d}{du}\tan ^{ - 1} u&amp;=\frac{1}{1 + u^2 }\\
-\frac{du}{dx}&amp;=\frac{2}{(x+1)^2} \text{(Using quotient rule)}\\
-\therefore \frac{df}{dx}&amp;=\frac{1}{1 + u^2 }.\frac{2}{(x+1)^2}\\
-&amp;=\frac{1}{1+{\left(\frac{x-1}{x+1}\right)}^2}.\frac{2}{(x+1)^2}\\
-&amp;=\frac{(x+1)^2}{(x+1)^2+(x-1)^2}.\frac{2}{(x+1)^2}\\
-&amp;=\frac{1}{x^2+1}
-\end{align*}
-
-                <p id="p-207">Strange!  This function seems to have a continous and well defined gradient at \(x=-1\).</p>
-                <p id="p-208">
-                    The sage commands below plot the graph and gardient, and also calculates the limits as \(x \to -1\)
-                    and \(x \to \pm\infty\)
+<p id="p-200">
+                    We are told that the half-life is \(5\) days.
+                    \begin{equation*}\lambda \approx 0.1386\end{equation*}
                 </p>
-            </p></span></span> </article><span class="incontext"><a href="cap-2017-hw4.html#exercise-17">in-context</a></span>
+<p id="p-201">
+                    Substituting with the original mass gives us:
+                    \begin{equation*}M_t = 800 e^{-0.1386t}\end{equation*}
+                    where \(M_t\) is the mass in \(mg\) and \(t\) is the time in days.
+                </p></span></span> </article><span class="incontext"><a href="cap-2017-hw3.html#exercise-17">in-context</a></span>
 </body>
 </html>

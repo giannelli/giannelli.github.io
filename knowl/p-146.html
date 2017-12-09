@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,28 +14,19 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                    \begin{align*}
-y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
-\text{Differentiate through:}\\
-y \frac{d\left(\cos\left(x\right)\right)}{dx} + \frac{dy}{dx}\cos\left(x\right)&amp;=
-                         \frac{d\left(\sin\left(xy\right)\right)}{dx}\\
+                    Given a twice continuously differentiable function \(f\) of one real number variable,
+                    Taylor's theorem for the case \(n = 1 \) states that:
+                    \begin{equation*} f(x) = f(a) + f'(a)(x - a) + R_2\ \end{equation*}
 
-                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
-                            \frac{d\left(\sin\left(xy\right)\right)}{dx}
-                        \\
-\text{Now set } u = xy\\
-\frac{d\left(\sin\left(u\right)\right)}{dx}&amp;= \frac{d\left(\sin\left(u\right)\right)}{du}\frac{du}{dx}\\
-&amp;= \cos\left(u\right)\frac{du}{dx}\\
-&amp;= \cos\left(u\right)\left(x\frac{dy}{dx} + y\frac{dx}{dx}\right)\\
-&amp;= x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
-\text{Substituting this into our main equation:}\\
+                    where \(R_2\) is the remainder term. The linear approximation is obtained by dropping the remainder:
+                    \begin{equation} f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.6.4}\end{equation}.
 
-                            - y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
-                            x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)
-                        \\
-\text{Rearranging:}\\
-\frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
-\end{align*}
+                    This is a good approximation for \(x\) when it is close enough to \(a\);
+                    since a curve, when closely observed, will begin to resemble a straight line.
+                    Therefore, the expression on the right-hand side is just the equation for the tangent line
+                    to the graph of \(f\) at \((a,f(a))\).  For this reason, this process is also called
+                    the <!--Style me with CSS--><em>tangent line approximation</em>.
+
                 </p>
 <span class="incontext"><a href="cap-2017-hw2.html#p-146">in-context</a></span>
 </body>

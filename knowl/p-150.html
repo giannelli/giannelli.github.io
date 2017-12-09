@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,20 +14,16 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                    Implicit:
-                    \begin{gather*}
-xy+2x+3x^2 = 4\\
-\text{Differentiate each part using the product rule for } xy\\
-x\frac{dy}{dx} + y\frac{dx}{dx} + 2 + 6x = 0\\
-x\frac{dy}{dx} + y + 2 + 6x = 0\\
-\text{Rearranging gives:} \\
-\frac{dy}{dx} = -\frac{\left(y+2+6x\right)}{x}\\
-\text{Rearranging original equation for } y\\
-y = \frac{4}{x} -2 -3x\\
-\text{Substituting gives } y\\
-\frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
-\frac{dy}{dx} = -\frac{4}{x^2}-3
-\end{gather*}
+                    \begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\cdot\frac{\sqrt{3x+1}+\sqrt{3a+1}}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\lim_{a\to x}\frac{(3x+1)-(3a+1)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3(x-a)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
                 </p>
 <span class="incontext"><a href="cap-2017-hw2.html#p-150">in-context</a></span>
 </body>

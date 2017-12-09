@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,7 +14,20 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                    \begin{equation*}N(30) = 800 e^{-0.1386 \times 30} = 800 e^{-4.1589} = 800 \times 0.015625 = 12.5 \end{equation*}
+                    \begin{align*}
+p&amp;= \frac{1}{1+ a e^{-kt}}\\
+\text{Substitute p's for t's, and vice versa:}\\
+t&amp;= \frac{1}{1+ a e^{-kp}}\\
+\text{Solve for p:}\\
+1 + a e^{-kp}&amp;=\frac{1}{t}\\
+a e^{-kp}&amp;=\frac{1}{t} - 1\\
+e^{-kp}&amp;=\frac{1}{at} - \frac{1}{a}\\
+-kp&amp;=\ln \left(\frac{1}{at} - \frac{1}{a}\right)\\
+p&amp;=-\frac{1}{k}\ln \left(\frac{1-t}{at}\right)\\
+p&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
+\text{In other words the inverse is:}\\
+p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)
+\end{align*}
                 </p>
 <span class="incontext"><a href="cap-2017-hw3.html#p-187">in-context</a></span>
 </body>

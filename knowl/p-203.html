@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,35 +14,8 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-                <p id="p-204">First thing to note is we have a problem at \(x=-1\):
-                    \begin{equation*}\at{\left(\frac{x-1}{x+1}\right)}{x=-1} = \frac{-1 -1}{-1 + 1} = \frac{-2}{0}\end{equation*}
+                    \begin{equation*}N(30) = 800 e^{-0.1386 \times 30} = 800 e^{-4.1589} = 800 \times 0.015625 = 12.5 \end{equation*}
                 </p>
-
-                <p id="p-205">
-                    The sage calculations below calculate finite limits at \(x=-1\).  The graph does <!--Style me with CSS--><em>not</em>
-                    shoot of to \(\pm\infty\) at this value.
-                </p>
-                <p id="p-206">
-                    Next see how the gradient behaves:
-                </p>
-                \begin{align*}
-f(x)&amp;=\tan ^{-1} \left(\frac{x-1}{x+1}\right)\\
-\text{Let }u&amp;=\left(\frac{x-1}{x+1}\right)\\
-\frac{df}{dx}&amp;=\frac{df}{du}\frac{du}{dx}\\
-\frac{d}{du}\tan ^{ - 1} u&amp;=\frac{1}{1 + u^2 }\\
-\frac{du}{dx}&amp;=\frac{2}{(x+1)^2} \text{(Using quotient rule)}\\
-\therefore \frac{df}{dx}&amp;=\frac{1}{1 + u^2 }.\frac{2}{(x+1)^2}\\
-&amp;=\frac{1}{1+{\left(\frac{x-1}{x+1}\right)}^2}.\frac{2}{(x+1)^2}\\
-&amp;=\frac{(x+1)^2}{(x+1)^2+(x-1)^2}.\frac{2}{(x+1)^2}\\
-&amp;=\frac{1}{x^2+1}
-\end{align*}
-
-                <p id="p-207">Strange!  This function seems to have a continous and well defined gradient at \(x=-1\).</p>
-                <p id="p-208">
-                    The sage commands below plot the graph and gardient, and also calculates the limits as \(x \to -1\)
-                    and \(x \to \pm\infty\)
-                </p>
-            </p>
-<span class="incontext"><a href="cap-2017-hw4.html#p-203">in-context</a></span>
+<span class="incontext"><a href="cap-2017-hw3.html#p-203">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,18 +13,21 @@
 </head>
 <body>
 <article class="exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="codenumber">d)</span>
-</h5>\(p\)\(a=10,k=0.5\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-9" id="answer-9"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-172">
-                    \(7.38\) days.
+<span class="type">Exercise</span><span class="codenumber">2</span>
+</h5>
+<p id="p-153">
+                    Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.
                 </p>
-<p id="p-173">See <a knowl="./knowl/hm3_1d_pt1.html" knowl-id="xref-hm3_1d_pt1" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of \(p(t)\) below.</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-174">
-                    Use the inverse function with a value of \(0.8\)
-
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-154">
+                    \(1+\dfrac{1}{\sqrt{x^3}}\)
+                </p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-155">
                     \begin{align*}
-p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
-p^{-1}(0.8)&amp;=7.378
+\fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
+\text{Expand this to:}\\
+\fe{f}{x}&amp;=x - \frac{2}{\sqrt{x}}\\
+\text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
+\fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
 \end{align*}
-                </p>
-<p id="p-175">See <a knowl="./knowl/hm3_1d_pt2.html" knowl-id="xref-hm3_1d_pt2" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of inverse \(p(t)\) below.</p></span></span> </article><span class="incontext"><a href="cap-2017-hw3.html#exercise-9">in-context</a></span>
+                </p></span></span> </article><span class="incontext"><a href="cap-2017-hw2.html#exercise-9">in-context</a></span>
 </body>
 </html>

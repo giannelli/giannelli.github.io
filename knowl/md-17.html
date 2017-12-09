@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:01Z    *-->
+<!--*    on 2017-12-09T09:45:21Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>\begin{align*}
-\frac{d^2 s}{dt^2}&amp;=a\\
-\frac{ds}{dt}&amp;=at+u_0\\
-s&amp;=\frac{at^2}{2}+u_0 t + s_0
+f(x)&amp;=\tan ^{-1} \left(\frac{x-1}{x+1}\right)\\
+\text{Let }u&amp;=\left(\frac{x-1}{x+1}\right)\\
+\frac{df}{dx}&amp;=\frac{df}{du}\frac{du}{dx}\\
+\frac{d}{du}\tan ^{ - 1} u&amp;=\frac{1}{1 + u^2 }\\
+\frac{du}{dx}&amp;=\frac{2}{(x+1)^2} \text{(Using quotient rule)}\\
+\therefore \frac{df}{dx}&amp;=\frac{1}{1 + u^2 }.\frac{2}{(x+1)^2}\\
+&amp;=\frac{1}{1+{\left(\frac{x-1}{x+1}\right)}^2}.\frac{2}{(x+1)^2}\\
+&amp;=\frac{(x+1)^2}{(x+1)^2+(x-1)^2}.\frac{2}{(x+1)^2}\\
+&amp;=\frac{1}{x^2+1}
 \end{align*}<span class="incontext"><a href="cap-2017-hw4.html#md-17">in-context</a></span>
 </body>
 </html>

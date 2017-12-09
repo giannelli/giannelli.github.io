@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:00Z    *-->
+<!--*    on 2017-12-09T09:45:20Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -116,12 +116,14 @@ MathJax.Hub.Config({
 <h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
 <li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="section-product-rule.html">The Product Rule</a></li>
 <li><a href="calculus-derivatives.html">Derivatives</a></li>
 <li><a href="calculus-integration.html">Integration</a></li>
-<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="level-curves.html">Sketching Level Curves</a></li>
 <li><a href="cap-2017-hw2.html">CAP 2017, HW 2 due January 31</a></li>
 <li><a href="cap-2017-hw3.html">CAP 2017, HW 3 due February 7</a></li>
 <li><a href="cap-2017-hw4.html">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="cap-2017-hw5.html">CAP 2017, HW 4 due February 28</a></li>
 <li><a href="references-2.html">References</a></li>
 </ul>
 <h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
@@ -134,10 +136,9 @@ MathJax.Hub.Config({
 </ul>
 <h2 class="link"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="section-18.html">A1</a></li>
-<li><a href="section-19.html">A2</a></li>
-<li><a href="section-20.html">A3</a></li>
-<li><a href="section-product-rule.html">The Product Rule</a></li>
+<li><a href="section-20.html">A1</a></li>
+<li><a href="section-21.html">A2</a></li>
+<li><a href="section-22.html">A3</a></li>
 </ul>
 <h2 class="link active"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
@@ -150,14 +151,14 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="appendix-2"><header title="Appendix B Hints and Solutions to Selected Exercises"><h1 class="heading hide-type" alt="Appendix B Hints and Solutions to Selected Exercises">
 <span class="type">Appendix</span><span class="codenumber">B</span><span class="title">Hints and Solutions to Selected Exercises</span>
 </h1></header><section class="exercises"><h1 class="heading">
-<span class="type">Exercises</span><span class="codenumber">3.5.1</span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="codenumber">3.6.1</span><span class="title">Exercises</span>
 </h1>
-<article class="exercise-like" id="exercise-1"><h5 class="heading hidden-type">
+<article class="exercise-like" id="exercise-8"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">1</span>
 </h5>
-<p id="p-131">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-132">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-133">First Method:</p>
-<p id="p-134">
+<p id="p-147">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-148">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\).</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-149">First Method:</p>
+<p id="p-150">
                     \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
 &amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
@@ -169,8 +170,8 @@ MathJax.Hub.Config({
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
                 </p>
-<p id="p-135">Second Method:</p>
-<p id="p-136">
+<p id="p-151">Second Method:</p>
+<p id="p-152">
                     \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
 &amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
@@ -181,15 +182,15 @@ MathJax.Hub.Config({
 &amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-2"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-9"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">2</span>
 </h5>
-<p id="p-137">
+<p id="p-153">
                     Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.
                 </p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-138">
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-154">
                     \(1+\dfrac{1}{\sqrt{x^3}}\)
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-139">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-155">
                     \begin{align*}
 \fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
 \text{Expand this to:}\\
@@ -197,27 +198,27 @@ MathJax.Hub.Config({
 \text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
 \fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-3"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-10"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">3</span>
 </h5>
-<p id="p-140">
-                    Use <a knowl="./knowl/definition-linear-approx.html" knowl-id="xref-definition-linear-approx" alt="Definition 3.5.3 Linear Approximation" title="Definition 3.5.3 Linear Approximation">Linear Approximation 3.5.3</a> to calculate \(\sqrt{99.8}\).
+<p id="p-156">
+                    Use <a knowl="./knowl/definition-linear-approx.html" knowl-id="xref-definition-linear-approx" alt="Definition 3.6.3 Linear Approximation" title="Definition 3.6.3 Linear Approximation">Linear Approximation 3.6.3</a> to calculate \(\sqrt{99.8}\).
                 </p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-3" id="answer-3"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-141">
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-3" id="answer-3"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-157">
                     \(9.9000\)
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-142">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-158">
                     \begin{align*}
 \fe{f}{x}&amp;=\fe{f}{a} + \fe{\fd{f}}{a}(x-a)\\
 TBD
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-4"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-11"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">4</span>
 </h5>
-<p id="p-143">Implicit Differentiation</p>
-<p id="p-144">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-145">
+<p id="p-159">Implicit Differentiation</p>
+<p id="p-160">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-161">
                     \(\frac{dy}{dx} = -\frac{y \cos\left(x y\right)}{x \cos\left(x y\right) - \cos\left(x\right)} - \frac{y \sin\left(x\right)}{x \cos\left(x y\right) - \cos\left(x\right)}\)
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-162">
                     \begin{align*}
 y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
 \text{Differentiate through:}\\
@@ -240,14 +241,14 @@ y \frac{d\left(\cos\left(x\right)\right)}{dx} + \frac{dy}{dx}\cos\left(x\right)&
 \text{Rearranging:}\\
 \frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-5"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-12"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">5</span>
 </h5>
-<p id="p-147">Implicit Differentiation</p>
-<p id="p-148"> \(xy+2x+3x^2 = 4\)</p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-5" id="answer-5"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-149">
+<p id="p-163">Implicit Differentiation</p>
+<p id="p-164"> \(xy+2x+3x^2 = 4\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-5" id="answer-5"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-165">
                     \(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-150">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-166">
                     Implicit:
                     \begin{gather*}
 xy+2x+3x^2 = 4\\
@@ -263,7 +264,7 @@ y = \frac{4}{x} -2 -3x\\
 \frac{dy}{dx} = -\frac{4}{x^2}-3
 \end{gather*}
                 </p>
-<p id="p-151">
+<p id="p-167">
                     Explicit:
                     \begin{gather*}
 xy+2x+3x^2 = 4\\
@@ -273,38 +274,38 @@ y = \frac{4}{x} -2 -3x\\
 \frac{dy}{dx} = -\frac{4}{x^2} -3
 \end{gather*}
                 </p>
-<p id="p-152">As you can see the results are the same for each method.</p>
-<p id="p-153">The problem that implicit differentiation solves is that it is often difficult or
+<p id="p-168">As you can see the results are the same for each method.</p>
+<p id="p-169">The problem that implicit differentiation solves is that it is often difficult or
                     impossible to rearrange to have \(y\) on the left by its own.</p></span></span></span></article></section><section class="exercises"><h1 class="heading">
-<span class="type">Exercises</span><span class="codenumber">3.6.1</span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="codenumber">3.7.1</span><span class="title">Exercises</span>
 </h1>
-<article class="exercise-like" id="exercise-6"><h5 class="heading hidden-type">
+<article class="exercise-like" id="exercise-13"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">a)</span>
 </h5>
                 Find \(\lim_{t \to \infty} p(t)\). What does this mean for the rumor?
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-6" id="answer-6"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-6" style="display: none;" class="tex2jax_ignore"><span class="solution">\(p(\infty) = 1\)<p id="p-168">After a long period of time everyone knows the rumour!</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-6" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-169">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-6" id="answer-6"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-6" style="display: none;" class="tex2jax_ignore"><span class="solution">\(p(\infty) = 1\)<p id="p-184">After a long period of time everyone knows the rumour!</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-6" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-185">
                     \begin{align*}
 lim_{t \to \infty}\fe{p}{t}&amp;=\frac{1}{1+ a e^{-k\infty}}\\
 \text{Since }e^{-k\infty} = 0, \{ k \in \mathbb{R} | k &gt; 0 \}\\
 \therefore lim_{t \to \infty} p(t)&amp;= \frac{1}{1+0}\\
 &amp;=1
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-7"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-14"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">b)</span>
 </h5>
                 Find the rate of spread of the rumor.
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-7" id="answer-7"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-7" style="display: none;" class="tex2jax_ignore"><span class="solution">\(\frac{dp}{dt}=\frac{ak e^{-kt}}{(1+a e^{-kt})^2}\)</span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-7" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-170">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-7" id="answer-7"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-7" style="display: none;" class="tex2jax_ignore"><span class="solution">\(\frac{dp}{dt}=\frac{ak e^{-kt}}{(1+a e^{-kt})^2}\)</span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-7" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-186">
                     \begin{align*}
 u&amp;= 1 + a e^{-kt}\\
 \frac{dp}{dt}&amp;=\frac{dp}{du}\frac{du}{dt}&amp;\text{(Chain Rule)}\\
 &amp;=\frac{-1}{u^2}\left(-ak e^{-kt}\right)\\
 &amp;=\frac{ak e^{-kt}}{(1+a e^{-kt})^2}
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-8"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-15"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">c)</span>
 </h5>
                 Find the inverse function of \(p(t)\) and give an interpretation of the meaning.
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-8" id="answer-8"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-8" style="display: none;" class="tex2jax_ignore"><span class="solution">\(\frac{1}{k}\ln\left(\frac{at}{1-t}\right)\)</span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-8" id="solution-8"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-8" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-171">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-8" id="answer-8"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-8" style="display: none;" class="tex2jax_ignore"><span class="solution">\(\frac{1}{k}\ln\left(\frac{at}{1-t}\right)\)</span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-8" id="solution-8"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-8" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-187">
                     \begin{align*}
 p&amp;= \frac{1}{1+ a e^{-kt}}\\
 \text{Substitute p's for t's, and vice versa:}\\
@@ -319,16 +320,16 @@ p&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
 \text{In other words the inverse is:}\\
 p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-9"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-16"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">d)</span>
 </h5>
                 Graph \(p\) for the case \(a=10,k=0.5\) and use your graph to estimate how
                 long it will take for 80% of the population to hear the rumor.
                 Can you also calculate this time?
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-9" id="answer-9"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-172">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-9" id="answer-9"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-188">
                     \(7.38\) days.
                 </p>
-<p id="p-173">See <a knowl="./knowl/hm3_1d_pt1.html" knowl-id="xref-hm3_1d_pt1" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of \(p(t)\) below.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-174">
+<p id="p-189">See <a knowl="./knowl/hm3_1d_pt1.html" knowl-id="xref-hm3_1d_pt1" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of \(p(t)\) below.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-190">
                     Use the inverse function with a value of \(0.8\)
 
                     \begin{align*}
@@ -336,59 +337,59 @@ p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
 p^{-1}(0.8)&amp;=7.378
 \end{align*}
                 </p>
-<p id="p-175">See <a knowl="./knowl/hm3_1d_pt2.html" knowl-id="xref-hm3_1d_pt2" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of inverse \(p(t)\) below.</p></span></span></span></article></section><section class="exercises"><h1 class="heading">
-<span class="type">Exercises</span><span class="codenumber">3.6.2</span><span class="title">Exercises</span>
+<p id="p-191">See <a knowl="./knowl/hm3_1d_pt2.html" knowl-id="xref-hm3_1d_pt2" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of inverse \(p(t)\) below.</p></span></span></span></article></section><section class="exercises"><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">3.7.2</span><span class="title">Exercises</span>
 </h1>
-<article class="exercise-like" id="exercise-10"><h5 class="heading hidden-type">
+<article class="exercise-like" id="exercise-17"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">a)</span>
 </h5>
                 A sample originally has a mass of \(800 mg\).
                 Find a formula for the mass remaining after \(t\) days.
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-10" id="answer-10"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-180">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-10" id="answer-10"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-196">
                     The mass (in \(mg\)) after time \(t\) (in days) is:
                     \begin{equation*}M_t=800 e^{-0.1386t}\end{equation*}
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-181">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-197">
                     The rate of change of mass is proportional to the current mass:
                     \begin{equation*}\frac{dM}{dt} \propto M\end{equation*}
                     Lets call the constant of proportionality \(\lambda\).
                     \begin{equation*}\frac{dM}{dt} = -\lambda M\end{equation*}
                     The negative is because this is a decay.
                 </p>
-<p id="p-182">
+<p id="p-198">
                     The solution of this equation is:
                     \begin{equation*}M_t = M_0 e^{-\lambda t}\end{equation*}
                     (where \(M_0\) is the mass at \(t=0\).)
                 </p>
-<p id="p-183">
+<p id="p-199">
                     At the half-life \(t=T_{\frac{1}{2}}\) and \(M_t = \frac{M_0}{2}\):
                     \begin{equation*}\frac{M_0}{2} = M_0 \exp\left({-\lambda T_{\frac{1}{2}}}\right)\end{equation*}
                     \begin{equation*}2 = \exp\left({\lambda T_{\frac{1}{2}}}\right)\end{equation*}
                     \begin{equation*}\log{2} = \lambda T_{\frac{1}{2}}\end{equation*}
                     \begin{equation*}\lambda = \frac{log2}{T_{\frac{1}{2}}}\end{equation*}
                 </p>
-<p id="p-184">
+<p id="p-200">
                     We are told that the half-life is \(5\) days.
                     \begin{equation*}\lambda \approx 0.1386\end{equation*}
                 </p>
-<p id="p-185">
+<p id="p-201">
                     Substituting with the original mass gives us:
                     \begin{equation*}M_t = 800 e^{-0.1386t}\end{equation*}
                     where \(M_t\) is the mass in \(mg\) and \(t\) is the time in days.
-                </p></span></span></span></article><article class="exercise-like" id="exercise-11"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-18"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">b)</span>
 </h5>
                 Find the mass remaining after \(30\) days.
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-11" id="answer-11"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-186">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-11" id="answer-11"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-202">
                     \(N(30) = 12.5 mg\)
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-11" id="solution-11"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-187">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-11" id="solution-11"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-203">
                     \begin{equation*}N(30) = 800 e^{-0.1386 \times 30} = 800 e^{-4.1589} = 800 \times 0.015625 = 12.5 \end{equation*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-12"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-19"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">c)</span>
 </h5>
                 When is the mass reduced to \(1mg\)?
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-12" id="answer-12"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-188">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-12" id="answer-12"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-204">
                     \(48.2\) days.
-                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-12" id="solution-12"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-189">
+                </p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-12" id="solution-12"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-205">
                     \begin{align*}
 M_t&amp;=M_0 e^{-\lambda t}\\
 1&amp;=800e^{-\lambda t}\\
@@ -399,54 +400,54 @@ t&amp;=\frac{log{800}}{\lambda}\\
 &amp;=\frac{log{800}}{0.1386}\\
 &amp; \approx 48.2
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-13"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-20"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">d)</span>
 </h5>
                 Sketch a graph of the mass function.
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-13" id="answer-13"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-190">
-                    <p id="p-191">See <a knowl="./knowl/hm3_2d.html" knowl-id="xref-hm3_2d" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of mass function below.</p>
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-13" id="answer-13"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-206">
+                    <p id="p-207">See <a knowl="./knowl/hm3_2d.html" knowl-id="xref-hm3_2d" alt="Paragraph  " title="Paragraph  ">Sage plot </a> of mass function below.</p>
                 </p></span></span></span></article></section><section class="exercises"><h1 class="heading">
-<span class="type">Exercises</span><span class="codenumber">3.6.3</span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="codenumber">3.7.3</span><span class="title">Exercises</span>
 </h1>
-<article class="exercise-like" id="exercise-14"><h5 class="heading hidden-type">
+<article class="exercise-like" id="exercise-21"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">a)</span>
 </h5>
                 From first principles.
-            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-195">
+            <span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-211">
                     The first derivative is given by:
                     \begin{equation*}\frac{\Delta f(x)}{\Delta x} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{(x+h)-(x)} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{h}\end{equation*}
                 </p>
-<p id="p-196">The solution is to apply this twice. The trick here is to start with the correct increments
-                    (see <a knowl="./knowl/second-diff-math-stack.html" knowl-id="xref-second-diff-math-stack" alt="Bibliographic Entry 3.6.3.1.1 Second derivative “formula derivation”" title="Bibliographic Entry 3.6.3.1.1 Second derivative “formula derivation”">Math Stack Q&amp;A [3.6.3.1.1]</a>).
+<p id="p-212">The solution is to apply this twice. The trick here is to start with the correct increments
+                    (see <a knowl="./knowl/second-diff-math-stack.html" knowl-id="xref-second-diff-math-stack" alt="Bibliographic Entry 3.7.3.1.1 Second derivative “formula derivation”" title="Bibliographic Entry 3.7.3.1.1 Second derivative “formula derivation”">Math Stack Q&amp;A [3.7.3.1.1]</a>).
                 </p>
-<p id="p-197">
+<p id="p-213">
                     \begin{align*}
 \fe{f''}{x}&amp;=\lim_{h \to 0} \frac{\fe{f'}{x} - \fe{f'}{x-h}}{h}\\
 &amp;=\lim_{h \to 0}\frac{\frac{f(x+h)-f(x)}{h}-\frac{f(x)-f(x-h)}{h}}{h}\\
 &amp;=\lim_{h \to 0}\frac{f(x+h)-2f(x)+f(x-h)}{h^2}
 \end{align*}
-                </p></span></span></span></article><article class="exercise-like" id="exercise-15"><h5 class="heading hidden-type">
+                </p></span></span></span></article><article class="exercise-like" id="exercise-22"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">b)</span>
 </h5>
-<p id="p-198">Using <a knowl="./knowl/taylor-series-wiki.html" knowl-id="xref-taylor-series-wiki" alt="Bibliographic Entry 3.6.3.1.2 Taylor Series.https://en.wikipedia.org/wiki/Taylor_series
-                " title="Bibliographic Entry 3.6.3.1.2 Taylor Series.https://en.wikipedia.org/wiki/Taylor_series
-                ">Taylor Series [3.6.3.1.2]</a>.</p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-14" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-199">
+<p id="p-214">Using <a knowl="./knowl/taylor-series-wiki.html" knowl-id="xref-taylor-series-wiki" alt="Bibliographic Entry 3.7.3.1.2 Taylor Series.https://en.wikipedia.org/wiki/Taylor_series
+                " title="Bibliographic Entry 3.7.3.1.2 Taylor Series.https://en.wikipedia.org/wiki/Taylor_series
+                ">Taylor Series [3.7.3.1.2]</a>.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-14" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-215">
                     First set \(a=x+h\):
                     \begin{equation*}f(x)f(a)+\frac {f'(a)}{1!} (x-a)+ \frac{f''(a)}{2!} (x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+ \cdots\end{equation*}
 
                     TBD
 
                 </p></span></span></span></article></section><section class="exercises"><h1 class="heading">
-<span class="type">Exercises</span><span class="codenumber">3.6.4</span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="codenumber">3.7.4</span><span class="title">Exercises</span>
 </h1>
-<article class="exercise-like" id="exercise-16"><h5 class="heading hidden-type">
+<article class="exercise-like" id="exercise-23"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">a)</span>
 </h5>
                 The <!--Style me with CSS--><em>Mean Value Theorem</em> states that if \(f(x)\) is defined and continuous
                 on the interval \([a,b]\) and differentiable on \((a,b)\), then there is <!--Style me with CSS--><em>at least</em>
                 one number \(c\) in the interval \((a,b)\) (that is \(a &lt; c &lt; b\)) such that
-                \begin{equation*}f'(c)=\frac{f(b) - f(a)}{b-a}\end{equation*}<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-200">
+                \begin{equation*}f'(c)=\frac{f(b) - f(a)}{b-a}\end{equation*}<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-216">
                     \begin{align*}
 \text{Apply the mean value theorem}\\
 &amp;f'(c)=\frac{f(8) - f(2)}{8-2}\\
@@ -459,59 +460,59 @@ t&amp;=\frac{log{800}}{\lambda}\\
                 </p></span></span></span></article></section><section class="exercises"><h1 class="heading">
 <span class="type">Exercises</span><span class="codenumber">4.4</span><span class="title">Exercises</span>
 </h1>
-<article class="exercise-like" id="exercise-21"><h5 class="heading hidden-type">
+<article class="exercise-like" id="exercise-29"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">1</span>
 </h5>
-<p id="p-295">Response to Exponential Input</p>
-<p id="p-296">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + e^{st}\label{men-27}\tag{4.4.5}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-28}\tag{4.4.6}\end{equation}<p id="p-297">This is the standard growth equation  with an exponential forcing term \(e^{st}\).</p>
-<p id="p-298">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = Ye^{st}\end{equation*}<p id="p-299">where \(Y\) is a constant.</p>
-<p id="p-300">Substituting we get:</p>\begin{equation*}Ys e^{st} = aY e^{st} + e^{st}\end{equation*}<p id="p-301">Rearranging gives:</p>\begin{equation*}Y=\frac{1}{s-a}\end{equation*}<p id="p-302">Full solution is the <!--Style me with CSS--><em>particular</em> solution plus <!--Style me with CSS--><em>null</em> (or <!--Style me with CSS--><em>homogeneous</em>) solution:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + C e^{st}\end{equation*}<p id="p-303">From the initial conditions we get:</p>\begin{equation*}y(0) = \frac{1}{s-a} + C\end{equation*}<p id="p-304">Substituting in \(y(t)\) gives:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}\end{equation*}<p id="p-305">Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>\begin{equation*}y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\end{equation*}<p id="p-306">In Strang's terminology:</p>\begin{equation}y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\label{men-29}\tag{4.4.7}\end{equation}<p id="p-307">That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor.
+<p id="p-314">Response to Exponential Input</p>
+<p id="p-315">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + e^{st}\label{men-28}\tag{4.4.5}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-29}\tag{4.4.6}\end{equation}<p id="p-316">This is the standard growth equation  with an exponential forcing term \(e^{st}\).</p>
+<p id="p-317">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = Ye^{st}\end{equation*}<p id="p-318">where \(Y\) is a constant.</p>
+<p id="p-319">Substituting we get:</p>\begin{equation*}Ys e^{st} = aY e^{st} + e^{st}\end{equation*}<p id="p-320">Rearranging gives:</p>\begin{equation*}Y=\frac{1}{s-a}\end{equation*}<p id="p-321">Full solution is the <!--Style me with CSS--><em>particular</em> solution plus <!--Style me with CSS--><em>null</em> (or <!--Style me with CSS--><em>homogeneous</em>) solution:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + C e^{st}\end{equation*}<p id="p-322">From the initial conditions we get:</p>\begin{equation*}y(0) = \frac{1}{s-a} + C\end{equation*}<p id="p-323">Substituting in \(y(t)\) gives:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}\end{equation*}<p id="p-324">Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>\begin{equation*}y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\end{equation*}<p id="p-325">In Strang's terminology:</p>\begin{equation}y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\label{men-30}\tag{4.4.7}\end{equation}<p id="p-326">That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor.
                 Notice that this extra term has a singularity (division by zero) at \(s=a\). This is <!--Style me with CSS--><em>Resonance</em>.</p>
-<p id="p-308">This singularity can be handled using  <!--Style me with CSS--><em>L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a></p>
-<figure class="figure-like" id="figure-7"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p id="p-309">The full solution, using L'Hopital, should match the final solution in
-                <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>\begin{equation}y(t)=y_{0} e^{a t} + t e^{s t}\label{men-30}\tag{4.4.8}\end{equation}<p id="p-310">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-311">Remind yourself how to obtain the homogeneous (null) solution:</p>
+<p id="p-327">This singularity can be handled using  <!--Style me with CSS--><em>L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a></p>
+<figure class="figure-like" id="figure-7"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p id="p-328">The full solution, using L'Hopital, should match the final solution in
+                <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>\begin{equation}y(t)=y_{0} e^{a t} + t e^{s t}\label{men-31}\tag{4.4.8}\end{equation}<p id="p-329">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-330">Remind yourself how to obtain the homogeneous (null) solution:</p>
 <pre class="code-block tex2jax_ignore">t,a = var('t,a')
 y = function('y')(t)
 de1 = diff(y,t) == a*y
 sol1 = desolve(de1,y, ivar=t)
 show(sol1)
 </pre>
-<p id="p-312">\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\).</p>
-<p id="p-313">Also have a look at the screenshot above!</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-20" id="solution-20"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-20" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-314">Sage Commands:</p>
+<p id="p-331">\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\).</p>
+<p id="p-332">Also have a look at the screenshot above!</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-21" id="solution-21"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-21" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-333">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
 y = function('y')(t)
 de = diff(y,t) == a*y + e^(s*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<p id="p-315">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-316">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
-<p id="p-317">
+<p id="p-334">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-335">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
+<p id="p-336">
                 As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
                 We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
             </p>
-<p id="p-318">Sage Commands:</p>
+<p id="p-337">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
 numerator.diff(s)
 denominator= s - a
 denominator.diff(s)
 </pre>
-<p id="p-319">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
-<p id="p-320">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span></span></span></article><article class="exercise-like" id="exercise-22"><h5 class="heading hidden-type">
+<p id="p-338">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
+<p id="p-339">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span></span></span></article><article class="exercise-like" id="exercise-30"><h5 class="heading hidden-type">
 <span class="type">Exercise</span><span class="codenumber">2</span>
 </h5>
-<p id="p-321">Response to Oscillating Input</p>
-<p id="p-322">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\label{men-31}\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-32}\tag{4.4.10}\end{equation}<p id="p-323">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
-<p id="p-324">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-325">where \(M\) and \(N\) are constants.</p>
-<p id="p-326">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-21" id="solution-21"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-21" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-327">Sage Commands:</p>
+<p id="p-340">Response to Oscillating Input</p>
+<p id="p-341">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\label{men-32}\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\label{men-33}\tag{4.4.10}\end{equation}<p id="p-342">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
+<p id="p-343">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-344">where \(M\) and \(N\) are constants.</p>
+<p id="p-345">Now try and solve this using SageMath.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-22" id="solution-22"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-22" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-346">Sage Commands:</p>
 <pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
 y = function('y')(t)
 de = diff(y,t) == a*y + cos(omega*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<p id="p-328">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span></span></article></section></section></div></main>
+<p id="p-347">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span></span></article></section></section></div></main>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-14T20:58:00Z    *-->
+<!--*    on 2017-12-09T09:45:20Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -92,12 +92,12 @@ MathJax.Hub.Config({
 <nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="calculus-derivatives.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers-sage.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="calculus-derivatives.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="level-curves.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="calculus-derivatives.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="integers-sage.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="calculus-derivatives.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="level-curves.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -124,12 +124,14 @@ MathJax.Hub.Config({
 <h2 class="link active"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
 <li><a href="calculus-limits.html">Calculating Limits</a></li>
+<li><a href="section-product-rule.html">The Product Rule</a></li>
 <li><a href="calculus-derivatives.html">Derivatives</a></li>
 <li><a href="calculus-integration.html" class="active">Integration</a></li>
-<li><a href="integers-sage.html">Sage</a></li>
+<li><a href="level-curves.html">Sketching Level Curves</a></li>
 <li><a href="cap-2017-hw2.html">CAP 2017, HW 2 due January 31</a></li>
 <li><a href="cap-2017-hw3.html">CAP 2017, HW 3 due February 7</a></li>
 <li><a href="cap-2017-hw4.html">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="cap-2017-hw5.html">CAP 2017, HW 4 due February 28</a></li>
 <li><a href="references-2.html">References</a></li>
 </ul>
 <h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
@@ -142,10 +144,9 @@ MathJax.Hub.Config({
 </ul>
 <h2 class="link"><a href="linear-algebra-exam.html"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="section-18.html">A1</a></li>
-<li><a href="section-19.html">A2</a></li>
-<li><a href="section-20.html">A3</a></li>
-<li><a href="section-product-rule.html">The Product Rule</a></li>
+<li><a href="section-20.html">A1</a></li>
+<li><a href="section-21.html">A2</a></li>
+<li><a href="section-22.html">A3</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
@@ -155,9 +156,9 @@ MathJax.Hub.Config({
 <li><a href="index-part-1.html">Index</a></li>
 <li><a href="colophon-1.html">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="calculus-integration"><header title="Section 3.3 Integration"><h1 class="heading hide-type" alt="Section 3.3 Integration">
-<span class="type">Section</span><span class="codenumber">3.3</span><span class="title">Integration</span><a href="calculus-integration.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-122">Here are some examples of indefinite integrals to demonstrate the power of SageMath:</p>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="calculus-integration"><header title="Section 3.4 Integration"><h1 class="heading hide-type" alt="Section 3.4 Integration">
+<span class="type">Section</span><span class="codenumber">3.4</span><span class="title">Integration</span><a href="calculus-integration.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-138">Here are some examples of indefinite integrals to demonstrate the power of SageMath:</p>
 <div class="sagecell-sage" id="sage-59"><script type="text/x-sage">f = x^3
 show("function:",f,", Indefinite Integral = ",f.integrate(x))
 f= e^x
@@ -176,7 +177,7 @@ show("function:",f,", Indefinite Integral = ",f.integral(x))
 f=sqrt(x^2-25)/x
 show("function:",f,", Indefinite Integral = ",f.integral(x))
 </script></div>
-<p id="p-123">Now for some Definite Integrals. For example:</p>\begin{equation*}\int_{-1}^{1} \frac{1}{x^{2} + 1} dx = \frac{1}{2} \, \pi\end{equation*}<p id="p-124">This can be confirmed in SageMath quite simply:</p>
+<p id="p-139">Now for some Definite Integrals. For example:</p>\begin{equation*}\int_{-1}^{1} \frac{1}{x^{2} + 1} dx = \frac{1}{2} \, \pi\end{equation*}<p id="p-140">This can be confirmed in SageMath quite simply:</p>
 <div class="sagecell-sage" id="sage-60"><script type="text/x-sage">f(x)=1/(1+x^2)
 show(f)
 f.integral(x, -1, 1).show()
