@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-12-09T10:01:11Z    *-->
+<!--*    on 2017-12-09T10:22:47Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -159,8 +159,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="level-curves"><header title="Section 3.5 Sketching Level Curves"><h1 class="heading hide-type" alt="Section 3.5 Sketching Level Curves">
 <span class="type">Section</span><span class="codenumber">3.5</span><span class="title">Sketching Level Curves</span><a href="level-curves.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-141">Plot of  \(x^{4} + y^{4}\)</p>
-<div class="sagecell-sage" id="sage-61"><script type="text/x-sage">from sage.manifolds.utilities import set_axes_labels
-var('x,y,z')
+<div class="sagecell-sage" id="sage-61"><script type="text/x-sage">var('x,y,z')
 f(x,y)=x^4+y^4
 
 levels=[1,2,3,4,5,6]
@@ -169,8 +168,7 @@ p=plot3d(f(x,y),(x,-2,2),(y,-2,2),color='khaki',opacity=0.7)
 for h in levels:
     p+=implicit_plot3d(f(x,y)==h,(x,-2,2),(y,-2,2),(z,h,h+epsilon))
 
-pa = set_axes_labels(p, 'X', 'Y', 'Z', color='red')
-show(pa)
+show(p)
 </script></div></section></div></main>
 </div>
 </body>
